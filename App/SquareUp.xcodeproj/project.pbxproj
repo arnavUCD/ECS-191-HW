@@ -7,33 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5A0000000000000000000301 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 5A0000000000000000000501 /* SnapshotTesting */; };
 		5A0000000000000000000302 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5A0000000000000000000502 /* FirebaseAuth */; };
 		5A0000000000000000000303 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 5A0000000000000000000503 /* FirebaseCore */; };
 		5A0000000000000000000304 /* PhoneNumberKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5A0000000000000000000504 /* PhoneNumberKit */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		5A0000000000000000000401 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5A0000000000000000000001 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5A0000000000000000000101;
-			remoteInfo = SquareUp;
-		};
-		5A0000000000000000000402 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5A0000000000000000000001 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5A0000000000000000000101;
-			remoteInfo = SquareUp;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		5A0000000000000000000201 /* SquareUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SquareUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5A0000000000000000000202 /* SquareUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SquareUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5A0000000000000000000203 /* SquareUpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SquareUpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A0000000000000000000204 /* SquareUp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SquareUp-Info.plist"; sourceTree = "<group>"; };
 		5A0000000000000000000205 /* Remote.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Remote.xcconfig; sourceTree = "<group>"; };
 		5A0000000000000000000206 /* SquareUpClip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SquareUpClip.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,16 +26,6 @@
 		5A0000000000000000000011 /* SquareUp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = SquareUp;
-			sourceTree = "<group>";
-		};
-		5A0000000000000000000012 /* SquareUpTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = SquareUpTests;
-			sourceTree = "<group>";
-		};
-		5A0000000000000000000013 /* SquareUpUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = SquareUpUITests;
 			sourceTree = "<group>";
 		};
 		5A0000000000000000000014 /* SquareUpShared */ = {
@@ -81,21 +51,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5A0000000000000000000612 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5A0000000000000000000301 /* SnapshotTesting in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5A0000000000000000000622 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5A0000000000000000000632 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -110,8 +65,6 @@
 			isa = PBXGroup;
 			children = (
 				5A0000000000000000000011 /* SquareUp */,
-				5A0000000000000000000012 /* SquareUpTests */,
-				5A0000000000000000000013 /* SquareUpUITests */,
 				5A0000000000000000000014 /* SquareUpShared */,
 				5A0000000000000000000015 /* SquareUpClip */,
 				5A0000000000000000000004 /* Config */,
@@ -123,8 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				5A0000000000000000000201 /* SquareUp.app */,
-				5A0000000000000000000202 /* SquareUpTests.xctest */,
-				5A0000000000000000000203 /* SquareUpUITests.xctest */,
 				5A0000000000000000000206 /* SquareUpClip.app */,
 			);
 			name = Products;
@@ -171,53 +122,6 @@
 			productReference = 5A0000000000000000000201 /* SquareUp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5A0000000000000000000102 /* SquareUpTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5A0000000000000000000712 /* Build configuration list for PBXNativeTarget "SquareUpTests" */;
-			buildPhases = (
-				5A0000000000000000000611 /* Sources */,
-				5A0000000000000000000612 /* Frameworks */,
-				5A0000000000000000000613 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5A0000000000000000000801 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				5A0000000000000000000012 /* SquareUpTests */,
-			);
-			name = SquareUpTests;
-			packageProductDependencies = (
-				5A0000000000000000000501 /* SnapshotTesting */,
-			);
-			productName = SquareUpTests;
-			productReference = 5A0000000000000000000202 /* SquareUpTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		5A0000000000000000000103 /* SquareUpUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5A0000000000000000000713 /* Build configuration list for PBXNativeTarget "SquareUpUITests" */;
-			buildPhases = (
-				5A0000000000000000000621 /* Sources */,
-				5A0000000000000000000622 /* Frameworks */,
-				5A0000000000000000000623 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5A0000000000000000000802 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				5A0000000000000000000013 /* SquareUpUITests */,
-			);
-			name = SquareUpUITests;
-			packageProductDependencies = (
-			);
-			productName = SquareUpUITests;
-			productReference = 5A0000000000000000000203 /* SquareUpUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 		5A0000000000000000000104 /* SquareUpClip */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A0000000000000000000714 /* Build configuration list for PBXNativeTarget "SquareUpClip" */;
@@ -254,14 +158,6 @@
 					5A0000000000000000000101 = {
 						CreatedOnToolsVersion = 27.0;
 					};
-					5A0000000000000000000102 = {
-						CreatedOnToolsVersion = 27.0;
-						TestTargetID = 5A0000000000000000000101;
-					};
-					5A0000000000000000000103 = {
-						CreatedOnToolsVersion = 27.0;
-						TestTargetID = 5A0000000000000000000101;
-					};
 					5A0000000000000000000104 = {
 						CreatedOnToolsVersion = 27.0;
 					};
@@ -277,7 +173,6 @@
 			mainGroup = 5A0000000000000000000002;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				5A0000000000000000000901 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
 				5A0000000000000000000902 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				5A0000000000000000000903 /* XCRemoteSwiftPackageReference "PhoneNumberKit" */,
 			);
@@ -287,8 +182,6 @@
 			projectRoot = "";
 			targets = (
 				5A0000000000000000000101 /* SquareUp */,
-				5A0000000000000000000102 /* SquareUpTests */,
-				5A0000000000000000000103 /* SquareUpUITests */,
 				5A0000000000000000000104 /* SquareUpClip */,
 			);
 		};
@@ -296,20 +189,6 @@
 
 /* Begin PBXResourcesBuildPhase section */
 		5A0000000000000000000603 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5A0000000000000000000613 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5A0000000000000000000623 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -333,20 +212,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5A0000000000000000000611 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5A0000000000000000000621 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5A0000000000000000000631 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -355,19 +220,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		5A0000000000000000000801 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5A0000000000000000000101 /* SquareUp */;
-			targetProxy = 5A0000000000000000000401 /* PBXContainerItemProxy */;
-		};
-		5A0000000000000000000802 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5A0000000000000000000101 /* SquareUp */;
-			targetProxy = 5A0000000000000000000402 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		5A0000000000000000000A01 /* Debug */ = {
@@ -573,80 +425,6 @@
 			};
 			name = Release;
 		};
-		5A0000000000000000000C01 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.ucdavis.ecs191.SquareUpTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SquareUp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SquareUp";
-			};
-			name = Debug;
-		};
-		5A0000000000000000000C02 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.ucdavis.ecs191.SquareUpTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SquareUp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SquareUp";
-			};
-			name = Release;
-		};
-		5A0000000000000000000D01 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.ucdavis.ecs191.SquareUpUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SquareUp;
-			};
-			name = Debug;
-		};
-		5A0000000000000000000D02 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.ucdavis.ecs191.SquareUpUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SquareUp;
-			};
-			name = Release;
-		};
 		5A0000000000000000000E01 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5A0000000000000000000207 /* AppClip.xcconfig */;
@@ -738,24 +516,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5A0000000000000000000712 /* Build configuration list for PBXNativeTarget "SquareUpTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5A0000000000000000000C01 /* Debug */,
-				5A0000000000000000000C02 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5A0000000000000000000713 /* Build configuration list for PBXNativeTarget "SquareUpUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5A0000000000000000000D01 /* Debug */,
-				5A0000000000000000000D02 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		5A0000000000000000000714 /* Build configuration list for PBXNativeTarget "SquareUpClip" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -768,14 +528,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		5A0000000000000000000901 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
-			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 1.19.6;
-			};
-		};
 		5A0000000000000000000902 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -795,11 +547,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5A0000000000000000000501 /* SnapshotTesting */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5A0000000000000000000901 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
-			productName = SnapshotTesting;
-		};
 		5A0000000000000000000502 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 5A0000000000000000000902 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

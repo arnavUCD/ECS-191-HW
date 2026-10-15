@@ -114,6 +114,26 @@ Shared/**/README.md
 /Logo
 /Logo *.png
 
+# --- Tests, evaluation, and developer tooling (kept locally, not published) ---
+# The repository publishes the production app and backend only.
+App/SquareUpTests/
+App/SquareUpUITests/
+App/Tools/
+App/.swiftformat
+App/.swiftlint.yml
+server/tests/
+server/requirements-dev.txt
+server/pyproject.toml
+server/scripts/check.sh
+server/scripts/run_receipt_eval.py
+server/dev/
+/Shared/
+# Test output
+TestResults/
+*.xctestrun
+*.profdata
+junit*.xml
+
 # --- Local working notes, scratch, and backups ---
 GITHUB_PUSH_AUDIT.md
 # Local proposal draft (the submitted proposal is Proposal.md).
