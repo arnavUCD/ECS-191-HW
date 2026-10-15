@@ -98,6 +98,22 @@ Shared/receipt-eval/results/
 /Screenshot*.png
 /UI rebuild and design\ /
 
+# --- Internal planning and reference documentation (kept locally, not published) ---
+# The repository publishes only README.md and proposal.md as documentation.
+/CLAUDE.md
+/overview.md
+/milestone*.md
+App/ARCHITECTURE.md
+App/DEPENDENCIES.md
+App/PHONE_AUTH_SETUP.md
+App/APP_CLIP_ACTIVATION.md
+server/README.md
+server/API.md
+Shared/**/README.md
+# Logo source files (the app uses its own copies in Assets.xcassets).
+/Logo
+/Logo *.png
+
 # --- Local working notes, scratch, and backups ---
 GITHUB_PUSH_AUDIT.md
 # Local proposal draft (the submitted proposal is Proposal.md).
