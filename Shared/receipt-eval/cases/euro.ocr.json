@@ -1,0 +1,233 @@
+{
+  "id" : "euro",
+  "likelyCurrency" : "EUR",
+  "ocrMilliseconds" : [
+    173
+  ],
+  "pages" : [
+    "euro-p1.jpg"
+  ],
+  "regions" : [
+    {
+      "alternatives" : [
+        "CAFÉ LUMIÈR",
+        "AFÉ LUMIÈRE"
+      ],
+      "box" : [
+        0.3841,
+        0.1591,
+        0.2317,
+        0.0455
+      ],
+      "confidence" : 1,
+      "id" : "FA66B2B0-7712-4B02-9E74-9619A3086B49",
+      "order" : 0,
+      "page" : 0,
+      "text" : "CAFÉ LUMIÈRE"
+    },
+    {
+      "alternatives" : [
+        "Ru Exemple 12",
+        "Rue Exemple 1"
+      ],
+      "box" : [
+        0.4063,
+        0.225,
+        0.1873,
+        0.0318
+      ],
+      "confidence" : 1,
+      "id" : "51CE299C-3F82-401D-B1A6-0304DD773D8F",
+      "order" : 1,
+      "page" : 0,
+      "text" : "Rue Exemple 12"
+    },
+    {
+      "alternatives" : [
+        "19.09.202614:22",
+        "19.09.2026 1:22"
+      ],
+      "box" : [
+        0.1111,
+        0.3409,
+        0.2444,
+        0.0386
+      ],
+      "confidence" : 1,
+      "id" : "BCDA453A-3D95-41B7-9389-995652EF4393",
+      "order" : 2,
+      "page" : 0,
+      "text" : "19.09.2026 14:22"
+    },
+    {
+      "alternatives" : [
+        "Coque Monsieur",
+        "CroqueMonsieur"
+      ],
+      "box" : [
+        0.1109,
+        0.3992,
+        0.2321,
+        0.0402
+      ],
+      "confidence" : 1,
+      "id" : "53CAEAFF-7250-4347-BB7D-05FDED5DE68C",
+      "order" : 3,
+      "page" : 0,
+      "text" : "Croque Monsieur"
+    },
+    {
+      "alternatives" : [
+        "Salade Niçois",
+        "Salad Niçoise"
+      ],
+      "box" : [
+        0.1095,
+        0.4591,
+        0.2175,
+        0.0386
+      ],
+      "confidence" : 1,
+      "id" : "DF6818C9-1359-44AC-B3CB-DBDFF5FDEC68",
+      "order" : 4,
+      "page" : 0,
+      "text" : "Salade Niçoise"
+    },
+    {
+      "alternatives" : [
+        "Café Crèm",
+        "CaféCrème"
+      ],
+      "box" : [
+        0.1111,
+        0.5159,
+        0.154,
+        0.0341
+      ],
+      "confidence" : 1,
+      "id" : "D34E29BE-5979-46A6-A487-E8BFD1A261AC",
+      "order" : 5,
+      "page" : 0,
+      "text" : "Café Crème"
+    },
+    {
+      "alternatives" : [
+        "TOTAL TC",
+        "TOTAL TT"
+      ],
+      "box" : [
+        0.1111,
+        0.6386,
+        0.1381,
+        0.0295
+      ],
+      "confidence" : 0.5,
+      "id" : "4033355E-44D5-4351-9034-E9EB9975EBB4",
+      "order" : 6,
+      "page" : 0,
+      "text" : "TOTAL TTC"
+    },
+    {
+      "alternatives" : [
+        "dont TV 10%",
+        "dont TVA 10%%"
+      ],
+      "box" : [
+        0.1111,
+        0.6955,
+        0.1857,
+        0.0318
+      ],
+      "confidence" : 1,
+      "id" : "2B930809-F144-44B9-ACC7-0CA2FB1C4E7B",
+      "order" : 7,
+      "page" : 0,
+      "text" : "dont TVA 10%"
+    },
+    {
+      "alternatives" : [
+        "9,50€",
+        "9,5 €"
+      ],
+      "box" : [
+        0.7966,
+        0.4011,
+        0.0942,
+        0.0455
+      ],
+      "confidence" : 1,
+      "id" : "05AAF02B-4049-46A4-9FCB-500AF18432E9",
+      "order" : 8,
+      "page" : 0,
+      "text" : "9,50 €"
+    },
+    {
+      "alternatives" : [
+        "12,00€",
+        "12,0 €"
+      ],
+      "box" : [
+        0.7824,
+        0.4604,
+        0.1083,
+        0.0451
+      ],
+      "confidence" : 1,
+      "id" : "49F9101F-74F7-4455-AAD7-3771EFC180FD",
+      "order" : 9,
+      "page" : 0,
+      "text" : "12,00 €"
+    },
+    {
+      "alternatives" : [
+        "3,20€",
+        "3,0 €"
+      ],
+      "box" : [
+        0.7966,
+        0.5196,
+        0.094,
+        0.0448
+      ],
+      "confidence" : 1,
+      "id" : "6636578A-B6A8-4D12-A018-9EED2A54D545",
+      "order" : 10,
+      "page" : 0,
+      "text" : "3,20 €"
+    },
+    {
+      "alternatives" : [
+        "24,70€",
+        "24,7 €"
+      ],
+      "box" : [
+        0.7808,
+        0.6357,
+        0.1098,
+        0.0467
+      ],
+      "confidence" : 1,
+      "id" : "AE8FB104-6124-4EE9-9FE8-D7C64358303D",
+      "order" : 11,
+      "page" : 0,
+      "text" : "24,70 €"
+    },
+    {
+      "alternatives" : [
+        "2,25€",
+        "2,25"
+      ],
+      "box" : [
+        0.7967,
+        0.697,
+        0.094,
+        0.0446
+      ],
+      "confidence" : 1,
+      "id" : "22E5C00C-2D96-4CC6-A22C-44BF893E60B2",
+      "order" : 12,
+      "page" : 0,
+      "text" : "2,25 €"
+    }
+  ]
+}

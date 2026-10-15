@@ -1,0 +1,390 @@
+{
+ "about": "RECORDED FICTIONAL RESPONSE for the bundled sample receipt, in the provider-output format. Hand-written for development and demos with SQUAREUP_AI_PROVIDER=recorded; it is not output from Claude.",
+ "signature": "b971f8eec24c0bdb92a96fddc92598d30b97c4a0b0803eee37576acf2ea4f583",
+ "output": {
+  "merchant": {
+   "value": "Fernwood Supper Club",
+   "confidence": "high",
+   "basis": "visible",
+   "regionIds": [
+    "r1"
+   ],
+   "uncertainty": "none"
+  },
+  "date": {
+   "value": "2026-09-24",
+   "confidence": "high",
+   "basis": "visible",
+   "regionIds": [
+    "r5"
+   ],
+   "uncertainty": "none"
+  },
+  "currency": {
+   "value": "USD",
+   "confidence": "high",
+   "basis": "layout",
+   "regionIds": [],
+   "uncertainty": "none"
+  },
+  "items": [
+   {
+    "name": {
+     "value": "Truffle Fries",
+     "confidence": "high",
+     "basis": "visible",
+     "regionIds": [
+      "r7"
+     ],
+     "uncertainty": "none"
+    },
+    "quantity": {
+     "value": null,
+     "confidence": "high",
+     "basis": "absent",
+     "regionIds": [],
+     "uncertainty": "none"
+    },
+    "unitPrice": {
+     "value": null,
+     "confidence": "high",
+     "basis": "absent",
+     "regionIds": [],
+     "uncertainty": "none"
+    },
+    "lineTotal": {
+     "value": "9.50",
+     "confidence": "high",
+     "basis": "visible",
+     "regionIds": [
+      "r8"
+     ],
+     "uncertainty": "none"
+    },
+    "isRefund": false
+   },
+   {
+    "name": {
+     "value": "Margherita Pizza",
+     "confidence": "high",
+     "basis": "visible",
+     "regionIds": [
+      "r9"
+     ],
+     "uncertainty": "none"
+    },
+    "quantity": {
+     "value": "2",
+     "confidence": "high",
+     "basis": "visible",
+     "regionIds": [
+      "r9"
+     ],
+     "uncertainty": "none"
+    },
+    "unitPrice": {
+     "value": "8.00",
+     "confidence": "high",
+     "basis": "visible",
+     "regionIds": [
+      "r9"
+     ],
+     "uncertainty": "none"
+    },
+    "lineTotal": {
+     "value": "16.00",
+     "confidence": "high",
+     "basis": "visible",
+     "regionIds": [
+      "r10"
+     ],
+     "uncertainty": "none"
+    },
+    "isRefund": false
+   },
+   {
+    "name": {
+     "value": "Caesar Salad",
+     "confidence": "high",
+     "basis": "visible",
+     "regionIds": [
+      "r11"
+     ],
+     "uncertainty": "none"
+    },
+    "quantity": {
+     "value": null,
+     "confidence": "high",
+     "basis": "absent",
+     "regionIds": [],
+     "uncertainty": "none"
+    },
+    "unitPrice": {
+     "value": null,
+     "confidence": "high",
+     "basis": "absent",
+     "regionIds": [],
+     "uncertainty": "none"
+    },
+    "lineTotal": {
+     "value": "11.25",
+     "confidence": "high",
+     "basis": "visible",
+     "regionIds": [
+      "r12"
+     ],
+     "uncertainty": "none"
+    },
+    "isRefund": false
+   },
+   {
+    "name": {
+     "value": "Lemonade",
+     "confidence": "high",
+     "basis": "visible",
+     "regionIds": [
+      "r13"
+     ],
+     "uncertainty": "none"
+    },
+    "quantity": {
+     "value": "2",
+     "confidence": "high",
+     "basis": "visible",
+     "regionIds": [
+      "r13"
+     ],
+     "uncertainty": "none"
+    },
+    "unitPrice": {
+     "value": "3.50",
+     "confidence": "high",
+     "basis": "visible",
+     "regionIds": [
+      "r13"
+     ],
+     "uncertainty": "none"
+    },
+    "lineTotal": {
+     "value": "7.00",
+     "confidence": "high",
+     "basis": "visible",
+     "regionIds": [
+      "r14"
+     ],
+     "uncertainty": "none"
+    },
+    "isRefund": false
+   },
+   {
+    "name": {
+     "value": "Mushroom Risotto",
+     "confidence": "high",
+     "basis": "visible",
+     "regionIds": [
+      "r15"
+     ],
+     "uncertainty": "none"
+    },
+    "quantity": {
+     "value": null,
+     "confidence": "high",
+     "basis": "absent",
+     "regionIds": [],
+     "uncertainty": "none"
+    },
+    "unitPrice": {
+     "value": null,
+     "confidence": "high",
+     "basis": "absent",
+     "regionIds": [],
+     "uncertainty": "none"
+    },
+    "lineTotal": {
+     "value": "18.75",
+     "confidence": "high",
+     "basis": "visible",
+     "regionIds": [
+      "r16"
+     ],
+     "uncertainty": "none"
+    },
+    "isRefund": false
+   },
+   {
+    "name": {
+     "value": "Shared Nachos",
+     "confidence": "high",
+     "basis": "visible",
+     "regionIds": [
+      "r17"
+     ],
+     "uncertainty": "none"
+    },
+    "quantity": {
+     "value": null,
+     "confidence": "high",
+     "basis": "absent",
+     "regionIds": [],
+     "uncertainty": "none"
+    },
+    "unitPrice": {
+     "value": null,
+     "confidence": "high",
+     "basis": "absent",
+     "regionIds": [],
+     "uncertainty": "none"
+    },
+    "lineTotal": {
+     "value": "12.00",
+     "confidence": "high",
+     "basis": "visible",
+     "regionIds": [
+      "r18"
+     ],
+     "uncertainty": "none"
+    },
+    "isRefund": false
+   },
+   {
+    "name": {
+     "value": "Tiramisu",
+     "confidence": "high",
+     "basis": "visible",
+     "regionIds": [
+      "r19"
+     ],
+     "uncertainty": "none"
+    },
+    "quantity": {
+     "value": null,
+     "confidence": "high",
+     "basis": "absent",
+     "regionIds": [],
+     "uncertainty": "none"
+    },
+    "unitPrice": {
+     "value": null,
+     "confidence": "high",
+     "basis": "absent",
+     "regionIds": [],
+     "uncertainty": "none"
+    },
+    "lineTotal": {
+     "value": "8.50",
+     "confidence": "high",
+     "basis": "visible",
+     "regionIds": [
+      "r20"
+     ],
+     "uncertainty": "none"
+    },
+    "isRefund": false
+   },
+   {
+    "name": {
+     "value": "Iced Tea",
+     "confidence": "high",
+     "basis": "visible",
+     "regionIds": [
+      "r21"
+     ],
+     "uncertainty": "none"
+    },
+    "quantity": {
+     "value": null,
+     "confidence": "high",
+     "basis": "absent",
+     "regionIds": [],
+     "uncertainty": "none"
+    },
+    "unitPrice": {
+     "value": null,
+     "confidence": "high",
+     "basis": "absent",
+     "regionIds": [],
+     "uncertainty": "none"
+    },
+    "lineTotal": {
+     "value": "3.25",
+     "confidence": "high",
+     "basis": "visible",
+     "regionIds": [
+      "r22"
+     ],
+     "uncertainty": "none"
+    },
+    "isRefund": false
+   }
+  ],
+  "charges": [
+   {
+    "kind": "discount",
+    "label": "Happy Hour Discount",
+    "amount": {
+     "value": "-4.00",
+     "confidence": "high",
+     "basis": "visible",
+     "regionIds": [
+      "r27"
+     ],
+     "uncertainty": "none"
+    }
+   },
+   {
+    "kind": "tax",
+    "label": "Sales Tax 8.25%",
+    "amount": {
+     "value": "6.79",
+     "confidence": "high",
+     "basis": "visible",
+     "regionIds": [
+      "r29"
+     ],
+     "uncertainty": "none"
+    }
+   },
+   {
+    "kind": "tip",
+    "label": "Tip",
+    "amount": {
+     "value": "15.00",
+     "confidence": "high",
+     "basis": "visible",
+     "regionIds": [
+      "r33"
+     ],
+     "uncertainty": "none"
+    }
+   }
+  ],
+  "subtotal": {
+   "value": "86.25",
+   "confidence": "high",
+   "basis": "visible",
+   "regionIds": [
+    "r25"
+   ],
+   "uncertainty": "none"
+  },
+  "total": {
+   "value": "104.04",
+   "confidence": "high",
+   "basis": "visible",
+   "regionIds": [
+    "r35"
+   ],
+   "uncertainty": "none"
+  },
+  "warnings": [
+   {
+    "code": "cardDetailsIgnored",
+    "regionIds": [
+     "r37",
+     "r39"
+    ]
+   }
+  ],
+  "overallConfidence": "high"
+ }
+}

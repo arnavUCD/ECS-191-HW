@@ -1,0 +1,250 @@
+{
+  "id" : "inconsistent-total",
+  "likelyCurrency" : "USD",
+  "ocrMilliseconds" : [
+    77
+  ],
+  "pages" : [
+    "inconsistent-total-p1.jpg"
+  ],
+  "regions" : [
+    {
+      "alternatives" : [
+        "RIVERIDE PIZZA CO",
+        "RIVESIDE PIZZA CO"
+      ],
+      "box" : [
+        0.3208,
+        0.1602,
+        0.3542,
+        0.0545
+      ],
+      "confidence" : 1,
+      "id" : "EC0E1566-1683-4BC0-A812-C35E3071A478",
+      "order" : 0,
+      "page" : 0,
+      "text" : "RIVERSIDE PIZZA CO"
+    },
+    {
+      "alternatives" : [
+        "09/14/202621:05",
+        "09/1/2026 21:05"
+      ],
+      "box" : [
+        0.1111,
+        0.2841,
+        0.2444,
+        0.0341
+      ],
+      "confidence" : 1,
+      "id" : "5ADA5526-0F4D-4B92-9D54-66FBEAC5AA5C",
+      "order" : 1,
+      "page" : 0,
+      "text" : "09/14/2026 21:05"
+    },
+    {
+      "alternatives" : [
+        "Large Margerita",
+        "Large Magherita"
+      ],
+      "box" : [
+        0.1111,
+        0.3409,
+        0.2444,
+        0.0386
+      ],
+      "confidence" : 1,
+      "id" : "E265FE2F-494E-4AFF-8731-7F4D761FBECB",
+      "order" : 2,
+      "page" : 0,
+      "text" : "Large Margherita"
+    },
+    {
+      "alternatives" : [
+        "Galic Knots",
+        "Garlic Kots"
+      ],
+      "box" : [
+        0.1111,
+        0.4,
+        0.1841,
+        0.0318
+      ],
+      "confidence" : 1,
+      "id" : "DFA41186-6E88-44CF-9D85-97A564F3878B",
+      "order" : 3,
+      "page" : 0,
+      "text" : "Garlic Knots"
+    },
+    {
+      "alternatives" : [
+        "Soa",
+        "Sda"
+      ],
+      "box" : [
+        0.1095,
+        0.4611,
+        0.0636,
+        0.0302
+      ],
+      "confidence" : 1,
+      "id" : "969382F1-7C73-4592-8CA2-D8D67F97B604",
+      "order" : 4,
+      "page" : 0,
+      "text" : "Soda"
+    },
+    {
+      "alternatives" : [
+        "18.00",
+        "1800"
+      ],
+      "box" : [
+        0.8126,
+        0.3418,
+        0.0781,
+        0.0378
+      ],
+      "confidence" : 1,
+      "id" : "4FB2A7D9-1909-4905-9D21-AE9F921253EB",
+      "order" : 5,
+      "page" : 0,
+      "text" : "18.00"
+    },
+    {
+      "alternatives" : [
+        "650",
+        ".50"
+      ],
+      "box" : [
+        0.827,
+        0.4022,
+        0.0635,
+        0.0343
+      ],
+      "confidence" : 1,
+      "id" : "0C023223-B9C8-457D-AC44-6E879D00C593",
+      "order" : 6,
+      "page" : 0,
+      "text" : "6.50"
+    },
+    {
+      "alternatives" : [
+        "250",
+        "2.50"
+      ],
+      "box" : [
+        0.8269,
+        0.4611,
+        0.0636,
+        0.0347
+      ],
+      "confidence" : 1,
+      "id" : "E7A8C574-FAF3-4FC1-A2D7-961EE2F9D58E",
+      "order" : 7,
+      "page" : 0,
+      "text" : "2.50"
+    },
+    {
+      "alternatives" : [
+        "SUBOTAL",
+        "SUBTOAL"
+      ],
+      "box" : [
+        0.1111,
+        0.5768,
+        0.1239,
+        0.0328
+      ],
+      "confidence" : 1,
+      "id" : "D2F94AA0-118E-44B4-B883-4C208942E08C",
+      "order" : 8,
+      "page" : 0,
+      "text" : "SUBTOTAL"
+    },
+    {
+      "alternatives" : [
+        "Tax8%",
+        "Tx 8%"
+      ],
+      "box" : [
+        0.111,
+        0.6382,
+        0.0938,
+        0.0326
+      ],
+      "confidence" : 1,
+      "id" : "D64FCDCF-0F98-49F8-B257-CAC549BE675F",
+      "order" : 9,
+      "page" : 0,
+      "text" : "Tax 8%"
+    },
+    {
+      "alternatives" : [
+        "TOTA",
+        "TOAL"
+      ],
+      "box" : [
+        0.1095,
+        0.6977,
+        0.0794,
+        0.0295
+      ],
+      "confidence" : 1,
+      "id" : "480AC66A-449B-4639-8683-C1A2C739FD1B",
+      "order" : 10,
+      "page" : 0,
+      "text" : "TOTAL"
+    },
+    {
+      "alternatives" : [
+        "27.00",
+        "2700"
+      ],
+      "box" : [
+        0.8125,
+        0.578,
+        0.0767,
+        0.0406
+      ],
+      "confidence" : 1,
+      "id" : "EB5C7DE0-311C-4B67-AF44-D8F8FD274C65",
+      "order" : 11,
+      "page" : 0,
+      "text" : "27.00"
+    },
+    {
+      "alternatives" : [
+        "216",
+        "2.16"
+      ],
+      "box" : [
+        0.827,
+        0.6386,
+        0.0619,
+        0.0364
+      ],
+      "confidence" : 1,
+      "id" : "FEDD4B21-CEB4-44E7-BA09-681175166F6A",
+      "order" : 12,
+      "page" : 0,
+      "text" : "2.16"
+    },
+    {
+      "alternatives" : [
+        "31.16",
+        "3116"
+      ],
+      "box" : [
+        0.8127,
+        0.6977,
+        0.0762,
+        0.0364
+      ],
+      "confidence" : 1,
+      "id" : "9511D654-F47B-47DA-A49E-33A0C14E9A3D",
+      "order" : 13,
+      "page" : 0,
+      "text" : "31.16"
+    }
+  ]
+}

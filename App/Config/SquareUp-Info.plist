@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>edu.ucdavis.ecs191.SquareUp.deeplink</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>squp</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>edu.ucdavis.ecs191.SquareUp.firebase-phone-auth</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>$(SQUAREUP_FIREBASE_APP_URL_SCHEME)</string>
+			</array>
+		</dict>
+	</array>
+	<key>FirebaseAppDelegateProxyEnabled</key>
+	<false/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsLocalNetworking</key>
+		<true/>
+	</dict>
+	<key>SquareUpAPIHost</key>
+	<string>$(SQUAREUP_API_HOST)</string>
+	<key>SquareUpAPIScheme</key>
+	<string>$(SQUAREUP_API_SCHEME)</string>
+	<key>SquareUpAuthMode</key>
+	<string>$(SQUAREUP_AUTH_MODE)</string>
+	<key>SquareUpFirebaseAPIKey</key>
+	<string>$(SQUAREUP_FIREBASE_API_KEY)</string>
+	<key>SquareUpFirebaseGCMSenderID</key>
+	<string>$(SQUAREUP_FIREBASE_GCM_SENDER_ID)</string>
+	<key>SquareUpFirebaseGoogleAppID</key>
+	<string>$(SQUAREUP_FIREBASE_GOOGLE_APP_ID)</string>
+	<key>SquareUpFirebaseIOSAPIKey</key>
+	<string>$(SQUAREUP_FIREBASE_IOS_API_KEY)</string>
+	<key>SquareUpFirebaseProjectID</key>
+	<string>$(SQUAREUP_FIREBASE_PROJECT_ID)</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>remote-notification</string>
+	</array>
+	<key>UILaunchScreen</key>
+	<dict>
+		<key>UIColorName</key>
+		<string>DuskInk</string>
+		<key>UIImageName</key>
+		<string>LaunchLogo</string>
+	</dict>
+</dict>
+</plist>

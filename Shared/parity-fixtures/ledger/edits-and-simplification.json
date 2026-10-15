@@ -1,0 +1,1055 @@
+{
+ "description": "Edits create revisions, delete/restore are idempotent tombstones, a pending seat shares costs, and the plan with simplification off and on.",
+ "currency": "USD",
+ "members": [
+  "riley",
+  "maya",
+  "sam",
+  "lena"
+ ],
+ "accounts": [
+  "riley",
+  "maya",
+  "lena"
+ ],
+ "simplify": false,
+ "steps": [
+  {
+   "actor": "riley",
+   "command": "addExpense",
+   "key": "rent",
+   "expense": {
+    "total": 3000,
+    "payments": [
+     [
+      "riley",
+      3000
+     ]
+    ],
+    "split": {
+     "method": "equal",
+     "participants": [
+      "riley",
+      "maya",
+      "sam"
+     ]
+    }
+   },
+   "expect": {
+    "outcome": "applied",
+    "balances": {
+     "confirmedNets": {
+      "riley": 2000,
+      "maya": -1000,
+      "sam": -1000,
+      "lena": 0
+     },
+     "availableNets": {
+      "riley": 2000,
+      "maya": -1000,
+      "sam": -1000,
+      "lena": 0
+     },
+     "payments": [
+      [
+       "maya",
+       "riley",
+       1000
+      ],
+      [
+       "sam",
+       "riley",
+       1000
+      ]
+     ],
+     "directPaymentCount": 2,
+     "simplifiedPaymentCount": 2,
+     "settlements": [],
+     "expenses": [
+      [
+       "rent",
+       1,
+       false,
+       [
+        [
+         "maya",
+         1000
+        ],
+        [
+         "riley",
+         1000
+        ],
+        [
+         "sam",
+         1000
+        ]
+       ]
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "actor": "maya",
+   "command": "addExpense",
+   "key": "utilities",
+   "expense": {
+    "total": 1500,
+    "payments": [
+     [
+      "maya",
+      1500
+     ]
+    ],
+    "split": {
+     "method": "exact",
+     "amounts": [
+      [
+       "maya",
+       500
+      ],
+      [
+       "sam",
+       500
+      ],
+      [
+       "lena",
+       500
+      ]
+     ]
+    }
+   },
+   "expect": {
+    "outcome": "applied",
+    "balances": {
+     "confirmedNets": {
+      "riley": 2000,
+      "maya": 0,
+      "sam": -1500,
+      "lena": -500
+     },
+     "availableNets": {
+      "riley": 2000,
+      "maya": 0,
+      "sam": -1500,
+      "lena": -500
+     },
+     "payments": [
+      [
+       "maya",
+       "riley",
+       1000
+      ],
+      [
+       "sam",
+       "riley",
+       1000
+      ],
+      [
+       "sam",
+       "maya",
+       500
+      ],
+      [
+       "lena",
+       "maya",
+       500
+      ]
+     ],
+     "directPaymentCount": 4,
+     "simplifiedPaymentCount": 2,
+     "settlements": [],
+     "expenses": [
+      [
+       "rent",
+       1,
+       false,
+       [
+        [
+         "maya",
+         1000
+        ],
+        [
+         "riley",
+         1000
+        ],
+        [
+         "sam",
+         1000
+        ]
+       ]
+      ],
+      [
+       "utilities",
+       1,
+       false,
+       [
+        [
+         "lena",
+         500
+        ],
+        [
+         "maya",
+         500
+        ],
+        [
+         "sam",
+         500
+        ]
+       ]
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "actor": "lena",
+   "command": "addExpense",
+   "key": "snacks",
+   "expense": {
+    "total": 900,
+    "payments": [
+     [
+      "lena",
+      900
+     ]
+    ],
+    "split": {
+     "method": "equal",
+     "participants": [
+      "riley",
+      "lena"
+     ]
+    }
+   },
+   "expect": {
+    "outcome": "applied",
+    "balances": {
+     "confirmedNets": {
+      "riley": 1550,
+      "maya": 0,
+      "sam": -1500,
+      "lena": -50
+     },
+     "availableNets": {
+      "riley": 1550,
+      "maya": 0,
+      "sam": -1500,
+      "lena": -50
+     },
+     "payments": [
+      [
+       "maya",
+       "riley",
+       1000
+      ],
+      [
+       "sam",
+       "riley",
+       1000
+      ],
+      [
+       "riley",
+       "lena",
+       450
+      ],
+      [
+       "sam",
+       "maya",
+       500
+      ],
+      [
+       "lena",
+       "maya",
+       500
+      ]
+     ],
+     "directPaymentCount": 5,
+     "simplifiedPaymentCount": 2,
+     "settlements": [],
+     "expenses": [
+      [
+       "rent",
+       1,
+       false,
+       [
+        [
+         "maya",
+         1000
+        ],
+        [
+         "riley",
+         1000
+        ],
+        [
+         "sam",
+         1000
+        ]
+       ]
+      ],
+      [
+       "snacks",
+       1,
+       false,
+       [
+        [
+         "lena",
+         450
+        ],
+        [
+         "riley",
+         450
+        ]
+       ]
+      ],
+      [
+       "utilities",
+       1,
+       false,
+       [
+        [
+         "lena",
+         500
+        ],
+        [
+         "maya",
+         500
+        ],
+        [
+         "sam",
+         500
+        ]
+       ]
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "actor": "riley",
+   "command": "updateExpense",
+   "key": "rent",
+   "expense": {
+    "total": 4501,
+    "payments": [
+     [
+      "riley",
+      4501
+     ]
+    ],
+    "split": {
+     "method": "equal",
+     "participants": [
+      "riley",
+      "maya",
+      "sam"
+     ]
+    }
+   },
+   "expect": {
+    "outcome": "applied",
+    "balances": {
+     "confirmedNets": {
+      "riley": 2550,
+      "maya": -500,
+      "sam": -2000,
+      "lena": -50
+     },
+     "availableNets": {
+      "riley": 2550,
+      "maya": -500,
+      "sam": -2000,
+      "lena": -50
+     },
+     "payments": [
+      [
+       "maya",
+       "riley",
+       1500
+      ],
+      [
+       "sam",
+       "riley",
+       1500
+      ],
+      [
+       "riley",
+       "lena",
+       450
+      ],
+      [
+       "sam",
+       "maya",
+       500
+      ],
+      [
+       "lena",
+       "maya",
+       500
+      ]
+     ],
+     "directPaymentCount": 5,
+     "simplifiedPaymentCount": 3,
+     "settlements": [],
+     "expenses": [
+      [
+       "rent",
+       2,
+       false,
+       [
+        [
+         "maya",
+         1500
+        ],
+        [
+         "riley",
+         1501
+        ],
+        [
+         "sam",
+         1500
+        ]
+       ]
+      ],
+      [
+       "snacks",
+       1,
+       false,
+       [
+        [
+         "lena",
+         450
+        ],
+        [
+         "riley",
+         450
+        ]
+       ]
+      ],
+      [
+       "utilities",
+       1,
+       false,
+       [
+        [
+         "lena",
+         500
+        ],
+        [
+         "maya",
+         500
+        ],
+        [
+         "sam",
+         500
+        ]
+       ]
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "actor": "maya",
+   "command": "deleteExpense",
+   "key": "utilities",
+   "expect": {
+    "outcome": "applied",
+    "balances": {
+     "confirmedNets": {
+      "riley": 2550,
+      "maya": -1500,
+      "sam": -1500,
+      "lena": 450
+     },
+     "availableNets": {
+      "riley": 2550,
+      "maya": -1500,
+      "sam": -1500,
+      "lena": 450
+     },
+     "payments": [
+      [
+       "maya",
+       "riley",
+       1500
+      ],
+      [
+       "sam",
+       "riley",
+       1500
+      ],
+      [
+       "riley",
+       "lena",
+       450
+      ]
+     ],
+     "directPaymentCount": 3,
+     "simplifiedPaymentCount": 3,
+     "settlements": [],
+     "expenses": [
+      [
+       "rent",
+       2,
+       false,
+       [
+        [
+         "maya",
+         1500
+        ],
+        [
+         "riley",
+         1501
+        ],
+        [
+         "sam",
+         1500
+        ]
+       ]
+      ],
+      [
+       "snacks",
+       1,
+       false,
+       [
+        [
+         "lena",
+         450
+        ],
+        [
+         "riley",
+         450
+        ]
+       ]
+      ],
+      [
+       "utilities",
+       1,
+       true,
+       [
+        [
+         "lena",
+         500
+        ],
+        [
+         "maya",
+         500
+        ],
+        [
+         "sam",
+         500
+        ]
+       ]
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "actor": "maya",
+   "command": "deleteExpense",
+   "key": "utilities",
+   "expect": {
+    "outcome": "expense_deleted",
+    "balances": {
+     "confirmedNets": {
+      "riley": 2550,
+      "maya": -1500,
+      "sam": -1500,
+      "lena": 450
+     },
+     "availableNets": {
+      "riley": 2550,
+      "maya": -1500,
+      "sam": -1500,
+      "lena": 450
+     },
+     "payments": [
+      [
+       "maya",
+       "riley",
+       1500
+      ],
+      [
+       "sam",
+       "riley",
+       1500
+      ],
+      [
+       "riley",
+       "lena",
+       450
+      ]
+     ],
+     "directPaymentCount": 3,
+     "simplifiedPaymentCount": 3,
+     "settlements": [],
+     "expenses": [
+      [
+       "rent",
+       2,
+       false,
+       [
+        [
+         "maya",
+         1500
+        ],
+        [
+         "riley",
+         1501
+        ],
+        [
+         "sam",
+         1500
+        ]
+       ]
+      ],
+      [
+       "snacks",
+       1,
+       false,
+       [
+        [
+         "lena",
+         450
+        ],
+        [
+         "riley",
+         450
+        ]
+       ]
+      ],
+      [
+       "utilities",
+       1,
+       true,
+       [
+        [
+         "lena",
+         500
+        ],
+        [
+         "maya",
+         500
+        ],
+        [
+         "sam",
+         500
+        ]
+       ]
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "actor": "maya",
+   "command": "restoreExpense",
+   "key": "utilities",
+   "expect": {
+    "outcome": "applied",
+    "balances": {
+     "confirmedNets": {
+      "riley": 2550,
+      "maya": -500,
+      "sam": -2000,
+      "lena": -50
+     },
+     "availableNets": {
+      "riley": 2550,
+      "maya": -500,
+      "sam": -2000,
+      "lena": -50
+     },
+     "payments": [
+      [
+       "maya",
+       "riley",
+       1500
+      ],
+      [
+       "sam",
+       "riley",
+       1500
+      ],
+      [
+       "riley",
+       "lena",
+       450
+      ],
+      [
+       "sam",
+       "maya",
+       500
+      ],
+      [
+       "lena",
+       "maya",
+       500
+      ]
+     ],
+     "directPaymentCount": 5,
+     "simplifiedPaymentCount": 3,
+     "settlements": [],
+     "expenses": [
+      [
+       "rent",
+       2,
+       false,
+       [
+        [
+         "maya",
+         1500
+        ],
+        [
+         "riley",
+         1501
+        ],
+        [
+         "sam",
+         1500
+        ]
+       ]
+      ],
+      [
+       "snacks",
+       1,
+       false,
+       [
+        [
+         "lena",
+         450
+        ],
+        [
+         "riley",
+         450
+        ]
+       ]
+      ],
+      [
+       "utilities",
+       1,
+       false,
+       [
+        [
+         "lena",
+         500
+        ],
+        [
+         "maya",
+         500
+        ],
+        [
+         "sam",
+         500
+        ]
+       ]
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "actor": "riley",
+   "command": "setSimplification",
+   "enabled": true,
+   "expect": {
+    "outcome": "applied",
+    "balances": {
+     "confirmedNets": {
+      "riley": 2550,
+      "maya": -500,
+      "sam": -2000,
+      "lena": -50
+     },
+     "availableNets": {
+      "riley": 2550,
+      "maya": -500,
+      "sam": -2000,
+      "lena": -50
+     },
+     "payments": [
+      [
+       "maya",
+       "riley",
+       500
+      ],
+      [
+       "sam",
+       "riley",
+       2000
+      ],
+      [
+       "lena",
+       "riley",
+       50
+      ]
+     ],
+     "directPaymentCount": 5,
+     "simplifiedPaymentCount": 3,
+     "settlements": [],
+     "expenses": [
+      [
+       "rent",
+       2,
+       false,
+       [
+        [
+         "maya",
+         1500
+        ],
+        [
+         "riley",
+         1501
+        ],
+        [
+         "sam",
+         1500
+        ]
+       ]
+      ],
+      [
+       "snacks",
+       1,
+       false,
+       [
+        [
+         "lena",
+         450
+        ],
+        [
+         "riley",
+         450
+        ]
+       ]
+      ],
+      [
+       "utilities",
+       1,
+       false,
+       [
+        [
+         "lena",
+         500
+        ],
+        [
+         "maya",
+         500
+        ],
+        [
+         "sam",
+         500
+        ]
+       ]
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "actor": "riley",
+   "command": "setSimplification",
+   "enabled": true,
+   "expect": {
+    "outcome": "noop",
+    "balances": {
+     "confirmedNets": {
+      "riley": 2550,
+      "maya": -500,
+      "sam": -2000,
+      "lena": -50
+     },
+     "availableNets": {
+      "riley": 2550,
+      "maya": -500,
+      "sam": -2000,
+      "lena": -50
+     },
+     "payments": [
+      [
+       "maya",
+       "riley",
+       500
+      ],
+      [
+       "sam",
+       "riley",
+       2000
+      ],
+      [
+       "lena",
+       "riley",
+       50
+      ]
+     ],
+     "directPaymentCount": 5,
+     "simplifiedPaymentCount": 3,
+     "settlements": [],
+     "expenses": [
+      [
+       "rent",
+       2,
+       false,
+       [
+        [
+         "maya",
+         1500
+        ],
+        [
+         "riley",
+         1501
+        ],
+        [
+         "sam",
+         1500
+        ]
+       ]
+      ],
+      [
+       "snacks",
+       1,
+       false,
+       [
+        [
+         "lena",
+         450
+        ],
+        [
+         "riley",
+         450
+        ]
+       ]
+      ],
+      [
+       "utilities",
+       1,
+       false,
+       [
+        [
+         "lena",
+         500
+        ],
+        [
+         "maya",
+         500
+        ],
+        [
+         "sam",
+         500
+        ]
+       ]
+      ]
+     ]
+    }
+   }
+  },
+  {
+   "actor": "riley",
+   "command": "setSimplification",
+   "enabled": false,
+   "expect": {
+    "outcome": "applied",
+    "balances": {
+     "confirmedNets": {
+      "riley": 2550,
+      "maya": -500,
+      "sam": -2000,
+      "lena": -50
+     },
+     "availableNets": {
+      "riley": 2550,
+      "maya": -500,
+      "sam": -2000,
+      "lena": -50
+     },
+     "payments": [
+      [
+       "maya",
+       "riley",
+       1500
+      ],
+      [
+       "sam",
+       "riley",
+       1500
+      ],
+      [
+       "riley",
+       "lena",
+       450
+      ],
+      [
+       "sam",
+       "maya",
+       500
+      ],
+      [
+       "lena",
+       "maya",
+       500
+      ]
+     ],
+     "directPaymentCount": 5,
+     "simplifiedPaymentCount": 3,
+     "settlements": [],
+     "expenses": [
+      [
+       "rent",
+       2,
+       false,
+       [
+        [
+         "maya",
+         1500
+        ],
+        [
+         "riley",
+         1501
+        ],
+        [
+         "sam",
+         1500
+        ]
+       ]
+      ],
+      [
+       "snacks",
+       1,
+       false,
+       [
+        [
+         "lena",
+         450
+        ],
+        [
+         "riley",
+         450
+        ]
+       ]
+      ],
+      [
+       "utilities",
+       1,
+       false,
+       [
+        [
+         "lena",
+         500
+        ],
+        [
+         "maya",
+         500
+        ],
+        [
+         "sam",
+         500
+        ]
+       ]
+      ]
+     ]
+    }
+   }
+  }
+ ]
+}

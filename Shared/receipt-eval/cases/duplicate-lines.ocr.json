@@ -1,0 +1,250 @@
+{
+  "id" : "duplicate-lines",
+  "likelyCurrency" : "USD",
+  "ocrMilliseconds" : [
+    83
+  ],
+  "pages" : [
+    "duplicate-lines-p1.jpg"
+  ],
+  "regions" : [
+    {
+      "alternatives" : [
+        "CORNER BEAN ROASTER",
+        "CORNER BEAN ROASTES"
+      ],
+      "box" : [
+        0.3042,
+        0.1602,
+        0.3917,
+        0.0545
+      ],
+      "confidence" : 1,
+      "id" : "76050605-3B1E-4682-969C-34AE0762C0DA",
+      "order" : 0,
+      "page" : 0,
+      "text" : "CORNER BEAN ROASTERS"
+    },
+    {
+      "alternatives" : [
+        "09/11/202608:03",
+        "09/1/2026 08:03"
+      ],
+      "box" : [
+        0.1111,
+        0.2841,
+        0.2444,
+        0.0318
+      ],
+      "confidence" : 1,
+      "id" : "0E7CA224-863E-4E6E-B0E2-FCECB2C5F0A8",
+      "order" : 1,
+      "page" : 0,
+      "text" : "09/11/2026 08:03"
+    },
+    {
+      "alternatives" : [
+        "Drip Coffe",
+        "Dri Coffee"
+      ],
+      "box" : [
+        0.1109,
+        0.3392,
+        0.1702,
+        0.0421
+      ],
+      "confidence" : 1,
+      "id" : "A8AC07BE-0DB9-4980-B6E0-33BAA5C2DA04",
+      "order" : 2,
+      "page" : 0,
+      "text" : "Drip Coffee"
+    },
+    {
+      "alternatives" : [
+        "Drip Coffe",
+        "Dip Coffee"
+      ],
+      "box" : [
+        0.1108,
+        0.3975,
+        0.1704,
+        0.0437
+      ],
+      "confidence" : 1,
+      "id" : "D3CDEC3E-1FBA-41F0-B59B-E898B2AA9113",
+      "order" : 3,
+      "page" : 0,
+      "text" : "Drip Coffee"
+    },
+    {
+      "alternatives" : [
+        "Blueberry Muffi",
+        "Bluebery Muffin"
+      ],
+      "box" : [
+        0.1109,
+        0.458,
+        0.2449,
+        0.0415
+      ],
+      "confidence" : 1,
+      "id" : "8632AA05-D46F-4B1E-8FE4-D1005CEE2026",
+      "order" : 4,
+      "page" : 0,
+      "text" : "Blueberry Muffin"
+    },
+    {
+      "alternatives" : [
+        "300",
+        "3.00"
+      ],
+      "box" : [
+        0.8268,
+        0.3412,
+        0.064,
+        0.0382
+      ],
+      "confidence" : 1,
+      "id" : "8598359E-3D61-48AF-BE62-23CC0C36EEF9",
+      "order" : 5,
+      "page" : 0,
+      "text" : "3.00"
+    },
+    {
+      "alternatives" : [
+        "300",
+        "3.00"
+      ],
+      "box" : [
+        0.8269,
+        0.4008,
+        0.0638,
+        0.0378
+      ],
+      "confidence" : 1,
+      "id" : "BF140B63-EBC1-4386-9FDD-204B47720805",
+      "order" : 6,
+      "page" : 0,
+      "text" : "3.00"
+    },
+    {
+      "alternatives" : [
+        "375",
+        "3.75"
+      ],
+      "box" : [
+        0.827,
+        0.4614,
+        0.0619,
+        0.0364
+      ],
+      "confidence" : 1,
+      "id" : "5C1A233F-EBC1-404D-B5F1-294AAECC831D",
+      "order" : 7,
+      "page" : 0,
+      "text" : "3.75"
+    },
+    {
+      "alternatives" : [
+        "SUBTOTA",
+        "SUBOTAL"
+      ],
+      "box" : [
+        0.111,
+        0.5765,
+        0.124,
+        0.0334
+      ],
+      "confidence" : 1,
+      "id" : "7018FDD3-FF6F-482D-A7C2-EDB432E418F4",
+      "order" : 8,
+      "page" : 0,
+      "text" : "SUBTOTAL"
+    },
+    {
+      "alternatives" : [
+        "Тах",
+        "ax"
+      ],
+      "box" : [
+        0.1111,
+        0.6386,
+        0.0476,
+        0.0295
+      ],
+      "confidence" : 1,
+      "id" : "95C8ED2C-7A7B-480B-B9A9-55551A9F5E33",
+      "order" : 9,
+      "page" : 0,
+      "text" : "Tax"
+    },
+    {
+      "alternatives" : [
+        "TOTA",
+        "OTAL"
+      ],
+      "box" : [
+        0.1095,
+        0.6976,
+        0.0794,
+        0.0298
+      ],
+      "confidence" : 1,
+      "id" : "A79D8085-9E78-43DE-A1B3-065B6AF4E1A8",
+      "order" : 10,
+      "page" : 0,
+      "text" : "TOTAL"
+    },
+    {
+      "alternatives" : [
+        "975",
+        "9.75"
+      ],
+      "box" : [
+        0.8268,
+        0.579,
+        0.0622,
+        0.0351
+      ],
+      "confidence" : 1,
+      "id" : "7C17418A-DF14-4123-A70A-54A36CA53CED",
+      "order" : 11,
+      "page" : 0,
+      "text" : "9.75"
+    },
+    {
+      "alternatives" : [
+        "082",
+        "0.82"
+      ],
+      "box" : [
+        0.8269,
+        0.6382,
+        0.0622,
+        0.0372
+      ],
+      "confidence" : 1,
+      "id" : "CB7E1C7C-23FF-42B2-8156-8D47320532A8",
+      "order" : 12,
+      "page" : 0,
+      "text" : "0.82"
+    },
+    {
+      "alternatives" : [
+        "1057",
+        "10.57"
+      ],
+      "box" : [
+        0.8126,
+        0.6972,
+        0.0764,
+        0.035
+      ],
+      "confidence" : 1,
+      "id" : "23A7E58E-F6BB-4FCF-9A2E-FD4A4FA8DB8A",
+      "order" : 13,
+      "page" : 0,
+      "text" : "10.57"
+    }
+  ]
+}

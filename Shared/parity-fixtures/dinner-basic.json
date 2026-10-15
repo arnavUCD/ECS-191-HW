@@ -1,0 +1,439 @@
+{
+ "description": "Sample dinner: whole claims, three-way shares, proportional tax/tip/discount, stale revision, idempotent finalize.",
+ "currency": "USD",
+ "participants": [
+  "riley",
+  "maya",
+  "alex",
+  "priya"
+ ],
+ "payer": "riley",
+ "receipt": {
+  "merchant": "Fernwood Supper Club",
+  "date": "2026-09-24",
+  "currency": "USD",
+  "total": 10404,
+  "items": [
+   {
+    "key": "fries",
+    "name": "Truffle Fries",
+    "lineTotal": 950
+   },
+   {
+    "key": "pizza",
+    "name": "Margherita Pizza",
+    "lineTotal": 1600,
+    "quantity": 2,
+    "unitPrice": 800
+   },
+   {
+    "key": "salad",
+    "name": "Caesar Salad",
+    "lineTotal": 1125
+   },
+   {
+    "key": "lemonade",
+    "name": "Lemonade",
+    "lineTotal": 700,
+    "quantity": 2,
+    "unitPrice": 350
+   },
+   {
+    "key": "risotto",
+    "name": "Mushroom Risotto",
+    "lineTotal": 1875
+   },
+   {
+    "key": "nachos",
+    "name": "Shared Nachos",
+    "lineTotal": 1200
+   },
+   {
+    "key": "tiramisu",
+    "name": "Tiramisu",
+    "lineTotal": 850
+   },
+   {
+    "key": "tea",
+    "name": "Iced Tea",
+    "lineTotal": 325
+   }
+  ],
+  "charges": [
+   {
+    "key": "discount",
+    "kind": "discount",
+    "label": "Happy Hour Discount",
+    "amount": -400,
+    "allocation": {
+     "kind": "proportional"
+    }
+   },
+   {
+    "key": "tax",
+    "kind": "tax",
+    "label": "Sales Tax 8.25%",
+    "amount": 679,
+    "allocation": {
+     "kind": "proportional"
+    }
+   },
+   {
+    "key": "tip",
+    "kind": "tip",
+    "label": "Tip",
+    "amount": 1500,
+    "allocation": {
+     "kind": "proportional"
+    }
+   }
+  ]
+ },
+ "steps": [
+  {
+   "actor": "riley",
+   "command": "claim",
+   "payload": {
+    "item": "fries",
+    "request": "share"
+   },
+   "expect": {
+    "applied": true
+   }
+  },
+  {
+   "actor": "maya",
+   "command": "claim",
+   "payload": {
+    "item": "fries",
+    "request": "share"
+   },
+   "expect": {
+    "applied": true
+   }
+  },
+  {
+   "actor": "riley",
+   "command": "claim",
+   "payload": {
+    "item": "risotto",
+    "request": "mine"
+   },
+   "expect": {
+    "applied": true
+   }
+  },
+  {
+   "actor": "maya",
+   "command": "claim",
+   "payload": {
+    "item": "lemonade",
+    "request": "mine"
+   },
+   "expect": {
+    "applied": true
+   }
+  },
+  {
+   "actor": "alex",
+   "command": "claim",
+   "payload": {
+    "item": "lemonade",
+    "request": "mine"
+   },
+   "expect": {
+    "error": "item_already_claimed"
+   }
+  },
+  {
+   "actor": "alex",
+   "command": "claim",
+   "payload": {
+    "item": "pizza",
+    "request": "mine"
+   },
+   "expect": {
+    "applied": true
+   }
+  },
+  {
+   "actor": "alex",
+   "command": "claim",
+   "payload": {
+    "item": "pizza",
+    "request": "mine"
+   },
+   "expect": {
+    "applied": false
+   }
+  },
+  {
+   "actor": "alex",
+   "command": "claim",
+   "payload": {
+    "item": "nachos",
+    "request": "share"
+   },
+   "expect": {
+    "applied": true
+   }
+  },
+  {
+   "actor": "priya",
+   "command": "claim",
+   "payload": {
+    "item": "nachos",
+    "request": "share"
+   },
+   "expect": {
+    "applied": true
+   }
+  },
+  {
+   "actor": "riley",
+   "command": "claim",
+   "payload": {
+    "item": "nachos",
+    "request": "share"
+   },
+   "expect": {
+    "applied": true
+   }
+  },
+  {
+   "actor": "priya",
+   "command": "claim",
+   "payload": {
+    "item": "salad",
+    "request": "mine"
+   },
+   "expect": {
+    "applied": true
+   }
+  },
+  {
+   "actor": "maya",
+   "command": "claim",
+   "payload": {
+    "item": "tiramisu",
+    "request": "mine"
+   },
+   "expect": {
+    "error": "revision_conflict"
+   },
+   "expectedRevision": "stale"
+  },
+  {
+   "actor": "priya",
+   "command": "claim",
+   "payload": {
+    "item": "tiramisu",
+    "request": "mine"
+   },
+   "expect": {
+    "applied": true
+   }
+  },
+  {
+   "actor": "alex",
+   "command": "claim",
+   "payload": {
+    "item": "tea",
+    "request": "mine"
+   },
+   "expect": {
+    "applied": true
+   }
+  },
+  {
+   "actor": "riley",
+   "command": "finalize",
+   "payload": {},
+   "expect": {
+    "error": "not_allowed_in_state"
+   }
+  },
+  {
+   "actor": "riley",
+   "command": "transition",
+   "payload": {
+    "move": "requestFinalReview"
+   },
+   "expect": {
+    "applied": true
+   }
+  },
+  {
+   "actor": "riley",
+   "command": "finalize",
+   "payload": {},
+   "expect": {
+    "applied": true
+   }
+  },
+  {
+   "actor": "riley",
+   "command": "finalize",
+   "payload": {},
+   "expect": {
+    "applied": false
+   }
+  },
+  {
+   "actor": "maya",
+   "command": "claim",
+   "payload": {
+    "item": "tea",
+    "request": "share"
+   },
+   "expect": {
+    "error": "room_finalized"
+   }
+  }
+ ],
+ "expect": {
+  "state": "finalized",
+  "remaining": 0,
+  "participants": {
+   "riley": {
+    "items": 2750,
+    "tax": 216,
+    "tip": 478,
+    "fees": 0,
+    "discounts": -128,
+    "adjustments": 0,
+    "total": 3316
+   },
+   "maya": {
+    "items": 1175,
+    "tax": 93,
+    "tip": 205,
+    "fees": 0,
+    "discounts": -54,
+    "adjustments": 0,
+    "total": 1419
+   },
+   "alex": {
+    "items": 2325,
+    "tax": 183,
+    "tip": 404,
+    "fees": 0,
+    "discounts": -108,
+    "adjustments": 0,
+    "total": 2804
+   },
+   "priya": {
+    "items": 2375,
+    "tax": 187,
+    "tip": 413,
+    "fees": 0,
+    "discounts": -110,
+    "adjustments": 0,
+    "total": 2865
+   }
+  },
+  "items": {
+   "fries": {
+    "status": "allocated",
+    "shares": {
+     "riley": 475,
+     "maya": 475
+    },
+    "rounding": []
+   },
+   "pizza": {
+    "status": "allocated",
+    "shares": {
+     "alex": 1600
+    },
+    "rounding": []
+   },
+   "salad": {
+    "status": "allocated",
+    "shares": {
+     "priya": 1125
+    },
+    "rounding": []
+   },
+   "lemonade": {
+    "status": "allocated",
+    "shares": {
+     "maya": 700
+    },
+    "rounding": []
+   },
+   "risotto": {
+    "status": "allocated",
+    "shares": {
+     "riley": 1875
+    },
+    "rounding": []
+   },
+   "nachos": {
+    "status": "allocated",
+    "shares": {
+     "riley": 400,
+     "alex": 400,
+     "priya": 400
+    },
+    "rounding": []
+   },
+   "tiramisu": {
+    "status": "allocated",
+    "shares": {
+     "priya": 850
+    },
+    "rounding": []
+   },
+   "tea": {
+    "status": "allocated",
+    "shares": {
+     "alex": 325
+    },
+    "rounding": []
+   }
+  },
+  "charges": {
+   "discount": {
+    "status": "allocated",
+    "shares": {
+     "riley": -128,
+     "maya": -54,
+     "alex": -108,
+     "priya": -110
+    },
+    "rounding": [
+     "alex",
+     "riley"
+    ]
+   },
+   "tax": {
+    "status": "allocated",
+    "shares": {
+     "riley": 216,
+     "maya": 93,
+     "alex": 183,
+     "priya": 187
+    },
+    "rounding": [
+     "maya",
+     "priya"
+    ]
+   },
+   "tip": {
+    "status": "allocated",
+    "shares": {
+     "riley": 478,
+     "maya": 205,
+     "alex": 404,
+     "priya": 413
+    },
+    "rounding": [
+     "maya"
+    ]
+   }
+  },
+  "readiness": [],
+  "finalized": true
+ }
+}

@@ -1,0 +1,57 @@
+[project]
+name = "squareup-server"
+version = "0.5.0"
+description = "Square Up API: multi-device Live Receipt Rooms (milestone 4) and hybrid receipt intelligence (milestone 5)"
+requires-python = ">=3.13"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# Live Claude tests never run by default; select them explicitly with `-m live` (needs ANTHROPIC_API_KEY).
+addopts = "-p no:cacheprovider -m 'not live'"
+markers = ["live: calls the real Claude API with fictional receipts (opt-in, paid)"]
+filterwarnings = ["error"]
+
+[tool.ruff]
+line-length = 140
+target-version = "py313"
+extend-exclude = [".venv"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "S", "SIM", "RUF", "PL", "C4", "PT", "RET"]
+ignore = [
+  "PLR0911", "PLR0912", "PLR0913", "PLR0915", "PLR2004",  # domain dispatch and validation read better inline
+  "RUF001", "RUF002", "RUF003",                         # typographic punctuation in user-facing copy
+  "PLC0415",                                            # deliberate lazy imports: Google SDKs load only when configured
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101", "S105", "S106", "PLC0415", "PT018", "PT011"]
+
+[tool.mypy]
+python_version = "3.13"
+strict = true
+warn_unreachable = true
+exclude = ["^\\.venv/"]
+
+[[tool.mypy.overrides]]
+module = ["google.*", "cachecontrol.*"]
+ignore_missing_imports = true
+
+# Thin adapters over Google SDKs whose public functions are unannotated.
+[[tool.mypy.overrides]]
+module = ["squareup.storage.datastore_store", "squareup.storage.blobs", "squareup.auth.identity", "squareup.intelligence.secret_manager"]
+disallow_untyped_calls = false
+warn_return_any = false
+
+# Flask's test client types responses' JSON as optional; tests assert on it directly.
+[[tool.mypy.overrides]]
+module = ["tests.*"]
+disable_error_code = ["index", "operator", "union-attr"]
+
+# Google's API error classes are unannotated; the Secret Manager tests construct them.
+[[tool.mypy.overrides]]
+module = ["tests.test_secret_manager"]
+disallow_untyped_calls = false
+
+[tool.bandit]
+exclude_dirs = [".venv", "tests"]

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- The one parent app this App Clip belongs to (exactly one entry). -->
+	<key>com.apple.developer.parent-application-identifiers</key>
+	<array>
+		<string>$(AppIdentifierPrefix)$(SQUAREUP_APP_BUNDLE_ID)</string>
+	</array>
+	<!--
+	Associated Domains are added only once the paid Apple Developer Program team exists (they can't
+	be signed without it). Then add, to BOTH this file and the full app's entitlements:
+	  <key>com.apple.developer.associated-domains</key>
+	  <array><string>appclips:$(SQUAREUP_INVOCATION_DOMAIN)</string></array>   (App Clip)
+	  <array><string>applinks:$(SQUAREUP_INVOCATION_DOMAIN)</string>
+	         <string>appclips:$(SQUAREUP_INVOCATION_DOMAIN)</string></array>   (full app)
+	See HW/App/APP_CLIP_ACTIVATION.md.
+	-->
+</dict>
+</plist>

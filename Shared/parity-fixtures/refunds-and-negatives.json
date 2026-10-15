@@ -1,0 +1,206 @@
+{
+ "description": "Refund lines divide by magnitude, a discount assigned to someone without items makes their total negative, payer-only confirmation.",
+ "currency": "USD",
+ "participants": [
+  "host",
+  "ana",
+  "ben"
+ ],
+ "payer": "host",
+ "receipt": {
+  "merchant": "Corner Market",
+  "date": "2026-09-05",
+  "currency": "USD",
+  "total": 1001,
+  "items": [
+   {
+    "key": "milk",
+    "name": "Oat Milk",
+    "lineTotal": 1500
+   },
+   {
+    "key": "ret",
+    "name": "RETURN Oat Milk",
+    "lineTotal": -500,
+    "isRefund": true
+   },
+   {
+    "key": "promo",
+    "name": "Promo Sticker",
+    "lineTotal": 0
+   }
+  ],
+  "charges": [
+   {
+    "key": "disc",
+    "kind": "discount",
+    "label": "Coupon",
+    "amount": -100,
+    "allocation": {
+     "kind": "proportional"
+    }
+   },
+   {
+    "key": "round",
+    "kind": "adjustment",
+    "label": "Rounding",
+    "amount": 101,
+    "allocation": {
+     "kind": "equal",
+     "members": null
+    }
+   }
+  ]
+ },
+ "steps": [
+  {
+   "actor": "ana",
+   "command": "claim",
+   "payload": {
+    "item": "promo",
+    "request": "mine"
+   },
+   "expect": {
+    "error": "item_not_claimable"
+   }
+  },
+  {
+   "actor": "host",
+   "command": "setItemSplit",
+   "payload": {
+    "item": "milk",
+    "split": {
+     "kind": "equal",
+     "members": [
+      "host"
+     ]
+    }
+   },
+   "expect": {
+    "applied": true
+   }
+  },
+  {
+   "actor": "host",
+   "command": "setItemSplit",
+   "payload": {
+    "item": "ret",
+    "split": {
+     "kind": "equal",
+     "members": [
+      "host",
+      "ana",
+      "ben"
+     ]
+    }
+   },
+   "expect": {
+    "applied": true
+   }
+  },
+  {
+   "actor": "host",
+   "command": "setChargeAllocation",
+   "payload": {
+    "charge": "disc",
+    "allocation": {
+     "kind": "exact",
+     "amounts": [
+      [
+       "ben",
+       -100
+      ]
+     ]
+    }
+   },
+   "expect": {
+    "applied": true
+   }
+  }
+ ],
+ "expect": {
+  "state": "open",
+  "remaining": 0,
+  "participants": {
+   "host": {
+    "items": 1333,
+    "tax": 0,
+    "tip": 0,
+    "fees": 0,
+    "discounts": 0,
+    "adjustments": 34,
+    "total": 1367
+   },
+   "ana": {
+    "items": -167,
+    "tax": 0,
+    "tip": 0,
+    "fees": 0,
+    "discounts": 0,
+    "adjustments": 34,
+    "total": -133
+   },
+   "ben": {
+    "items": -166,
+    "tax": 0,
+    "tip": 0,
+    "fees": 0,
+    "discounts": -100,
+    "adjustments": 33,
+    "total": -233
+   }
+  },
+  "items": {
+   "milk": {
+    "status": "allocated",
+    "shares": {
+     "host": 1500
+    },
+    "rounding": []
+   },
+   "ret": {
+    "status": "allocated",
+    "shares": {
+     "host": -167,
+     "ana": -167,
+     "ben": -166
+    },
+    "rounding": [
+     "ana",
+     "host"
+    ]
+   },
+   "promo": {
+    "status": "note",
+    "shares": {},
+    "rounding": []
+   }
+  },
+  "charges": {
+   "disc": {
+    "status": "allocated",
+    "shares": {
+     "ben": -100
+    },
+    "rounding": []
+   },
+   "round": {
+    "status": "allocated",
+    "shares": {
+     "host": 34,
+     "ana": 34,
+     "ben": 33
+    },
+    "rounding": [
+     "ana",
+     "host"
+    ]
+   }
+  },
+  "readiness": [
+   "negativeParticipantTotal:ana",
+   "negativeParticipantTotal:ben"
+  ],
+  "finalized": false
+ }
+}

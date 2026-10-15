@@ -1,0 +1,36 @@
+// Square Up's client configuration: the defaults every checkout builds with, so a fresh clone
+// runs the full app against production (sign-in, Demo Mode, shared groups, live rooms, AI receipt
+// reading) with no extra setup.
+//
+// Everything here is a CLIENT identifier that ships inside every copy of the app: the API host and
+// Firebase's public client keys and IDs (they identify the Firebase project; they don't grant
+// access). They are committed on purpose. No secret belongs in this file or anywhere in the app:
+// the Anthropic key lives in Google Secret Manager, server settings in server/deploy.env (never
+// committed), and access is decided by the server (Firebase ID tokens, server-issued demo and guest
+// credentials). Restrict the Firebase/Google API keys in Google Cloud to this app's bundle ID and the
+// APIs it uses (DEPENDENCIES.md, "Client configuration").
+//
+// To point a build somewhere else (a local server, another Firebase project), override any of
+// these in Config/Remote.local.xcconfig — optional and gitignored; see Remote.local.xcconfig.example.
+//
+// xcconfig treats "//" as a comment, so the API origin is split into scheme and host.
+
+SQUAREUP_API_SCHEME = https
+SQUAREUP_API_HOST = square-up-ecs-191.uw.r.appspot.com
+// Firebase Web API key: identifies the Firebase project to Identity Toolkit (email sign-in).
+SQUAREUP_FIREBASE_API_KEY = AIzaSyAzEA_2MIvJgt6Z_n9M-StKfXh-wrq8LHM
+// firebase | development. "development" sends `Dev <install id>` and only works against a
+// server started with SQUAREUP_ALLOW_DEV_AUTH=1; Release builds ignore it.
+SQUAREUP_AUTH_MODE = firebase
+
+// Phone sign-in (Firebase phone authentication, PHONE_AUTH_SETUP.md): the iOS app's values from its
+// GoogleService-Info.plist (GOOGLE_APP_ID, GCM_SENDER_ID, PROJECT_ID, API_KEY). The URL scheme is
+// the encoded app ID ("app-" + GOOGLE_APP_ID with ":" replaced by "-"), used for reCAPTCHA.
+SQUAREUP_FIREBASE_GOOGLE_APP_ID = 1:782598349845:ios:3c5dc3cb8bff380221da1c
+SQUAREUP_FIREBASE_GCM_SENDER_ID = 782598349845
+SQUAREUP_FIREBASE_PROJECT_ID = square-up-ecs-191
+SQUAREUP_FIREBASE_IOS_API_KEY = AIzaSyCNoyTwtNJwimc30tkAo9dgwLf71nOR4Rw
+SQUAREUP_FIREBASE_APP_URL_SCHEME = app-1-782598349845-ios-3c5dc3cb8bff380221da1c
+
+// Optional local override (gitignored). Values set there replace the ones above.
+#include? "Remote.local.xcconfig"

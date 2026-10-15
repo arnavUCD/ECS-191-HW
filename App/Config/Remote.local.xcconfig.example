@@ -1,0 +1,20 @@
+// OPTIONAL local override. Remote.xcconfig already holds the production client configuration, so a
+// fresh clone needs nothing here. Copy this to Remote.local.xcconfig (gitignored) only to point
+// your build somewhere else; any value set there replaces the one in Remote.xcconfig.
+// Never put a server secret (Anthropic key, service account, deploy settings) in either file.
+
+// Another Firebase project / server:
+// SQUAREUP_API_SCHEME = https
+// SQUAREUP_API_HOST = your-project.appspot.com
+// SQUAREUP_FIREBASE_API_KEY = your-firebase-web-api-key
+// SQUAREUP_AUTH_MODE = firebase
+// SQUAREUP_FIREBASE_GOOGLE_APP_ID = 1:<project number>:ios:<app hash>
+// SQUAREUP_FIREBASE_GCM_SENDER_ID = <project number>
+// SQUAREUP_FIREBASE_PROJECT_ID = your-project
+// SQUAREUP_FIREBASE_IOS_API_KEY = <API_KEY from the plist>
+// SQUAREUP_FIREBASE_APP_URL_SCHEME = app-1-<project number>-ios-<app hash>
+
+// Local development server instead (python main.py with SQUAREUP_ALLOW_DEV_AUTH=1, SQUAREUP_BIND_HOST=0.0.0.0):
+// SQUAREUP_API_SCHEME = http
+// SQUAREUP_API_HOST = 192.168.1.20:8080
+// SQUAREUP_AUTH_MODE = development

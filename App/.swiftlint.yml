@@ -1,0 +1,64 @@
+# Square Up SwiftLint configuration — rules chosen for clarity and correctness, not churn.
+# Run: `swiftlint` from HW/App. Not part of the app build (development tool only).
+included:
+  - SquareUp
+  - SquareUpTests
+  - SquareUpUITests
+excluded:
+  - SquareUpTests/Snapshots/__Snapshots__
+
+disabled_rules:
+  - todo                      # tracked in docs, allowed during milestones
+  - trailing_comma            # trailing commas keep diffs small
+  - nesting                   # nested domain types (e.g. Expense.Kind) are intentional
+  - multiple_closures_with_trailing_closure
+
+opt_in_rules:
+  - empty_count
+  - first_where
+  - contains_over_first_not_nil
+  - sorted_first_last
+  - redundant_nil_coalescing
+  - fatal_error_message
+  - unowned_variable_capture
+
+custom_rules:
+  no_floating_point_money:
+    name: "No floating-point money"
+    regex: '(amount|total|money|price|balance)\s*:\s*(Double|Float|CGFloat)\b'
+    message: "Represent money with Money/Decimal, never Double or Float (CLAUDE.md §9)."
+    severity: error
+  no_print:
+    name: "Use OSLog"
+    regex: '^\s*print\('
+    message: "Use Log.<category> with privacy annotations instead of print (CLAUDE.md §15)."
+    severity: warning
+
+line_length:
+  # User-facing localized copy is kept on one line so translators see whole sentences.
+  warning: 180
+  error: 260
+  ignores_comments: true
+  ignores_urls: true
+  ignores_interpolated_strings: true
+type_body_length:
+  warning: 400
+  error: 600
+file_length:
+  warning: 600
+  error: 900
+function_body_length:
+  warning: 100
+  error: 150
+function_parameter_count:
+  warning: 9
+  error: 12
+identifier_name:
+  min_length: 1
+  excluded: [id, x, y, a, b, c]
+large_tuple:
+  warning: 3
+cyclomatic_complexity:
+  warning: 20
+  error: 30
+  ignores_case_statements: true

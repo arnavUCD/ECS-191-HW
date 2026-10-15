@@ -1,0 +1,118 @@
+# Square Up — what stays out of the public repository.
+# Everything a clone needs to build and run is tracked: app and server source, the Xcode project and
+# its Swift Package resolution, app assets, the client configuration (App/Config/Remote.xcconfig),
+# fictional receipt fixtures, demo seed definitions, server tests, and documentation.
+
+# --- macOS ---
+.DS_Store
+._*
+.AppleDouble
+.Spotlight-V100
+.Trashes
+
+# --- Xcode: user state, build output, archives, results ---
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+DerivedData/
+build/
+*.xcresult
+*.xcarchive
+*.ipa
+*.dSYM
+*.dSYM.zip
+*.hmap
+.swiftpm/
+.build/
+# Simulator and device data, crash and diagnostic logs
+*.simulatordata/
+*.crash
+*.ips
+*.diag
+*.log
+
+# Snapshot tests: failure artifacts, and the reference images — large, and out of date after the
+# October 2026 interface changes; the first snapshot test run records fresh ones.
+**/__Snapshots__/**/*-failure*.png
+App/SquareUpTests/Snapshots/__Snapshots__/
+
+# --- Python / server tooling ---
+**/__pycache__/
+*.py[cod]
+server/.venv/
+.venv/
+server/.mypy_cache/
+server/.ruff_cache/
+server/.pytest_cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# --- Local configuration and secrets (never committed) ---
+# Optional local override of the committed client configuration.
+**/Remote.local.xcconfig
+# Server secrets and deployment-only settings (the Anthropic key lives in Secret Manager).
+**/.env
+**/.env.*
+!**/.env.example
+**/deploy.env
+# Rendered at deploy time from app.yaml + deploy.env.
+server/app.deploy.yaml
+**/*.deploy.yaml
+# Firebase / Google / Apple credential files and key formats.
+GoogleService-Info*.plist
+**/*service-account*.json
+**/*service_account*.json
+**/*credentials*.json
+**/*firebase-adminsdk*.json
+*.p8
+*.p12
+*.pem
+*.key
+*.cer
+*.der
+*.mobileprovision
+*.provisionprofile
+# Local app and session data copied off a device or Simulator.
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.store
+*.store-shm
+*.store-wal
+
+# --- Receipts and AI evaluation ---
+# Real receipt photos never go in Git (the fictional fixtures under App/SquareUp/Resources/ReceiptFixtures
+# and Shared/receipt-eval/cases are tracked).
+*.heic
+*.HEIC
+**/real-receipts/
+/receipts/
+# Raw AI-evaluation output.
+Shared/receipt-eval/results/
+
+# --- Design references that aren't app assets (third-party concept images and screenshots) ---
+/*.jpg
+/Screenshot*.png
+/UI rebuild and design\ /
+
+# --- Local working notes, scratch, and backups ---
+GITHUB_PUSH_AUDIT.md
+# Local proposal draft (the submitted proposal is Proposal.md).
+proposal_draft.md
+scratch/
+scratchpad/
+tmp/
+*.bak
+*.orig
+*.swp
+*~
+*backup*/
+*Backup*/
+
+# --- Editors and assistants ---
+.vscode/
+.idea/
+.claude/

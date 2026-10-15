@@ -1,0 +1,250 @@
+{
+  "id" : "cropped",
+  "likelyCurrency" : "USD",
+  "ocrMilliseconds" : [
+    85
+  ],
+  "pages" : [
+    "cropped-p1.jpg"
+  ],
+  "regions" : [
+    {
+      "alternatives" : [
+        "SEASIDE SNACKSHACK",
+        "SEASIE SNACK SHACK"
+      ],
+      "box" : [
+        0.3333,
+        0.1625,
+        0.3958,
+        0.0511
+      ],
+      "confidence" : 1,
+      "id" : "001F4076-8F2F-480E-B239-9D417554217A",
+      "order" : 0,
+      "page" : 0,
+      "text" : "SEASIDE SNACK SHACK"
+    },
+    {
+      "alternatives" : [
+        "08/22/202615:02",
+        "08/22/202 15:02"
+      ],
+      "box" : [
+        0.118,
+        0.2818,
+        0.2614,
+        0.0364
+      ],
+      "confidence" : 1,
+      "id" : "ACD77F24-D675-4775-9B4C-F700B223FA20",
+      "order" : 1,
+      "page" : 0,
+      "text" : "08/22/2026 15:02"
+    },
+    {
+      "alternatives" : [
+        "Fish& Chips",
+        "Fish & Chip"
+      ],
+      "box" : [
+        0.1191,
+        0.3342,
+        0.1952,
+        0.0466
+      ],
+      "confidence" : 1,
+      "id" : "451D0437-735E-4F03-A5EA-D07AF3B65428",
+      "order" : 2,
+      "page" : 0,
+      "text" : "Fish & Chips"
+    },
+    {
+      "alternatives" : [
+        "Clam Strip",
+        "ClamStrips"
+      ],
+      "box" : [
+        0.1174,
+        0.3955,
+        0.1801,
+        0.0446
+      ],
+      "confidence" : 1,
+      "id" : "7F7D4053-D9A5-47FA-935A-E14C4AB40870",
+      "order" : 3,
+      "page" : 0,
+      "text" : "Clam Strips"
+    },
+    {
+      "alternatives" : [
+        "Lemonad",
+        "Lemonde"
+      ],
+      "box" : [
+        0.1197,
+        0.4591,
+        0.1298,
+        0.0318
+      ],
+      "confidence" : 1,
+      "id" : "90548D86-2058-4643-BD04-C3631CB9ED11",
+      "order" : 4,
+      "page" : 0,
+      "text" : "Lemonade"
+    },
+    {
+      "alternatives" : [
+        "1395",
+        "13.95"
+      ],
+      "box" : [
+        0.8651,
+        0.3431,
+        0.081,
+        0.0366
+      ],
+      "confidence" : 1,
+      "id" : "37214ED8-A9E8-48D6-9708-ED23205B18DD",
+      "order" : 5,
+      "page" : 0,
+      "text" : "13.95"
+    },
+    {
+      "alternatives" : [
+        "1050",
+        "10.50"
+      ],
+      "box" : [
+        0.8651,
+        0.4023,
+        0.0809,
+        0.0364
+      ],
+      "confidence" : 1,
+      "id" : "AAEE7197-F3A8-40C4-A136-5FA26C47312D",
+      "order" : 6,
+      "page" : 0,
+      "text" : "10.50"
+    },
+    {
+      "alternatives" : [
+        "325",
+        "3.25"
+      ],
+      "box" : [
+        0.8783,
+        0.4605,
+        0.0679,
+        0.038
+      ],
+      "confidence" : 1,
+      "id" : "AAEC5E7D-52DA-4A78-9E9C-362D774EAF23",
+      "order" : 7,
+      "page" : 0,
+      "text" : "3.25"
+    },
+    {
+      "alternatives" : [
+        "SUBTOTA",
+        "SUBOTAL"
+      ],
+      "box" : [
+        0.118,
+        0.5795,
+        0.1315,
+        0.0295
+      ],
+      "confidence" : 1,
+      "id" : "79A0142E-780A-43A3-ADF1-9D79957C7D1D",
+      "order" : 8,
+      "page" : 0,
+      "text" : "SUBTOTAL"
+    },
+    {
+      "alternatives" : [
+        "ax",
+        "Tx"
+      ],
+      "box" : [
+        0.118,
+        0.6386,
+        0.0506,
+        0.0295
+      ],
+      "confidence" : 1,
+      "id" : "AF0B3A1A-37BF-4005-AF93-4AF71BDC561C",
+      "order" : 9,
+      "page" : 0,
+      "text" : "Tax"
+    },
+    {
+      "alternatives" : [
+        "TOTA",
+        "OTAL"
+      ],
+      "box" : [
+        0.1163,
+        0.6973,
+        0.0862,
+        0.0304
+      ],
+      "confidence" : 1,
+      "id" : "CD9C2725-99FC-4E37-9AD8-9D5F07C0E7F6",
+      "order" : 10,
+      "page" : 0,
+      "text" : "TOTAL"
+    },
+    {
+      "alternatives" : [
+        "27.70",
+        "27.70"
+      ],
+      "box" : [
+        0.8634,
+        0.5793,
+        0.0827,
+        0.0368
+      ],
+      "confidence" : 1,
+      "id" : "851D710F-D31D-4096-95B8-030089C10F72",
+      "order" : 11,
+      "page" : 0,
+      "text" : "27.70"
+    },
+    {
+      "alternatives" : [
+        "220",
+        "2.20"
+      ],
+      "box" : [
+        0.8803,
+        0.6364,
+        0.0658,
+        0.0386
+      ],
+      "confidence" : 1,
+      "id" : "57DD32AB-8575-49DC-96FE-FA4CF625D5F9",
+      "order" : 12,
+      "page" : 0,
+      "text" : "2.20"
+    },
+    {
+      "alternatives" : [
+        "2990",
+        "29.90"
+      ],
+      "box" : [
+        0.8632,
+        0.6957,
+        0.0832,
+        0.0388
+      ],
+      "confidence" : 1,
+      "id" : "B4608B4E-061E-4965-9A48-FCF94B80B1E4",
+      "order" : 13,
+      "page" : 0,
+      "text" : "29.90"
+    }
+  ]
+}

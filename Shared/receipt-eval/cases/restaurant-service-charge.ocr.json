@@ -1,0 +1,420 @@
+{
+  "id" : "restaurant-service-charge",
+  "likelyCurrency" : "USD",
+  "ocrMilliseconds" : [
+    182
+  ],
+  "pages" : [
+    "restaurant-service-charge-p1.jpg"
+  ],
+  "regions" : [
+    {
+      "alternatives" : [
+        "SALMARSH OYSTER HALL",
+        "SALTARSH OYSTER HALL"
+      ],
+      "box" : [
+        0.2958,
+        0.1189,
+        0.4083,
+        0.0396
+      ],
+      "confidence" : 1,
+      "id" : "6FAD1159-1515-48AC-AE72-C188222711FB",
+      "order" : 0,
+      "page" : 0,
+      "text" : "SALTMARSH OYSTER HALL"
+    },
+    {
+      "alternatives" : [
+        "Party of",
+        "Party of8"
+      ],
+      "box" : [
+        0.4333,
+        0.1659,
+        0.1334,
+        0.0239
+      ],
+      "confidence" : 1,
+      "id" : "FA0E91B2-7038-43DB-B596-EF9C6A1B1F8C",
+      "order" : 1,
+      "page" : 0,
+      "text" : "Party of 8"
+    },
+    {
+      "alternatives" : [
+        "08/30/202620:14",
+        "08/30/202 20:14"
+      ],
+      "box" : [
+        0.1111,
+        0.2517,
+        0.246,
+        0.0252
+      ],
+      "confidence" : 1,
+      "id" : "3E654270-28DA-4EFE-BDCA-DE0CE991397A",
+      "order" : 2,
+      "page" : 0,
+      "text" : "08/30/2026 20:14"
+    },
+    {
+      "alternatives" : [
+        "1 Oyster Plater",
+        "1 Oyster latter"
+      ],
+      "box" : [
+        0.1109,
+        0.2943,
+        0.2464,
+        0.0301
+      ],
+      "confidence" : 1,
+      "id" : "970A3562-4D6D-4441-8425-21D4C5B44AA3",
+      "order" : 3,
+      "page" : 0,
+      "text" : "1 Oyster Platter"
+    },
+    {
+      "alternatives" : [
+        "1Clam Chowder",
+        "1 lam Chowder"
+      ],
+      "box" : [
+        0.1111,
+        0.3389,
+        0.2159,
+        0.0235
+      ],
+      "confidence" : 1,
+      "id" : "210E958B-C4BC-448A-A851-DADED44B846B",
+      "order" : 4,
+      "page" : 0,
+      "text" : "1 Clam Chowder"
+    },
+    {
+      "alternatives" : [
+        "1Clam Chowder",
+        "1 Cla Chowder"
+      ],
+      "box" : [
+        0.1111,
+        0.3826,
+        0.2159,
+        0.0235
+      ],
+      "confidence" : 1,
+      "id" : "B17E0EE2-5E7D-4291-B9E2-F845194D6602",
+      "order" : 5,
+      "page" : 0,
+      "text" : "1 Clam Chowder"
+    },
+    {
+      "alternatives" : [
+        "1 Fish Taco",
+        "1Fish Tacos"
+      ],
+      "box" : [
+        0.1111,
+        0.4262,
+        0.1841,
+        0.0235
+      ],
+      "confidence" : 1,
+      "id" : "6EEEE7A2-812E-4689-A21C-CF68505BE07A",
+      "order" : 6,
+      "page" : 0,
+      "text" : "1 Fish Tacos"
+    },
+    {
+      "alternatives" : [
+        "1 Lobste Roll",
+        "1 Lobster Rol"
+      ],
+      "box" : [
+        0.1111,
+        0.4698,
+        0.2159,
+        0.0252
+      ],
+      "confidence" : 1,
+      "id" : "5352769F-31BA-4D49-AEA2-A0CD1E4D374E",
+      "order" : 7,
+      "page" : 0,
+      "text" : "1 Lobster Roll"
+    },
+    {
+      "alternatives" : [
+        "1 Kal Caesar",
+        "1Kale Caesar"
+      ],
+      "box" : [
+        0.1111,
+        0.5151,
+        0.1984,
+        0.0218
+      ],
+      "confidence" : 1,
+      "id" : "6DA512C2-2F77-4D00-8BBB-AB0F0C7E17C2",
+      "order" : 8,
+      "page" : 0,
+      "text" : "1 Kale Caesar"
+    },
+    {
+      "alternatives" : [
+        "48.00",
+        "48.00"
+      ],
+      "box" : [
+        0.8111,
+        0.2953,
+        0.0778,
+        0.0285
+      ],
+      "confidence" : 1,
+      "id" : "EDF29679-EF4B-4BEB-8A34-38C38AB40206",
+      "order" : 9,
+      "page" : 0,
+      "text" : "48.00"
+    },
+    {
+      "alternatives" : [
+        "11.00",
+        "1100"
+      ],
+      "box" : [
+        0.8127,
+        0.3406,
+        0.0762,
+        0.0268
+      ],
+      "confidence" : 1,
+      "id" : "FA88911B-ACC9-442D-83BE-A257194C22BC",
+      "order" : 10,
+      "page" : 0,
+      "text" : "11.00"
+    },
+    {
+      "alternatives" : [
+        "11.00",
+        "1100"
+      ],
+      "box" : [
+        0.8127,
+        0.3841,
+        0.0779,
+        0.0271
+      ],
+      "confidence" : 1,
+      "id" : "EB0C2291-0EA7-40C3-85EB-37AF857C9804",
+      "order" : 11,
+      "page" : 0,
+      "text" : "11.00"
+    },
+    {
+      "alternatives" : [
+        "1650",
+        "16.50"
+      ],
+      "box" : [
+        0.8127,
+        0.4278,
+        0.0778,
+        0.027
+      ],
+      "confidence" : 1,
+      "id" : "AA8F8CEE-FF56-4175-9126-37DB352DA77B",
+      "order" : 12,
+      "page" : 0,
+      "text" : "16.50"
+    },
+    {
+      "alternatives" : [
+        "29.00",
+        "2900"
+      ],
+      "box" : [
+        0.8127,
+        0.4714,
+        0.0762,
+        0.027
+      ],
+      "confidence" : 1,
+      "id" : "03E9AFEC-8D99-48E0-A62E-83C2BAB2DCB4",
+      "order" : 13,
+      "page" : 0,
+      "text" : "29.00"
+    },
+    {
+      "alternatives" : [
+        "13.00",
+        "13.00"
+      ],
+      "box" : [
+        0.8127,
+        0.5151,
+        0.0762,
+        0.0268
+      ],
+      "confidence" : 1,
+      "id" : "1F3B8C34-D9A3-4FD8-8110-B8DE325E4B5B",
+      "order" : 14,
+      "page" : 0,
+      "text" : "13.00"
+    },
+    {
+      "alternatives" : [
+        "SUBTOTA",
+        "SUBOTAL"
+      ],
+      "box" : [
+        0.1111,
+        0.6023,
+        0.1238,
+        0.0218
+      ],
+      "confidence" : 1,
+      "id" : "BB4BAD4D-995D-4D0C-991D-DFD82371B5E5",
+      "order" : 15,
+      "page" : 0,
+      "text" : "SUBTOTAL"
+    },
+    {
+      "alternatives" : [
+        "Service Charge 18",
+        "Service Charge 8%"
+      ],
+      "box" : [
+        0.1083,
+        0.6432,
+        0.2875,
+        0.0355
+      ],
+      "confidence" : 1,
+      "id" : "E790E927-B5EC-4CCE-BA5B-9D2B8E74E9C1",
+      "order" : 16,
+      "page" : 0,
+      "text" : "Service Charge 18%"
+    },
+    {
+      "alternatives" : [
+        "Тах 8.5%",
+        "Tax 85%"
+      ],
+      "box" : [
+        0.1095,
+        0.6893,
+        0.1255,
+        0.0275
+      ],
+      "confidence" : 1,
+      "id" : "DCCEA5E1-EAD1-48A2-A1E8-2D3F93C6B366",
+      "order" : 17,
+      "page" : 0,
+      "text" : "Tax 8.5%"
+    },
+    {
+      "alternatives" : [
+        "Additional Ti",
+        "Aditional Tip"
+      ],
+      "box" : [
+        0.1107,
+        0.7266,
+        0.2263,
+        0.0341
+      ],
+      "confidence" : 1,
+      "id" : "15F536CE-3D71-4D6D-AFB5-15BC81DE24DF",
+      "order" : 18,
+      "page" : 0,
+      "text" : "Additional Tip"
+    },
+    {
+      "alternatives" : [
+        "TOTA",
+        "TOAL"
+      ],
+      "box" : [
+        0.1095,
+        0.7766,
+        0.0795,
+        0.0223
+      ],
+      "confidence" : 1,
+      "id" : "06275FF8-D44E-4693-A5F3-0EE205866006",
+      "order" : 19,
+      "page" : 0,
+      "text" : "TOTAL"
+    },
+    {
+      "alternatives" : [
+        "12850",
+        "128.50"
+      ],
+      "box" : [
+        0.7968,
+        0.6023,
+        0.0937,
+        0.0253
+      ],
+      "confidence" : 1,
+      "id" : "CEBD4C86-F618-47B4-BAA9-B60128CA5684",
+      "order" : 20,
+      "page" : 0,
+      "text" : "128.50"
+    },
+    {
+      "alternatives" : [
+        "23.13",
+        "2313"
+      ],
+      "box" : [
+        0.8126,
+        0.6456,
+        0.0764,
+        0.0276
+      ],
+      "confidence" : 1,
+      "id" : "C552B14E-3130-4ACB-A62C-D33507E2125D",
+      "order" : 21,
+      "page" : 0,
+      "text" : "23.13"
+    },
+    {
+      "alternatives" : [
+        "1092",
+        "10.92"
+      ],
+      "box" : [
+        0.8125,
+        0.6883,
+        0.0767,
+        0.0282
+      ],
+      "confidence" : 1,
+      "id" : "C0EA0D3A-20C0-4E21-A4D6-163658FC7614",
+      "order" : 22,
+      "page" : 0,
+      "text" : "10.92"
+    },
+    {
+      "alternatives" : [
+        "16255",
+        "162.55"
+      ],
+      "box" : [
+        0.7967,
+        0.7765,
+        0.0922,
+        0.0275
+      ],
+      "confidence" : 1,
+      "id" : "29BB6413-1B87-49B3-A980-06F52ED97E4E",
+      "order" : 23,
+      "page" : 0,
+      "text" : "162.55"
+    }
+  ]
+}

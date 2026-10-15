@@ -1,0 +1,250 @@
+{
+  "id" : "rotated",
+  "likelyCurrency" : "USD",
+  "ocrMilliseconds" : [
+    171
+  ],
+  "pages" : [
+    "rotated-p1.jpg"
+  ],
+  "regions" : [
+    {
+      "alternatives" : [
+        "BLUEBEL TAQUERIA",
+        "BLUBELL TAQUERIA"
+      ],
+      "box" : [
+        0.3172,
+        0.1852,
+        0.3161,
+        0.1017
+      ],
+      "confidence" : 0.5,
+      "id" : "C59E691D-6A08-4599-A805-A7577D2B2B45",
+      "order" : 0,
+      "page" : 0,
+      "text" : "BLUEBELL TAQUERIA"
+    },
+    {
+      "alternatives" : [
+        "09/27/202613:10",
+        "09/27/2026 1:10"
+      ],
+      "box" : [
+        0.1244,
+        0.3352,
+        0.2338,
+        0.068
+      ],
+      "confidence" : 1,
+      "id" : "C13A03CA-2492-49CE-B929-A50E8E10FF5A",
+      "order" : 1,
+      "page" : 0,
+      "text" : "09/27/2026 13:10"
+    },
+    {
+      "alternatives" : [
+        "2 Carnitas Taco @3.75",
+        "2 Carnitas Taco@ 3.75"
+      ],
+      "box" : [
+        0.1287,
+        0.3734,
+        0.3147,
+        0.078
+      ],
+      "confidence" : 1,
+      "id" : "65CCCDD7-E1CC-4649-8EF1-BC3315D78868",
+      "order" : 2,
+      "page" : 0,
+      "text" : "2 Carnitas Taco @ 3.75"
+    },
+    {
+      "alternatives" : [
+        "1Veggie Burrito",
+        "1 Veggi Burrito"
+      ],
+      "box" : [
+        0.1334,
+        0.4322,
+        0.2307,
+        0.0769
+      ],
+      "confidence" : 0.5,
+      "id" : "9BB74C6D-23AB-4BC7-9917-0DCF2B31024F",
+      "order" : 3,
+      "page" : 0,
+      "text" : "1 Veggie Burrito"
+    },
+    {
+      "alternatives" : [
+        "1 Horcata",
+        "1 Horchat"
+      ],
+      "box" : [
+        0.1391,
+        0.5008,
+        0.1449,
+        0.0514
+      ],
+      "confidence" : 1,
+      "id" : "E547B131-C088-4F55-93D6-BF3E5171AB89",
+      "order" : 4,
+      "page" : 0,
+      "text" : "1 Horchata"
+    },
+    {
+      "alternatives" : [
+        "SUTOTAL",
+        "SUBOTAL"
+      ],
+      "box" : [
+        0.1479,
+        0.6044,
+        0.1175,
+        0.0494
+      ],
+      "confidence" : 0.5,
+      "id" : "249B8065-56AE-4596-A3D2-82179365EACB",
+      "order" : 5,
+      "page" : 0,
+      "text" : "SUBTOTAL"
+    },
+    {
+      "alternatives" : [
+        "Tax9.25%",
+        "Tx 9.25%"
+      ],
+      "box" : [
+        0.151,
+        0.6519,
+        0.1354,
+        0.0579
+      ],
+      "confidence" : 1,
+      "id" : "362DDA7A-180A-439E-A334-A3AF33AF15C2",
+      "order" : 6,
+      "page" : 0,
+      "text" : "Tax 9.25%"
+    },
+    {
+      "alternatives" : [
+        "TOTAL",
+        "TOTA"
+      ],
+      "box" : [
+        0.1559,
+        0.7141,
+        0.0767,
+        0.0387
+      ],
+      "confidence" : 1,
+      "id" : "0509CBF6-B242-4D16-8238-151EB6EAA68E",
+      "order" : 7,
+      "page" : 0,
+      "text" : "TOTAL"
+    },
+    {
+      "alternatives" : [
+        "750",
+        "7.50"
+      ],
+      "box" : [
+        0.7859,
+        0.3049,
+        0.0656,
+        0.0501
+      ],
+      "confidence" : 1,
+      "id" : "62B845D2-07E7-4B48-935F-D38CE4B2F73A",
+      "order" : 8,
+      "page" : 0,
+      "text" : "7.50"
+    },
+    {
+      "alternatives" : [
+        "11.25",
+        "1125"
+      ],
+      "box" : [
+        0.7809,
+        0.3599,
+        0.0721,
+        0.035
+      ],
+      "confidence" : 1,
+      "id" : "8792C62B-95EA-4151-A5E5-80A1811139FD",
+      "order" : 9,
+      "page" : 0,
+      "text" : "11.25"
+    },
+    {
+      "alternatives" : [
+        "350",
+        "3.50"
+      ],
+      "box" : [
+        0.7954,
+        0.4066,
+        0.0643,
+        0.0451
+      ],
+      "confidence" : 1,
+      "id" : "05761AEB-327B-4F74-87CE-47C7A5AC31B5",
+      "order" : 10,
+      "page" : 0,
+      "text" : "3.50"
+    },
+    {
+      "alternatives" : [
+        "2225",
+        "22.25"
+      ],
+      "box" : [
+        0.7909,
+        0.5074,
+        0.0779,
+        0.0492
+      ],
+      "confidence" : 1,
+      "id" : "8FE1D748-38C0-4AE0-A675-0AAECC78695E",
+      "order" : 11,
+      "page" : 0,
+      "text" : "22.25"
+    },
+    {
+      "alternatives" : [
+        "206",
+        "2.06"
+      ],
+      "box" : [
+        0.8086,
+        0.5534,
+        0.067,
+        0.0525
+      ],
+      "confidence" : 1,
+      "id" : "13B4752B-BF7D-4BF2-A69A-C7AF686FAA7B",
+      "order" : 12,
+      "page" : 0,
+      "text" : "2.06"
+    },
+    {
+      "alternatives" : [
+        "2431",
+        "24.31"
+      ],
+      "box" : [
+        0.7995,
+        0.6068,
+        0.0798,
+        0.0499
+      ],
+      "confidence" : 1,
+      "id" : "C8796ED1-0DCC-443B-93C7-7615B470C0BB",
+      "order" : 13,
+      "page" : 0,
+      "text" : "24.31"
+    }
+  ]
+}

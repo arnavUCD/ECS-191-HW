@@ -1,0 +1,328 @@
+{
+  "note" : "FICTIONAL sample receipt. Prerecorded recognition with one deliberate misreading (Tiramisu 8.50 read as 6.50).",
+  "regions" : [
+    {
+      "confidence" : 1,
+      "height" : 0.0202,
+      "text" : "FERNWOOD SUPPER CLUB",
+      "width" : 0.4415,
+      "x" : 0.2792,
+      "y" : 0.0865
+    },
+    {
+      "confidence" : 1,
+      "height" : 0.0139,
+      "text" : "418 Example Ave, Davis CA 95616",
+      "width" : 0.4666,
+      "x" : 0.2667,
+      "y" : 0.123
+    },
+    {
+      "confidence" : 1,
+      "height" : 0.0139,
+      "text" : "(530) 555-0136",
+      "width" : 0.2107,
+      "x" : 0.3946,
+      "y" : 0.1532
+    },
+    {
+      "confidence" : 1,
+      "height" : 0.0158,
+      "text" : "Table 12   Server: Jo   Guests: 4",
+      "width" : 0.5629,
+      "x" : 0.1717,
+      "y" : 0.214
+    },
+    {
+      "confidence" : 1,
+      "height" : 0.0158,
+      "text" : "09\/24\/2026   7:42 PM",
+      "width" : 0.3412,
+      "x" : 0.1717,
+      "y" : 0.2442
+    },
+    {
+      "confidence" : 0.6,
+      "height" : 0.0158,
+      "text" : "--------------------------------------",
+      "width" : 0.6482,
+      "x" : 0.1717,
+      "y" : 0.2744
+    },
+    {
+      "confidence" : 1,
+      "height" : 0.0158,
+      "text" : "1 Truffle Fries",
+      "width" : 0.2559,
+      "x" : 0.1717,
+      "y" : 0.3046
+    },
+    {
+      "confidence" : 1,
+      "height" : 0.0158,
+      "text" : "9.50",
+      "width" : 0.0682,
+      "x" : 0.7601,
+      "y" : 0.3046
+    },
+    {
+      "confidence" : 1,
+      "height" : 0.0158,
+      "text" : "2 Margherita Pizza @ 8.00",
+      "width" : 0.4265,
+      "x" : 0.1717,
+      "y" : 0.3348
+    },
+    {
+      "confidence" : 1,
+      "height" : 0.0158,
+      "text" : "16.00",
+      "width" : 0.0853,
+      "x" : 0.743,
+      "y" : 0.3348
+    },
+    {
+      "confidence" : 1,
+      "height" : 0.0158,
+      "text" : "1 Caesar Salad",
+      "width" : 0.2388,
+      "x" : 0.1717,
+      "y" : 0.365
+    },
+    {
+      "confidence" : 1,
+      "height" : 0.0158,
+      "text" : "11.25",
+      "width" : 0.0853,
+      "x" : 0.743,
+      "y" : 0.365
+    },
+    {
+      "confidence" : 1,
+      "height" : 0.0158,
+      "text" : "2 Lemonade @ 3.50",
+      "width" : 0.29,
+      "x" : 0.1717,
+      "y" : 0.3952
+    },
+    {
+      "confidence" : 1,
+      "height" : 0.0158,
+      "text" : "7.00",
+      "width" : 0.0682,
+      "x" : 0.7601,
+      "y" : 0.3952
+    },
+    {
+      "confidence" : 1,
+      "height" : 0.0158,
+      "text" : "1 Mushroom Risotto",
+      "width" : 0.307,
+      "x" : 0.1717,
+      "y" : 0.4254
+    },
+    {
+      "confidence" : 1,
+      "height" : 0.0158,
+      "text" : "18.75",
+      "width" : 0.0853,
+      "x" : 0.743,
+      "y" : 0.4254
+    },
+    {
+      "confidence" : 1,
+      "height" : 0.0158,
+      "text" : "1 Shared Nachos",
+      "width" : 0.2559,
+      "x" : 0.1717,
+      "y" : 0.4556
+    },
+    {
+      "confidence" : 1,
+      "height" : 0.0158,
+      "text" : "12.00",
+      "width" : 0.0853,
+      "x" : 0.743,
+      "y" : 0.4556
+    },
+    {
+      "confidence" : 1,
+      "height" : 0.0158,
+      "text" : "1 Tiramisu",
+      "width" : 0.1706,
+      "x" : 0.1717,
+      "y" : 0.4858
+    },
+    {
+      "alternatives" : [
+        "8.50"
+      ],
+      "confidence" : 0.42,
+      "height" : 0.0158,
+      "text" : "6.50",
+      "width" : 0.0682,
+      "x" : 0.7601,
+      "y" : 0.4858
+    },
+    {
+      "confidence" : 1,
+      "height" : 0.0158,
+      "text" : "1 Iced Tea",
+      "width" : 0.1706,
+      "x" : 0.1717,
+      "y" : 0.516
+    },
+    {
+      "confidence" : 1,
+      "height" : 0.0158,
+      "text" : "3.25",
+      "width" : 0.0682,
+      "x" : 0.7601,
+      "y" : 0.516
+    },
+    {
+      "confidence" : 0.6,
+      "height" : 0.0158,
+      "text" : "--------------------------------------",
+      "width" : 0.6482,
+      "x" : 0.1717,
+      "y" : 0.5463
+    },
+    {
+      "confidence" : 1,
+      "height" : 0.0158,
+      "text" : "SUBTOTAL",
+      "width" : 0.1365,
+      "x" : 0.1717,
+      "y" : 0.5765
+    },
+    {
+      "confidence" : 1,
+      "height" : 0.0158,
+      "text" : "86.25",
+      "width" : 0.0853,
+      "x" : 0.743,
+      "y" : 0.5765
+    },
+    {
+      "confidence" : 1,
+      "height" : 0.0158,
+      "text" : "Happy Hour Discount",
+      "width" : 0.3241,
+      "x" : 0.1717,
+      "y" : 0.6067
+    },
+    {
+      "confidence" : 1,
+      "height" : 0.0158,
+      "text" : "-4.00",
+      "width" : 0.0853,
+      "x" : 0.743,
+      "y" : 0.6067
+    },
+    {
+      "confidence" : 1,
+      "height" : 0.0158,
+      "text" : "Sales Tax 8.25%",
+      "width" : 0.2559,
+      "x" : 0.1717,
+      "y" : 0.6369
+    },
+    {
+      "confidence" : 1,
+      "height" : 0.0158,
+      "text" : "6.79",
+      "width" : 0.0682,
+      "x" : 0.7601,
+      "y" : 0.6369
+    },
+    {
+      "confidence" : 1,
+      "height" : 0.0158,
+      "text" : "TOTAL",
+      "width" : 0.0853,
+      "x" : 0.1717,
+      "y" : 0.6671
+    },
+    {
+      "confidence" : 1,
+      "height" : 0.0158,
+      "text" : "89.04",
+      "width" : 0.0853,
+      "x" : 0.743,
+      "y" : 0.6671
+    },
+    {
+      "confidence" : 1,
+      "height" : 0.0158,
+      "text" : "Tip",
+      "width" : 0.0512,
+      "x" : 0.1717,
+      "y" : 0.6973
+    },
+    {
+      "confidence" : 1,
+      "height" : 0.0158,
+      "text" : "15.00",
+      "width" : 0.0853,
+      "x" : 0.743,
+      "y" : 0.6973
+    },
+    {
+      "confidence" : 1,
+      "height" : 0.0158,
+      "text" : "TOTAL",
+      "width" : 0.0853,
+      "x" : 0.1717,
+      "y" : 0.7275
+    },
+    {
+      "confidence" : 1,
+      "height" : 0.0158,
+      "text" : "104.04",
+      "width" : 0.1023,
+      "x" : 0.726,
+      "y" : 0.7275
+    },
+    {
+      "confidence" : 0.6,
+      "height" : 0.0158,
+      "text" : "--------------------------------------",
+      "width" : 0.6482,
+      "x" : 0.1717,
+      "y" : 0.7577
+    },
+    {
+      "confidence" : 1,
+      "height" : 0.0158,
+      "text" : "VISA ****4821",
+      "width" : 0.2218,
+      "x" : 0.1717,
+      "y" : 0.7879
+    },
+    {
+      "confidence" : 1,
+      "height" : 0.0158,
+      "text" : "104.04",
+      "width" : 0.1023,
+      "x" : 0.726,
+      "y" : 0.7879
+    },
+    {
+      "confidence" : 1,
+      "height" : 0.0158,
+      "text" : "AUTH CODE 0A1B2C",
+      "width" : 0.2729,
+      "x" : 0.1717,
+      "y" : 0.8181
+    },
+    {
+      "confidence" : 1,
+      "height" : 0.0139,
+      "text" : "Thank you! Come again",
+      "width" : 0.3161,
+      "x" : 0.342,
+      "y" : 0.8782
+    }
+  ]
+}

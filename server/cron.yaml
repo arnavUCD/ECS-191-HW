@@ -1,0 +1,8 @@
+# Retention (milestone 4 §10–§11). App Engine adds X-Appengine-Cron, which external callers can't forge.
+cron:
+  - description: "Delete expired room and group invitations, guest credentials, idempotency records, rate counters, and old receipt images"
+    url: /tasks/cleanup
+    schedule: every 1 hours
+    retry_parameters:
+      min_backoff_seconds: 60
+      max_doublings: 3

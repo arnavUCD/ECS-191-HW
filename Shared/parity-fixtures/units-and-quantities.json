@@ -1,0 +1,375 @@
+{
+ "description": "Claiming part of a line's quantity (\"2 of the 3 beers\"): unit claims that never overwrite each other, what's left, refusals, host unit assignment, odd cents by largest remainder, and charges on top.",
+ "currency": "USD",
+ "participants": [
+  "riley",
+  "maya",
+  "dev",
+  "priya"
+ ],
+ "payer": "riley",
+ "receipt": {
+  "merchant": "Driftwood Kitchen",
+  "date": "2026-10-10",
+  "currency": "USD",
+  "total": 4270,
+  "items": [
+   {
+    "key": "beer",
+    "name": "Pale Ale",
+    "lineTotal": 1800,
+    "quantity": 3,
+    "unitPrice": 600
+   },
+   {
+    "key": "wings",
+    "name": "Wings",
+    "lineTotal": 1000,
+    "quantity": 3
+   },
+   {
+    "key": "fries",
+    "name": "Fries",
+    "lineTotal": 900
+   }
+  ],
+  "charges": [
+   {
+    "key": "tax",
+    "kind": "tax",
+    "label": "Tax",
+    "amount": 270,
+    "allocation": {
+     "kind": "proportional"
+    }
+   },
+   {
+    "key": "tip",
+    "kind": "tip",
+    "label": "Tip",
+    "amount": 300,
+    "allocation": {
+     "kind": "equal",
+     "members": null
+    }
+   }
+  ]
+ },
+ "steps": [
+  {
+   "actor": "maya",
+   "command": "claimUnits",
+   "payload": {
+    "item": "beer",
+    "units": 2
+   },
+   "expect": {
+    "applied": true
+   }
+  },
+  {
+   "actor": "dev",
+   "command": "claimUnits",
+   "payload": {
+    "item": "beer",
+    "units": 2
+   },
+   "expect": {
+    "error": "units_unavailable"
+   }
+  },
+  {
+   "actor": "dev",
+   "command": "claimUnits",
+   "payload": {
+    "item": "beer",
+    "units": 1
+   },
+   "expect": {
+    "applied": true
+   }
+  },
+  {
+   "actor": "priya",
+   "command": "claim",
+   "payload": {
+    "item": "beer",
+    "request": "share"
+   },
+   "expect": {
+    "error": "item_has_custom_split"
+   }
+  },
+  {
+   "actor": "priya",
+   "command": "claim",
+   "payload": {
+    "item": "beer",
+    "request": "mine"
+   },
+   "expect": {
+    "error": "item_already_claimed"
+   }
+  },
+  {
+   "actor": "riley",
+   "command": "claimUnits",
+   "payload": {
+    "item": "fries",
+    "units": 1
+   },
+   "expect": {
+    "error": "item_quantity_unknown"
+   }
+  },
+  {
+   "actor": "priya",
+   "command": "claimUnits",
+   "payload": {
+    "item": "wings",
+    "units": 1
+   },
+   "expect": {
+    "applied": true
+   }
+  },
+  {
+   "actor": "maya",
+   "command": "claimUnits",
+   "payload": {
+    "item": "wings",
+    "units": 2
+   },
+   "expect": {
+    "applied": true
+   }
+  },
+  {
+   "actor": "maya",
+   "command": "claimUnits",
+   "payload": {
+    "item": "wings",
+    "units": 2
+   },
+   "expect": {
+    "applied": false
+   }
+  },
+  {
+   "actor": "dev",
+   "command": "claim",
+   "payload": {
+    "item": "fries",
+    "request": "mine"
+   },
+   "expect": {
+    "applied": true
+   }
+  },
+  {
+   "actor": "maya",
+   "command": "claimUnits",
+   "payload": {
+    "item": "beer",
+    "units": 0
+   },
+   "expect": {
+    "applied": true
+   }
+  },
+  {
+   "actor": "maya",
+   "command": "claimUnits",
+   "payload": {
+    "item": "beer",
+    "units": 2
+   },
+   "expect": {
+    "applied": true
+   }
+  },
+  {
+   "actor": "dev",
+   "command": "setItemSplit",
+   "payload": {
+    "item": "wings",
+    "split": {
+     "kind": "units",
+     "units": [
+      [
+       "dev",
+       3
+      ]
+     ]
+    }
+   },
+   "expect": {
+    "error": "cannot_remove_others"
+   }
+  },
+  {
+   "actor": "riley",
+   "command": "setItemSplit",
+   "payload": {
+    "item": "wings",
+    "split": {
+     "kind": "units",
+     "units": [
+      [
+       "priya",
+       1
+      ],
+      [
+       "maya",
+       4
+      ]
+     ]
+    }
+   },
+   "expect": {
+    "error": "invalid_split"
+   }
+  },
+  {
+   "actor": "riley",
+   "command": "setItemSplit",
+   "payload": {
+    "item": "wings",
+    "split": {
+     "kind": "units",
+     "units": [
+      [
+       "priya",
+       1
+      ],
+      [
+       "maya",
+       1
+      ],
+      [
+       "dev",
+       1
+      ]
+     ]
+    }
+   },
+   "expect": {
+    "applied": true
+   }
+  },
+  {
+   "actor": "riley",
+   "command": "transition",
+   "payload": {
+    "move": "requestFinalReview"
+   },
+   "expect": {
+    "applied": true
+   }
+  },
+  {
+   "actor": "riley",
+   "command": "finalize",
+   "payload": {},
+   "expect": {
+    "applied": true
+   }
+  }
+ ],
+ "expect": {
+  "state": "finalized",
+  "remaining": 0,
+  "participants": {
+   "riley": {
+    "items": 0,
+    "tax": 0,
+    "tip": 75,
+    "fees": 0,
+    "discounts": 0,
+    "adjustments": 0,
+    "total": 75
+   },
+   "maya": {
+    "items": 1534,
+    "tax": 112,
+    "tip": 75,
+    "fees": 0,
+    "discounts": 0,
+    "adjustments": 0,
+    "total": 1721
+   },
+   "dev": {
+    "items": 1833,
+    "tax": 134,
+    "tip": 75,
+    "fees": 0,
+    "discounts": 0,
+    "adjustments": 0,
+    "total": 2042
+   },
+   "priya": {
+    "items": 333,
+    "tax": 24,
+    "tip": 75,
+    "fees": 0,
+    "discounts": 0,
+    "adjustments": 0,
+    "total": 432
+   }
+  },
+  "items": {
+   "beer": {
+    "status": "allocated",
+    "shares": {
+     "maya": 1200,
+     "dev": 600
+    },
+    "rounding": []
+   },
+   "wings": {
+    "status": "allocated",
+    "shares": {
+     "maya": 334,
+     "dev": 333,
+     "priya": 333
+    },
+    "rounding": [
+     "maya"
+    ]
+   },
+   "fries": {
+    "status": "allocated",
+    "shares": {
+     "dev": 900
+    },
+    "rounding": []
+   }
+  },
+  "charges": {
+   "tax": {
+    "status": "allocated",
+    "shares": {
+     "maya": 112,
+     "dev": 134,
+     "priya": 24
+    },
+    "rounding": [
+     "dev",
+     "maya"
+    ]
+   },
+   "tip": {
+    "status": "allocated",
+    "shares": {
+     "riley": 75,
+     "maya": 75,
+     "dev": 75,
+     "priya": 75
+    },
+    "rounding": []
+   }
+  },
+  "readiness": [],
+  "finalized": true
+ }
+}

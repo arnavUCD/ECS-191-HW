@@ -1,0 +1,158 @@
+{
+ "description": "Everything assigned to the payer needs explicit confirmation; removing a participant clears their claims.",
+ "currency": "USD",
+ "participants": [
+  "host",
+  "ana"
+ ],
+ "payer": "host",
+ "receipt": {
+  "merchant": "Bakery",
+  "date": "2026-09-01",
+  "currency": "USD",
+  "total": 900,
+  "items": [
+   {
+    "key": "bread",
+    "name": "Bread",
+    "lineTotal": 600
+   },
+   {
+    "key": "coffee",
+    "name": "Coffee",
+    "lineTotal": 300
+   }
+  ],
+  "charges": []
+ },
+ "steps": [
+  {
+   "actor": "ana",
+   "command": "claim",
+   "payload": {
+    "item": "coffee",
+    "request": "mine"
+   },
+   "expect": {
+    "applied": true
+   }
+  },
+  {
+   "actor": "host",
+   "command": "removeParticipant",
+   "payload": {
+    "participant": "ana"
+   },
+   "expect": {
+    "applied": true
+   }
+  },
+  {
+   "actor": "ana",
+   "command": "claim",
+   "payload": {
+    "item": "bread",
+    "request": "mine"
+   },
+   "expect": {
+    "error": "not_a_participant"
+   }
+  },
+  {
+   "actor": "host",
+   "command": "setItemSplit",
+   "payload": {
+    "item": "bread",
+    "split": {
+     "kind": "equal",
+     "members": [
+      "host"
+     ]
+    }
+   },
+   "expect": {
+    "applied": true
+   }
+  },
+  {
+   "actor": "host",
+   "command": "setItemSplit",
+   "payload": {
+    "item": "coffee",
+    "split": {
+     "kind": "equal",
+     "members": [
+      "host"
+     ]
+    }
+   },
+   "expect": {
+    "applied": true
+   }
+  },
+  {
+   "actor": "host",
+   "command": "transition",
+   "payload": {
+    "move": "requestFinalReview"
+   },
+   "expect": {
+    "error": "not_ready_to_finalize"
+   }
+  },
+  {
+   "actor": "host",
+   "command": "setPayerAcceptsFullReceipt",
+   "payload": {
+    "accepts": true
+   },
+   "expect": {
+    "applied": true
+   }
+  },
+  {
+   "actor": "host",
+   "command": "transition",
+   "payload": {
+    "move": "requestFinalReview"
+   },
+   "expect": {
+    "applied": true
+   }
+  }
+ ],
+ "expect": {
+  "state": "readyToFinalize",
+  "remaining": 0,
+  "participants": {
+   "host": {
+    "items": 900,
+    "tax": 0,
+    "tip": 0,
+    "fees": 0,
+    "discounts": 0,
+    "adjustments": 0,
+    "total": 900
+   }
+  },
+  "items": {
+   "bread": {
+    "status": "allocated",
+    "shares": {
+     "host": 600
+    },
+    "rounding": []
+   },
+   "coffee": {
+    "status": "allocated",
+    "shares": {
+     "host": 300
+    },
+    "rounding": []
+   }
+  },
+  "charges": {},
+  "readiness": [],
+  "finalized": false
+ }
+}

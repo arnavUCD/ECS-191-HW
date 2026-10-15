@@ -1,0 +1,23 @@
+# App Engine Standard (Python 3.13). Environment-specific values are NOT stored here:
+# scripts/deploy.sh merges deploy.env (gitignored; see .env.example) into app.deploy.yaml.
+runtime: python313
+# No gunicorn access log: it prints full request paths, which include invitation codes. The app logs
+# each request itself with the route template only.
+entrypoint: gunicorn --bind :$PORT --workers 2 --threads 8 --timeout 90 main:app
+instance_class: F1
+
+automatic_scaling:
+  min_instances: 0
+  max_instances: 2          # keep a course project inside the free tier; raise deliberately
+  target_cpu_utilization: 0.75
+
+env_variables:
+  SQUAREUP_ENV: production
+  SQUAREUP_STORAGE: datastore
+  SQUAREUP_BLOBS: gcs
+
+handlers:
+  - url: /.*
+    script: auto
+    secure: always            # HTTP is redirected to HTTPS
+    redirect_http_response_code: 301

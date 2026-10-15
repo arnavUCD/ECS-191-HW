@@ -1,0 +1,5 @@
+# Every query is a single-property equality (roomId, and for shared groups uid and groupId) or a
+# single-property inequality (expiresAt / createdAt / finishedAt), which Datastore's built-in
+# indexes serve. Shared-group events are read by key (paged), never queried.
+# No composite indexes are required. Keep this file so `gcloud app deploy index.yaml` is explicit.
+indexes: []

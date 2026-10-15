@@ -1,0 +1,6671 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+
+    },
+    ", credit" : {
+
+    },
+    "“%@”" : {
+
+    },
+    "“%@” isn't in this group." : {
+
+    },
+    "“%@” needs the server's answer, so nothing is confirmed yet. Try again when you're online." : {
+
+    },
+    "“%@” wasn't saved" : {
+
+    },
+    "“%@” wasn't saved. The latest is showing — review it, then try again." : {
+
+    },
+    "“No change needed” requires a note for the history." : {
+
+    },
+    "@%@" : {
+
+    },
+    "%" : {
+
+    },
+    "%@ · %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ · %2$@"
+          }
+        }
+      }
+    },
+    "%@ · %@ · %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ · %2$@ · %3$@"
+          }
+        }
+      }
+    },
+    "%@ · %@ · until %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ · %2$@ · until %3$@"
+          }
+        }
+      }
+    },
+    "%@ · %@ is now an itemized expense. Balances are updated." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ · %2$@ is now an itemized expense. Balances are updated."
+          }
+        }
+      }
+    },
+    "%@ · %@ paid · %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ · %2$@ paid · %3$@"
+          }
+        }
+      }
+    },
+    "%@ · awaiting %@ to confirm" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ · awaiting %2$@ to confirm"
+          }
+        }
+      }
+    },
+    "%@ · confirmed by %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ · confirmed by %2$@"
+          }
+        }
+      }
+    },
+    "%@ · paid by %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ · paid by %2$@"
+          }
+        }
+      }
+    },
+    "%@ · payment in progress" : {
+
+    },
+    "%@ · reviewed" : {
+
+    },
+    "%@ (host)" : {
+
+    },
+    "%@ (host) saves the split when everything is claimed." : {
+
+    },
+    "%@ (you)" : {
+
+    },
+    "%@ %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ %2$@"
+          }
+        }
+      }
+    },
+    "%@ %lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ %2$lld"
+          }
+        }
+      }
+    },
+    "%@ → %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ → %2$@"
+          }
+        }
+      }
+    },
+    "%@ +%lld more" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ +%2$lld more"
+          }
+        }
+      }
+    },
+    "%@ accepts" : {
+
+    },
+    "%@ added %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ added %2$@"
+          }
+        }
+      }
+    },
+    "%@ added %@ and removed %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ added %2$@ and removed %3$@"
+          }
+        }
+      }
+    },
+    "%@ added %@ to the room" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ added %2$@ to the room"
+          }
+        }
+      }
+    },
+    "%@ added it. As the group's owner you can remove it; the history shows you did." : {
+
+    },
+    "%@ added the receipt" : {
+
+    },
+    "%@ already claimed this. Share it or dispute it instead." : {
+
+    },
+    "%@ appears twice in a row. Remove one if it's a duplicate." : {
+
+    },
+    "%@ archived the group" : {
+
+    },
+    "%@ cancelled a payment to %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ cancelled a payment to %2$@"
+          }
+        }
+      }
+    },
+    "%@ changed the payer confirmation" : {
+
+    },
+    "%@ claimed %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ claimed %2$@"
+          }
+        }
+      }
+    },
+    "%@ claimed %lld of %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ claimed %2$lld of %3$@"
+          }
+        }
+      }
+    },
+    "%@ cleared the claims on %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ cleared the claims on %2$@"
+          }
+        }
+      }
+    },
+    "%@ closed the %@ receipt room" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ closed the %2$@ receipt room"
+          }
+        }
+      }
+    },
+    "%@ closed the room" : {
+
+    },
+    "%@ confirmed receiving %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ confirmed receiving %2$@"
+          }
+        }
+      }
+    },
+    "%@ confirmed receiving it from %@ via %@." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ confirmed receiving it from %2$@ via %3$@."
+          }
+        }
+      }
+    },
+    "%@ confirmed the payer keeps the whole receipt" : {
+
+    },
+    "%@ confirmed the receipt: %@, paid by %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ confirmed the receipt: %2$@, paid by %3$@"
+          }
+        }
+      }
+    },
+    "%@ copied" : {
+
+    },
+    "%@ covers it" : {
+
+    },
+    "%@ created %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ created %2$@"
+          }
+        }
+      }
+    },
+    "%@ created an invitation" : {
+
+    },
+    "%@ deleted %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ deleted %2$@"
+          }
+        }
+      }
+    },
+    "%@ didn't receive %@'s payment" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ didn't receive %2$@'s payment"
+          }
+        }
+      }
+    },
+    "%@ didn't receive it" : {
+
+    },
+    "%@ dismissed a dispute with a note" : {
+
+    },
+    "%@ disputed %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ disputed %2$@"
+          }
+        }
+      }
+    },
+    "%@ disputed %@." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ disputed %2$@."
+          }
+        }
+      }
+    },
+    "%@ disputes %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ disputes %2$@"
+          }
+        }
+      }
+    },
+    "%@ doesn't add up. Edit it before sharing." : {
+
+    },
+    "%@ edited %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ edited %2$@"
+          }
+        }
+      }
+    },
+    "%@ edited the group" : {
+
+    },
+    "%@ edited the receipt" : {
+
+    },
+    "%@ edited the receipt (version %lld)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ edited the receipt (version %2$lld)"
+          }
+        }
+      }
+    },
+    "%@ edited the receipt and cleared ^[%lld claim](inflect: true)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ edited the receipt and cleared ^[%2$lld claim](inflect: true)"
+          }
+        }
+      }
+    },
+    "%@ finalized the %@ receipt" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ finalized the %2$@ receipt"
+          }
+        }
+      }
+    },
+    "%@ hadn't reviewed their share; %@ finalized it for them." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ hadn't reviewed their share; %2$@ finalized it for them."
+          }
+        }
+      }
+    },
+    "%@ has %@ unassigned." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ has %2$@ unassigned."
+          }
+        }
+      }
+    },
+    "%@ has ^[%lld more](inflect: true) claimed than it lists." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ has ^[%2$lld more](inflect: true) claimed than it lists."
+          }
+        }
+      }
+    },
+    "%@ has a payment in progress. Resolve it before removing them." : {
+
+    },
+    "%@ has an amount with the wrong sign." : {
+
+    },
+    "%@ has no shares assigned." : {
+
+    },
+    "%@ has the wrong sign. Discounts subtract; other charges add." : {
+
+    },
+    "%@ hasn't added payment methods yet" : {
+
+    },
+    "%@ haven't reviewed their share yet." : {
+
+    },
+    "%@ in %lld s" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ in %2$lld s"
+          }
+        }
+      }
+    },
+    "%@ includes %@, who isn't in the room." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ includes %2$@, who isn't in the room."
+          }
+        }
+      }
+    },
+    "%@ invited %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ invited %2$@"
+          }
+        }
+      }
+    },
+    "%@ invited you" : {
+
+    },
+    "%@ invited you to %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ invited you to %2$@"
+          }
+        }
+      }
+    },
+    "%@ invited you to claim what you had." : {
+
+    },
+    "%@ is %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ is %2$@"
+          }
+        }
+      }
+    },
+    "%@ is already in this group." : {
+
+    },
+    "%@ is claimed by %@, who isn't in the room." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ is claimed by %2$@, who isn't in the room."
+          }
+        }
+      }
+    },
+    "%@ is claimed by quantity but doesn't list one. Set one split." : {
+
+    },
+    "%@ is divided by items, but nobody has claimed any yet." : {
+
+    },
+    "%@ is doing the final review. Claims are locked." : {
+
+    },
+    "%@ is marked as a refund but isn't negative." : {
+
+    },
+    "%@ is negative. Mark it as a refund or correct the amount." : {
+
+    },
+    "%@ is no longer in this group, so they can't be added to new expenses." : {
+
+    },
+    "%@ is off by %@." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ is off by %2$@."
+          }
+        }
+      }
+    },
+    "%@ is over-assigned by %@." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ is over-assigned by %2$@."
+          }
+        }
+      }
+    },
+    "%@ is owed again. Check with %@ before paying again." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ is owed again. Check with %2$@ before paying again."
+          }
+        }
+      }
+    },
+    "%@ is shared" : {
+
+    },
+    "%@ is splitting %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ is splitting %2$@"
+          }
+        }
+      }
+    },
+    "%@ is still owed %@. Settle up before removing them." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ is still owed %2$@. Settle up before removing them."
+          }
+        }
+      }
+    },
+    "%@ is zero. Enter the amount or remove it." : {
+
+    },
+    "%@ isn't an active member of this group." : {
+
+    },
+    "%@ isn't claimed yet." : {
+
+    },
+    "%@ joined" : {
+
+    },
+    "%@ left the group" : {
+
+    },
+    "%@ left the group. Remove them from the room." : {
+
+    },
+    "%@ left to assign" : {
+
+    },
+    "%@ made %@ the group's owner" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ made %2$@ the group's owner"
+          }
+        }
+      }
+    },
+    "%@ mixes exact amounts with shares. Set one split." : {
+
+    },
+    "%@ needs a correct amount. Check it against the receipt." : {
+
+    },
+    "%@ not assigned" : {
+
+    },
+    "%@ of the total isn't paid by anyone yet" : {
+
+    },
+    "%@ opened %@ to pay %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ opened %2$@ to pay %3$@"
+          }
+        }
+      }
+    },
+    "%@ opened a receipt room for %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ opened a receipt room for %2$@"
+          }
+        }
+      }
+    },
+    "%@ opened the room for %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ opened the room for %2$@"
+          }
+        }
+      }
+    },
+    "%@ over the total" : {
+
+    },
+    "%@ owe you" : {
+
+    },
+    "%@ owes %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ owes %2$@"
+          }
+        }
+      }
+    },
+    "%@ owes you" : {
+
+    },
+    "%@ paid" : {
+
+    },
+    "%@ paid %@" : {
+      "comment" : "Recorded settlement title: payer paid payee",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ paid %2$@"
+          }
+        }
+      }
+    },
+    "%@ paid %@ for %@." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ paid %2$@ for %3$@."
+          }
+        }
+      }
+    },
+    "%@ paid 42.50 for groceries with me" : {
+
+    },
+    "%@ paid but is no longer in the group." : {
+
+    },
+    "%@ paid you" : {
+      "comment" : "Recorded settlement the current user received"
+    },
+    "%@ paid. Your share is below." : {
+
+    },
+    "%@ pay %@ more so the total matches exactly." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ pay %2$@ more so the total matches exactly."
+          }
+        }
+      }
+    },
+    "%@ pays %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ pays %2$@"
+          }
+        }
+      }
+    },
+    "%@ pays %@ %@." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ pays %2$@ %3$@."
+          }
+        }
+      }
+    },
+    "%@ pays %@ less on %@ so it divides exactly." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ pays %2$@ less on %3$@ so it divides exactly."
+          }
+        }
+      }
+    },
+    "%@ pays %@ more on %@ so it divides exactly." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ pays %2$@ more on %3$@ so it divides exactly."
+          }
+        }
+      }
+    },
+    "%@ pays %@ more so the total matches exactly." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ pays %2$@ more so the total matches exactly."
+          }
+        }
+      }
+    },
+    "%@ pays you %@." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ pays you %2$@."
+          }
+        }
+      }
+    },
+    "%@ removed %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ removed %2$@"
+          }
+        }
+      }
+    },
+    "%@ removed %@ from the room" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ removed %2$@ from the room"
+          }
+        }
+      }
+    },
+    "%@ removed the receipt images" : {
+
+    },
+    "%@ reported paying %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ reported paying %2$@"
+          }
+        }
+      }
+    },
+    "%@ reported paying you %@ through %@. Did you receive it?" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ reported paying you %2$@ through %3$@. Did you receive it?"
+          }
+        }
+      }
+    },
+    "%@ resolved a dispute" : {
+
+    },
+    "%@ restored %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ restored %2$@"
+          }
+        }
+      }
+    },
+    "%@ reviewed their portion" : {
+
+    },
+    "%@ said it didn't arrive" : {
+
+    },
+    "%@ saved it as an itemized expense" : {
+
+    },
+    "%@ saved the shared %@ receipt" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ saved the shared %2$@ receipt"
+          }
+        }
+      }
+    },
+    "%@ scanned the receipt" : {
+
+    },
+    "%@ set %@ to %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ set %2$@ to %3$@"
+          }
+        }
+      }
+    },
+    "%@ shared %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ shared %2$@"
+          }
+        }
+      }
+    },
+    "%@ split %@ among %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ split %2$@ among %3$@"
+          }
+        }
+      }
+    },
+    "%@ started paying %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ started paying %2$@"
+          }
+        }
+      }
+    },
+    "%@ still owes %@. Settle up before removing them." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ still owes %2$@. Settle up before removing them."
+          }
+        }
+      }
+    },
+    "%@ still to assign." : {
+
+    },
+    "%@ switched payment method" : {
+
+    },
+    "%@ too much assigned." : {
+
+    },
+    "%@ turned off simplified payments" : {
+
+    },
+    "%@ turned on simplified payments" : {
+
+    },
+    "%@ unclaimed %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ unclaimed %2$@"
+          }
+        }
+      }
+    },
+    "%@ uses %lld decimal places" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ uses %2$lld decimal places"
+          }
+        }
+      }
+    },
+    "%@ uses a different currency than the group." : {
+
+    },
+    "%@ wasn't saved." : {
+
+    },
+    "%@ will be owed %@ less." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ will be owed %2$@ less."
+          }
+        }
+      }
+    },
+    "%@ will be owed to you again, and %@ will see that you didn't receive it." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ will be owed to you again, and %2$@ will see that you didn't receive it."
+          }
+        }
+      }
+    },
+    "%@ will owe %@ less." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ will owe %2$@ less."
+          }
+        }
+      }
+    },
+    "%@ will owe you %@." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ will owe you %2$@."
+          }
+        }
+      }
+    },
+    "%@ will see that you declined. They can invite you again later." : {
+
+    },
+    "%@, %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@, %2$@"
+          }
+        }
+      }
+    },
+    "%@, %@, %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@, %2$@, %3$@"
+          }
+        }
+      }
+    },
+    "%@, %lld items" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@, %2$lld items"
+          }
+        }
+      }
+    },
+    "%@, available in %lld seconds" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@, available in %2$lld seconds"
+          }
+        }
+      }
+    },
+    "%@, you" : {
+
+    },
+    "%@, your profile" : {
+
+    },
+    "%@: %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@: %2$@"
+          }
+        }
+      }
+    },
+    "%@: quantity × price doesn't match the line total." : {
+
+    },
+    "%@: quantity must be at least 1." : {
+
+    },
+    "%@. %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@. %2$@"
+          }
+        }
+      }
+    },
+    "%@'s credits exceed their items by %@. Change how a discount or refund is divided." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@'s credits exceed their items by %2$@. Change how a discount or refund is divided."
+          }
+        }
+      }
+    },
+    "%@'s own share is %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@'s own share is %2$@"
+          }
+        }
+      }
+    },
+    "%@'s payment to %@ is disputed" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@'s payment to %2$@ is disputed"
+          }
+        }
+      }
+    },
+    "%@'s payment to %@ wasn't received" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@'s payment to %2$@ wasn't received"
+          }
+        }
+      }
+    },
+    "%@'s share" : {
+
+    },
+    "%@'s total is now %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@'s total is now %2$@"
+          }
+        }
+      }
+    },
+    "%@%@%@%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@%2$@%3$@%4$@"
+          }
+        }
+      }
+    },
+    "%@%% left to assign" : {
+
+    },
+    "%@%% over 100%%" : {
+
+    },
+    "%lld" : {
+
+    },
+    "%lld × %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld × %2$@"
+          }
+        }
+      }
+    },
+    "%lld more" : {
+
+    },
+    "%lld of %lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld of %2$lld"
+          }
+        }
+      }
+    },
+    "%lld of %lld claimed" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld of %2$lld claimed"
+          }
+        }
+      }
+    },
+    "%lld of %lld digits entered" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld of %2$lld digits entered"
+          }
+        }
+      }
+    },
+    "%lld of %lld people" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld of %2$lld people"
+          }
+        }
+      }
+    },
+    "%lld on the receipt" : {
+
+    },
+    "%lld shares" : {
+
+    },
+    "%lld/140" : {
+
+    },
+    "%lld%% of what's open is coming to you." : {
+
+    },
+    "%lld%% of what's open is what you owe." : {
+
+    },
+    "^[%lld additional charge](inflect: true)" : {
+
+    },
+    "^[%lld dispute](inflect: true)" : {
+
+    },
+    "^[%lld expense](inflect: true)" : {
+
+    },
+    "^[%lld group](inflect: true)" : {
+
+    },
+    "^[%lld guest](inflect: true) to match" : {
+
+    },
+    "^[%lld image](inflect: true) couldn't be opened and was skipped." : {
+
+    },
+    "^[%lld item](inflect: true)" : {
+
+    },
+    "^[%lld item](inflect: true) · %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "^[%1$lld item](inflect: true) · %2$@"
+          }
+        }
+      }
+    },
+    "^[%lld item](inflect: true) still to assign. Tap the people who had each one." : {
+
+    },
+    "^[%lld line](inflect: true)" : {
+
+    },
+    "^[%lld member](inflect: true)" : {
+
+    },
+    "^[%lld more group](inflect: true) need you — see all groups." : {
+
+    },
+    "^[%lld more](inflect: true) left for others to claim." : {
+
+    },
+    "^[%lld more](inflect: true) than the receipt lists." : {
+
+    },
+    "^[%lld of %lld](inflect: true) left for others to claim" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "^[%1$lld of %2$lld](inflect: true) left for others to claim"
+          }
+        }
+      }
+    },
+    "^[%lld other](inflect: true)" : {
+
+    },
+    "^[%lld payment](inflect: true) — already as simple as it gets." : {
+
+    },
+    "^[%lld payment](inflect: true) awaiting confirmation" : {
+
+    },
+    "^[%lld payment](inflect: true) instead of %lld." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "^[%1$lld payment](inflect: true) instead of %2$lld."
+          }
+        }
+      }
+    },
+    "^[%lld payment](inflect: true) to confirm" : {
+
+    },
+    "^[%lld payment](inflect: true) to settle up" : {
+
+    },
+    "^[%lld payment](inflect: true)." : {
+
+    },
+    "^[%lld payment](inflect: true). Simplifying would need %lld." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "^[%1$lld payment](inflect: true). Simplifying would need %2$lld."
+          }
+        }
+      }
+    },
+    "^[%lld person](inflect: true)" : {
+
+    },
+    "^[%lld person](inflect: true) · %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "^[%1$lld person](inflect: true) · %2$@"
+          }
+        }
+      }
+    },
+    "^[%lld person](inflect: true) can claim items" : {
+
+    },
+    "^[%lld person](inflect: true) hasn't reviewed their share" : {
+
+    },
+    "^[%lld person](inflect: true) joined" : {
+
+    },
+    "^[%lld person](inflect: true) owe you" : {
+
+    },
+    "^[%lld person](inflect: true) still to review" : {
+
+    },
+    "^[%lld person](inflect: true) waiting to join · Everyone sees the same expenses" : {
+
+    },
+    "^[%lld person](inflect: true) will wait for an invitation. Each joins as themselves — nobody is matched by name." : {
+
+    },
+    "^[%lld problem](inflect: true) to resolve." : {
+
+    },
+    "^[%lld receipt](inflect: true) need you" : {
+
+    },
+    "^[%lld receipt](inflect: true) needs you" : {
+
+    },
+    "^[%lld share](inflect: true)" : {
+
+    },
+    "^[%lld unclaimed](inflect: true)" : {
+
+    },
+    "^[%lld value](inflect: true) to check against the receipt." : {
+
+    },
+    "+%lld" : {
+
+    },
+    "$000.00" : {
+
+    },
+    "$Cashtag" : {
+
+    },
+    "0" : {
+
+    },
+    "A change" : {
+
+    },
+    "A change wasn't sent" : {
+
+    },
+    "a charge" : {
+
+    },
+    "A charge" : {
+
+    },
+    "A dispute is open." : {
+
+    },
+    "A fresh proposal replaces the values below. Your pages are kept." : {
+
+    },
+    "A lowercase letter" : {
+
+    },
+    "A number" : {
+
+    },
+    "A number in %@, or start with + and the country code." : {
+
+    },
+    "A payment in progress uses this method. Its record keeps the method's name, but the details will no longer be shown." : {
+
+    },
+    "A payment that affects these balances is awaiting confirmation. Confirm, reject, or cancel it first, then try again." : {
+
+    },
+    "A receipt" : {
+
+    },
+    "A saved draft keeps its images and edits on this iPhone. Discarding deletes them." : {
+
+    },
+    "A symbol, like ! or #" : {
+
+    },
+    "A zero line is kept as a note and isn't split." : {
+
+    },
+    "About" : {
+
+    },
+    "Accept" : {
+
+    },
+    "Accept and join %@" : {
+
+    },
+    "Accepted" : {
+
+    },
+    "Accepted by %@" : {
+
+    },
+    "Accepted, expired, or turned off" : {
+
+    },
+    "Accepts %@" : {
+
+    },
+    "Access ended" : {
+
+    },
+    "Account" : {
+
+    },
+    "Accounts aren't set up in this build of Square Up." : {
+
+    },
+    "Across ^[%lld group](inflect: true)" : {
+
+    },
+    "Act as" : {
+
+    },
+    "Acting as %@ · local prototype" : {
+
+    },
+    "Activity" : {
+
+    },
+    "Add" : {
+
+    },
+    "Add %@" : {
+
+    },
+    "Add %@ · %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Add %1$@ · %2$@"
+          }
+        }
+      }
+    },
+    "Add %@ to the group" : {
+
+    },
+    "Add a %@ adjustment" : {
+
+    },
+    "Add a charge or discount" : {
+
+    },
+    "Add a method" : {
+
+    },
+    "Add a page to compare values with the receipt." : {
+
+    },
+    "Add a payment method" : {
+
+    },
+    "Add a phone number" : {
+
+    },
+    "Add a short note explaining why no change is needed." : {
+
+    },
+    "Add a way\nto get paid" : {
+
+    },
+    "Add an email and password" : {
+
+    },
+    "Add an email and password to your account to join shared groups." : {
+
+    },
+    "Add an expense" : {
+
+    },
+    "Add an Expense" : {
+
+    },
+    "Add an expense from anywhere" : {
+
+    },
+    "Add another" : {
+
+    },
+    "Add Apple Cash, PayPal, Cash App, Zelle, Venmo, or cash. Optional." : {
+
+    },
+    "Add Apple Cash, PayPal, Cash App, Zelle, Venmo, or cash. You can skip this and add one later." : {
+
+    },
+    "Add at least one item with a price." : {
+
+    },
+    "Add back" : {
+
+    },
+    "Add email and password" : {
+
+    },
+    "Add expense" : {
+
+    },
+    "Add Expense" : {
+
+    },
+    "Add from Photos" : {
+
+    },
+    "Add item" : {
+
+    },
+    "Add items and amounts below." : {
+
+    },
+    "Add method" : {
+
+    },
+    "Add number" : {
+
+    },
+    "Add pages" : {
+
+    },
+    "Add phone number" : {
+
+    },
+    "Add the merchant's name." : {
+
+    },
+    "Add to %@" : {
+
+    },
+    "Add to a group" : {
+
+    },
+    "Add Venmo, Cash App, PayPal, Zelle, or another way friends can send you money. Optional — you can do this later in Profile." : {
+
+    },
+    "Add what it was for" : {
+
+    },
+    "Added before history was recorded." : {
+
+    },
+    "Adding an email and password to a phone account is coming in a later version." : {
+
+    },
+    "Adds up exactly" : {
+
+    },
+    "Adds up to %@" : {
+
+    },
+    "Adds up to the total" : {
+
+    },
+    "Adjustment" : {
+
+    },
+    "Adjustments" : {
+
+    },
+    "After sharing, this group is kept in sync with the server, and the copy on this iPhone is set aside." : {
+
+    },
+    "AI assistance" : {
+
+    },
+    "AI processing wasn't available. We prepared this receipt on your device." : {
+
+    },
+    "All" : {
+
+    },
+    "All details" : {
+
+    },
+    "All groups" : {
+
+    },
+    "All square" : {
+
+    },
+    "Already claimed" : {
+
+    },
+    "Already has a decimal point" : {
+
+    },
+    "Already have an account?" : {
+
+    },
+    "amount" : {
+
+    },
+    "Amount" : {
+
+    },
+    "Amount %@ paid" : {
+
+    },
+    "Amount for %@" : {
+
+    },
+    "Amount prepared" : {
+
+    },
+    "Amounts can't have the opposite sign of the item." : {
+
+    },
+    "An earlier version of Square Up kept groups on this iPhone before accounts existed." : {
+
+    },
+    "an item" : {
+
+    },
+    "An item" : {
+
+    },
+    "An item you claimed changed" : {
+
+    },
+    "An uppercase letter" : {
+
+    },
+    "Apple Cash" : {
+
+    },
+    "Apple Intelligence" : {
+
+    },
+    "Apple Intelligence for quick entry" : {
+
+    },
+    "Apple Intelligence is still getting ready." : {
+
+    },
+    "Apple Intelligence is turned off in Settings." : {
+
+    },
+    "Apple Intelligence isn't available right now." : {
+
+    },
+    "Apply" : {
+
+    },
+    "Archive" : {
+
+    },
+    "Archive %@?" : {
+
+    },
+    "Archive group" : {
+
+    },
+    "Archive the group" : {
+
+    },
+    "Archived · read only" : {
+
+    },
+    "Ask %@ how they want to be paid" : {
+
+    },
+    "Assign or split" : {
+
+    },
+    "Assign or split…" : {
+
+    },
+    "At least %lld characters" : {
+
+    },
+    "Automatic AI processing" : {
+
+    },
+    "Available on this iPhone" : {
+
+    },
+    "awaiting confirmation" : {
+
+    },
+    "Awaiting confirmation" : {
+
+    },
+    "Back" : {
+
+    },
+    "Back to review" : {
+
+    },
+    "Back to room" : {
+
+    },
+    "Back to sign in" : {
+
+    },
+    "Balance details" : {
+
+    },
+    "Balances" : {
+
+    },
+    "Balances may have changed since you opened this." : {
+
+    },
+    "Before joining they see only the group's name, the owner's name, how many people are in it, its currency, and when this invitation expires." : {
+
+    },
+    "Before saving, say who each guest is in your group so the expense lands on the right people." : {
+
+    },
+    "Between you and others" : {
+
+    },
+    "Built-in parser" : {
+
+    },
+    "By item" : {
+
+    },
+    "By quantity" : {
+
+    },
+    "By shares" : {
+
+    },
+    "By what each person ordered" : {
+
+    },
+    "Camera access is off" : {
+
+    },
+    "Camera scanning isn't available on this device. Choose a photo instead." : {
+
+    },
+    "Camping" : {
+
+    },
+    "Can't reach\nSquare Up" : {
+
+    },
+    "Cancel" : {
+
+    },
+    "Cancel a payment" : {
+
+    },
+    "Cancel attempt" : {
+
+    },
+    "Cancel the invitation to %@" : {
+
+    },
+    "Cancelled" : {
+
+    },
+    "Cash" : {
+
+    },
+    "Cash App" : {
+
+    },
+    "Cash App payment link (optional)" : {
+
+    },
+    "Cash in person" : {
+
+    },
+    "category" : {
+
+    },
+    "Category: %@" : {
+
+    },
+    "Change" : {
+
+    },
+    "Change name" : {
+
+    },
+    "Change number" : {
+
+    },
+    "Change simplified payments" : {
+
+    },
+    "Change the details friends use to pay you." : {
+
+    },
+    "Change the owner" : {
+
+    },
+    "Change who has it…" : {
+
+    },
+    "Changed %@" : {
+
+    },
+    "Changed %@ · revision %lld (was %@)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Changed %1$@ · revision %2$lld (was %3$@)"
+          }
+        }
+      }
+    },
+    "Changed %@." : {
+
+    },
+    "Changes" : {
+
+    },
+    "Changes who pays whom, not what anyone owes." : {
+
+    },
+    "Changing %@ removes the claims on it. %@ will be asked to review again. The previous values stay in the room's history." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Changing %1$@ removes the claims on it. %2$@ will be asked to review again. The previous values stay in the room's history."
+          }
+        }
+      }
+    },
+    "Charges" : {
+
+    },
+    "Check\nyour email" : {
+
+    },
+    "Check that your bank shows %@ as the recipient before you send. Then come back here." : {
+
+    },
+    "Check the name, review, and send in PayPal." : {
+
+    },
+    "Check the number and its country, then try again." : {
+
+    },
+    "Check this" : {
+
+    },
+    "Checking the group…" : {
+
+    },
+    "Checking the invitation…" : {
+
+    },
+    "Checking totals" : {
+
+    },
+    "Checking your account…" : {
+
+    },
+    "Checking…" : {
+
+    },
+    "Choose a group" : {
+
+    },
+    "Choose a group." : {
+
+    },
+    "Choose a password that meets every requirement below." : {
+
+    },
+    "Choose a replacement" : {
+
+    },
+    "Choose another group" : {
+
+    },
+    "Choose at least one person." : {
+
+    },
+    "Choose from Photos" : {
+
+    },
+    "Choose from Photos instead" : {
+
+    },
+    "Choose how this is divided" : {
+
+    },
+    "Choose how to pay. Nothing is paid until you send it in another app." : {
+
+    },
+    "Choose one. You'll come back here to say whether you sent it." : {
+
+    },
+    "Choose the country of your number" : {
+
+    },
+    "Choose the name other members will see before creating or joining a shared group." : {
+
+    },
+    "Choose the name people will see" : {
+
+    },
+    "Choose the name people will see before joining." : {
+
+    },
+    "Choose the service friends will use to pay you, then add your details." : {
+
+    },
+    "Choose the ways you accept money. When someone owes you, they'll see only these, with your preferred method first. Square Up never moves money or asks for bank logins." : {
+
+    },
+    "Choose who paid before assigning %@ to the payer." : {
+
+    },
+    "Choose who paid." : {
+
+    },
+    "Choose who shares %@." : {
+
+    },
+    "Choose who shares this" : {
+
+    },
+    "Claim part" : {
+
+    },
+    "Claim what you had and mark your share reviewed. %@ finishes it into a group expense; balances don't change until then." : {
+
+    },
+    "Claim what you had on Square Up." : {
+
+    },
+    "Claim what you had on Square Up. Or open Square Up and enter the code %@." : {
+
+    },
+    "Claim what you had, then mark your share reviewed. When %@ finalizes, you'll see what to pay them." : {
+
+    },
+    "Claimed by %@" : {
+
+    },
+    "Claiming open" : {
+
+    },
+    "Clear" : {
+
+    },
+    "Clear affected claims?" : {
+
+    },
+    "Clear all claims" : {
+
+    },
+    "Clear match" : {
+
+    },
+    "Close" : {
+
+    },
+    "Close room" : {
+
+    },
+    "Close room without saving" : {
+
+    },
+    "Close this room?" : {
+
+    },
+    "Closed" : {
+
+    },
+    "Code copied" : {
+
+    },
+    "Code or link" : {
+
+    },
+    "Code sent. It can take a minute to arrive." : {
+
+    },
+    "Come back here and say whether you sent it." : {
+
+    },
+    "Compare each line with the receipt and correct the one that was misread. If the receipt itself doesn't add up, record the difference as a labelled adjustment." : {
+
+    },
+    "Confirm %lld payments" : {
+
+    },
+    "Confirm a payment" : {
+
+    },
+    "Confirm each payment when it arrives." : {
+
+    },
+    "Confirm password" : {
+
+    },
+    "Confirm received" : {
+
+    },
+    "Confirm receiving a payment" : {
+
+    },
+    "Confirm the total printed on the receipt." : {
+
+    },
+    "Confirmation number (optional)" : {
+
+    },
+    "Confirmed" : {
+
+    },
+    "Confirmed by %@" : {
+
+    },
+    "Confirmed by you." : {
+
+    },
+    "Confirmed payments also count toward this balance — see Activity." : {
+
+    },
+    "Confirmed received" : {
+
+    },
+    "Connecting…" : {
+
+    },
+    "Connection required" : {
+
+    },
+    "Connection required. Nothing was confirmed." : {
+
+    },
+    "Continue" : {
+
+    },
+    "Continue a saved receipt" : {
+
+    },
+    "Continue in Messages" : {
+
+    },
+    "Continue paying %@" : {
+
+    },
+    "Contributing expenses" : {
+
+    },
+    "Copied" : {
+
+    },
+    "Copy" : {
+
+    },
+    "Copy %@" : {
+
+    },
+    "Copy amount" : {
+
+    },
+    "Copy and continue" : {
+
+    },
+    "Copy code" : {
+
+    },
+    "Copy ctx.amount" : {
+
+    },
+    "Copy details" : {
+
+    },
+    "Copy link" : {
+
+    },
+    "Copy the amount, send it with Apple Cash from another device, then come back and report it." : {
+
+    },
+    "Couldn't add it right now. Nothing changed — try again." : {
+
+    },
+    "Couldn't find payer “%@” — choose on the next step." : {
+
+    },
+    "Couldn't find where this appears on the receipt." : {
+
+    },
+    "Couldn't load activity" : {
+
+    },
+    "Couldn't load groups" : {
+
+    },
+    "Couldn't load invitations. %@" : {
+
+    },
+    "Couldn't load payment methods" : {
+
+    },
+    "Couldn't load the invitations you sent. %@" : {
+
+    },
+    "Couldn't load the plan" : {
+
+    },
+    "Couldn't load this group" : {
+
+    },
+    "Couldn't load this payment" : {
+
+    },
+    "Couldn't load your balances" : {
+
+    },
+    "Couldn't make an invitation" : {
+
+    },
+    "Couldn't open %@" : {
+
+    },
+    "Couldn't open Mail. Open your email app and tap the link we sent." : {
+
+    },
+    "Couldn't open that group" : {
+
+    },
+    "Couldn't open the invitation" : {
+
+    },
+    "Couldn't open the room" : {
+
+    },
+    "Couldn't open this expense" : {
+
+    },
+    "Couldn't open this group" : {
+
+    },
+    "Couldn't open your groups" : {
+
+    },
+    "Couldn't reach Square Up right now. Nothing changed — try again." : {
+
+    },
+    "Couldn't reach the account service. Try again." : {
+
+    },
+    "Couldn't read the amount “%@”." : {
+
+    },
+    "Couldn't read the latest changes" : {
+
+    },
+    "Couldn't read the latest changes. Showing the last good version." : {
+
+    },
+    "Couldn't read this receipt" : {
+
+    },
+    "Couldn't refresh" : {
+
+    },
+    "Couldn't save right now. Nothing was changed — try again." : {
+
+    },
+    "Country" : {
+
+    },
+    "Country or code" : {
+
+    },
+    "Country: %@, %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Country: %1$@, %2$@"
+          }
+        }
+      }
+    },
+    "Create" : {
+
+    },
+    "Create a group" : {
+
+    },
+    "Create a group first, or split this receipt with people now." : {
+
+    },
+    "Create a group for an apartment, a trip, or a dinner crew — or open an invitation a friend sent you." : {
+
+    },
+    "Create a group for your apartment, a trip, or a dinner crew." : {
+
+    },
+    "Create a group or add an expense to get started." : {
+
+    },
+    "Create account" : {
+
+    },
+    "Create room and invite" : {
+
+    },
+    "Creating your account…" : {
+
+    },
+    "credit %@" : {
+
+    },
+    "Crop" : {
+
+    },
+    "Crop page" : {
+
+    },
+    "currency" : {
+
+    },
+    "Currency" : {
+
+    },
+    "Custom split" : {
+
+    },
+    "Custom split…" : {
+
+    },
+    "date" : {
+
+    },
+    "Date" : {
+
+    },
+    "Decide later" : {
+
+    },
+    "Decimal point" : {
+
+    },
+    "Decline" : {
+
+    },
+    "Decline the invitation to %@" : {
+
+    },
+    "Decline the invitation to %@?" : {
+
+    },
+    "Declined" : {
+
+    },
+    "Default currency" : {
+
+    },
+    "Delete" : {
+
+    },
+    "Delete %@" : {
+
+    },
+    "Delete %@?" : {
+
+    },
+    "Delete and start over" : {
+
+    },
+    "Delete expense" : {
+
+    },
+    "Delete item" : {
+
+    },
+    "Delete this sign-up and start over" : {
+
+    },
+    "Delete this sign-up?" : {
+
+    },
+    "Deleted" : {
+
+    },
+    "Deleted by %@ · %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Deleted by %1$@ · %2$@"
+          }
+        }
+      }
+    },
+    "Deleted: %@, %@. %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Deleted: %1$@, %2$@. %3$@"
+          }
+        }
+      }
+    },
+    "Demo" : {
+
+    },
+    "Demo · sample data" : {
+
+    },
+    "Describe it" : {
+
+    },
+    "Describe it in a sentence" : {
+
+    },
+    "Describe the expense the way you'd text it. You'll check every detail before saving." : {
+
+    },
+    "description" : {
+
+    },
+    "Description (optional)" : {
+
+    },
+    "Details" : {
+
+    },
+    "Details are shown in full only to people who owe you. Everyone else sees a masked version." : {
+
+    },
+    "details incomplete" : {
+
+    },
+    "Details incomplete · copy amount only" : {
+
+    },
+    "Development account" : {
+
+    },
+    "Diagnostics never include names, amounts, notes, or receipt text." : {
+
+    },
+    "Did you send %@ to %@?" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Did you send %1$@ to %2$@?"
+          }
+        }
+      }
+    },
+    "Didn't get it?" : {
+
+    },
+    "Didn't get it? Check the number above and wait a minute. Codes expire after a few minutes." : {
+
+    },
+    "Didn't have this" : {
+
+    },
+    "Difference %@" : {
+
+    },
+    "Direct" : {
+
+    },
+    "Discard" : {
+
+    },
+    "Discard my change" : {
+
+    },
+    "Discard my change: %@" : {
+
+    },
+    "Discard receipt" : {
+
+    },
+    "Discard this expense?" : {
+
+    },
+    "Discount" : {
+
+    },
+    "Discounts" : {
+
+    },
+    "Discounts reduce the total. Enter 4.00 or -4.00; it's stored as a credit." : {
+
+    },
+    "Dismiss" : {
+
+    },
+    "Dispute" : {
+
+    },
+    "Dispute a payment" : {
+
+    },
+    "Dispute this charge" : {
+
+    },
+    "Disputed" : {
+
+    },
+    "Disputed · needs a decision" : {
+
+    },
+    "Disputed by %@" : {
+
+    },
+    "Disputes" : {
+
+    },
+    "Divide" : {
+
+    },
+    "Divide %@" : {
+
+    },
+    "Divided evenly among the people you choose." : {
+
+    },
+    "Doesn't add up yet" : {
+
+    },
+    "Doesn't change what you owe" : {
+
+    },
+    "Doesn't match the other amounts." : {
+
+    },
+    "Done" : {
+
+    },
+    "Draft from your description — review each field" : {
+
+    },
+    "Each invitation works once, for one account, for 7 days." : {
+
+    },
+    "Each link and code works on its own." : {
+
+    },
+    "Each person claims what they had. You can change this later." : {
+
+    },
+    "Each person pays in proportion to their items. Usual for tax." : {
+
+    },
+    "Each person's items so far" : {
+
+    },
+    "Each person's share" : {
+
+    },
+    "Earlier data on this iPhone" : {
+
+    },
+    "Edit" : {
+
+    },
+    "Edit\n%@" : {
+
+    },
+    "Edit %@" : {
+
+    },
+    "Edit expense" : {
+
+    },
+    "Edit group" : {
+
+    },
+    "Edit item" : {
+
+    },
+    "Edit receipt" : {
+
+    },
+    "Edit the group" : {
+
+    },
+    "Edited · revision %lld · last by %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Edited · revision %1$lld · last by %2$@"
+          }
+        }
+      }
+    },
+    "Email" : {
+
+    },
+    "Email and password" : {
+
+    },
+    "email at %@" : {
+
+    },
+    "Email sent. It can take a minute to arrive — check spam too." : {
+
+    },
+    "Email sign-in isn't available right now. Try again later." : {
+
+    },
+    "Ended" : {
+
+    },
+    "Enter %@, add the note, and send in Cash App." : {
+
+    },
+    "Enter %@, tap Pay, and search %@." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Enter %1$@, tap Pay, and search %2$@."
+          }
+        }
+      }
+    },
+    "Enter a 10-digit US phone number." : {
+
+    },
+    "Enter a full email address, like name@example.com." : {
+
+    },
+    "Enter a phone number with its area code. For another country, start with + and its code." : {
+
+    },
+    "Enter a room code or paste an invitation link" : {
+
+    },
+    "Enter a US phone number or an email address." : {
+
+    },
+    "Enter a valid %@ mobile number, or choose a different country." : {
+
+    },
+    "Enter a valid %@ number, or choose a different country." : {
+
+    },
+    "Enter a valid email address, like name@example.com." : {
+
+    },
+    "Enter a valid email address." : {
+
+    },
+    "Enter an amount" : {
+
+    },
+    "Enter an amount first" : {
+
+    },
+    "Enter an amount greater than zero." : {
+
+    },
+    "Enter an amount like 12.50 or -2.00." : {
+
+    },
+    "Enter an amount like 12.50." : {
+
+    },
+    "Enter Demo" : {
+
+    },
+    "Enter the\ncode" : {
+
+    },
+    "Enter the code" : {
+
+    },
+    "Enter the code the host shows you, or paste the link they sent. To use a QR code, point the Camera app at it." : {
+
+    },
+    "Enter the details friends will use to pay you." : {
+
+    },
+    "Enter the email you use for Square Up and we'll send a link to choose a new password." : {
+
+    },
+    "Enter the mobile number on your account." : {
+
+    },
+    "Enter the name people in your groups will see." : {
+
+    },
+    "Enter the password again." : {
+
+    },
+    "Enter the person's full name." : {
+
+    },
+    "Enter the receipt total to check the math." : {
+
+    },
+    "Enter the receipt total." : {
+
+    },
+    "Enter what each person paid" : {
+
+    },
+    "Enter your email address." : {
+
+    },
+    "Enter your mobile number." : {
+
+    },
+    "Enter your mobile number. We'll text you a code to confirm it's yours." : {
+
+    },
+    "Enter your password." : {
+
+    },
+    "Entered by you." : {
+
+    },
+    "Entering manually" : {
+
+    },
+    "Entertainment" : {
+
+    },
+    "Equal" : {
+
+    },
+    "Equally" : {
+
+    },
+    "Equally among %@" : {
+
+    },
+    "Every expense and payment on this iPhone will be replaced with the original sample groups. This can't be undone." : {
+
+    },
+    "Every expense in this group uses this currency." : {
+
+    },
+    "Every group is square" : {
+
+    },
+    "Every item is assigned." : {
+
+    },
+    "Every item needs a name." : {
+
+    },
+    "Every payment is confirmed" : {
+
+    },
+    "Everyone" : {
+
+    },
+    "Everyone else already claimed all of this line." : {
+
+    },
+    "Everyone else pays you back" : {
+
+    },
+    "Everyone has reviewed. Finish it when it's all claimed." : {
+
+    },
+    "Everyone in %@ is square" : {
+
+    },
+    "Everyone in %@ is square." : {
+
+    },
+    "Everyone in the sample groups lives on this iPhone. Switching lets you play another person — for example, to confirm a payment as its recipient. Nothing is sent to other devices." : {
+
+    },
+    "Everyone in this demo group is fictional. Inviting people is off in the demo." : {
+
+    },
+    "Everyone is square" : {
+
+    },
+    "Everyone is square." : {
+
+    },
+    "Everyone sees the same expenses and balances" : {
+
+    },
+    "Everyone who shares this receipt." : {
+
+    },
+    "Everyone, every receipt, and every amount in the demo's groups is fictional sample data. This demo is yours alone: it's kept apart from every real account and group, and deleted after a week. Receipts you scan are read with AI like in the real app; live rooms you open can be joined as a guest or from another demo, never with a real account. Group invitations and Find a person are off." : {
+
+    },
+    "Everyone's names, every expense, and recorded payments are shared with the people who join." : {
+
+    },
+    "Everyone's shares add up to %@, exactly the receipt total." : {
+
+    },
+    "Everyone's square" : {
+
+    },
+    "Everything is assigned to the payer. Confirm that's intended to save it." : {
+
+    },
+    "Everything you added or changed in the demo is removed, and its sample groups, receipts, and payments go back to how they started. Only this demo is affected." : {
+
+    },
+    "Exact" : {
+
+    },
+    "Exact amounts" : {
+
+    },
+    "Excludes ^[%lld group](inflect: true) in another currency." : {
+
+    },
+    "Expense" : {
+
+    },
+    "Expense saved, %@" : {
+
+    },
+    "Expenses" : {
+
+    },
+    "Expenses and payments from your groups appear here." : {
+
+    },
+    "Expenses and payments you're part of will appear here." : {
+
+    },
+    "Expenses belong to a group so everyone involved can see them." : {
+
+    },
+    "Expired" : {
+
+    },
+    "Explain the adjustment, e.g. “Printed rounding”." : {
+
+    },
+    "Explore sample groups" : {
+
+    },
+    "Family" : {
+
+    },
+    "Fee" : {
+
+    },
+    "Feel the “all square” haptic" : {
+
+    },
+    "Fees" : {
+
+    },
+    "Fill in expense" : {
+
+    },
+    "Final review" : {
+
+    },
+    "Final split" : {
+
+    },
+    "Finalize the split" : {
+
+    },
+    "Finalize their %@ for them" : {
+
+    },
+    "Finalized" : {
+
+    },
+    "Find" : {
+
+    },
+    "Find a person" : {
+
+    },
+    "Find by" : {
+
+    },
+    "Find someone else" : {
+
+    },
+    "Find someone who uses Square Up by their email or phone number. They join only if they accept." : {
+
+    },
+    "Find Zelle in your bank's app" : {
+
+    },
+    "Finding…" : {
+
+    },
+    "Finish in %@" : {
+
+    },
+    "Finish or cancel payments in progress first." : {
+
+    },
+    "Finish or discard ^[%lld receipt](inflect: true) in progress first." : {
+
+    },
+    "Finish reviewing the receipt first." : {
+
+    },
+    "Finish splitting %@" : {
+
+    },
+    "First line's amount" : {
+
+    },
+    "Fix recognition" : {
+
+    },
+    "Fix these first" : {
+
+    },
+    "Food" : {
+
+    },
+    "Food & drink" : {
+
+    },
+    "For %@" : {
+
+    },
+    "For paying in person." : {
+
+    },
+    "For your security, sign in again before making this change." : {
+
+    },
+    "Forgot\npassword?" : {
+
+    },
+    "Forgot password?" : {
+
+    },
+    "Former member" : {
+
+    },
+    "Former members" : {
+
+    },
+    "Friends" : {
+
+    },
+    "Friends owe you %@, and you owe %@." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Friends owe you %1$@, and you owe %2$@."
+          }
+        }
+      }
+    },
+    "Friends will copy your username and the amount into Venmo." : {
+
+    },
+    "Friends will open your PayPal.Me link with the amount filled in." : {
+
+    },
+    "Friends won't see this method anymore. Past payments stay in history." : {
+
+    },
+    "From %@ via %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "From %1$@ via %2$@"
+          }
+        }
+      }
+    },
+    "From now on the server keeps the room in sync. You still save the final expense to your group." : {
+
+    },
+    "Full name" : {
+
+    },
+    "Fully assigned" : {
+
+    },
+    "Getting paid" : {
+
+    },
+    "Give at least one person a share" : {
+
+    },
+    "Give the group a name." : {
+
+    },
+    "Give this method a name." : {
+
+    },
+    "Glare may hide some text. Check values carefully." : {
+
+    },
+    "Good afternoon" : {
+
+    },
+    "Good evening" : {
+
+    },
+    "Good evening, Placeholder" : {
+
+    },
+    "Good morning" : {
+
+    },
+    "Google's Firebase processes your number to send the code and to prevent spam and abuse." : {
+
+    },
+    "Groceries" : {
+
+    },
+    "Group" : {
+
+    },
+    "Group name" : {
+
+    },
+    "Group not found" : {
+
+    },
+    "Group: %@" : {
+
+    },
+    "Groups" : {
+
+    },
+    "Groups hold the people you share costs with — an apartment, a trip, or a dinner crew." : {
+
+    },
+    "Groups or people" : {
+
+    },
+    "Groups stay on this iPhone. Add an email and password to share groups with other people's iPhones and get them back on a new one." : {
+
+    },
+    "Guests joined with just a name. Choose who they are in your group so balances stay right." : {
+
+    },
+    "Had this" : {
+
+    },
+    "Handle (optional)" : {
+
+    },
+    "Handles can use letters, numbers, dots, dashes, and underscores." : {
+
+    },
+    "Hasn't added payment methods yet" : {
+
+    },
+    "Hasn't paid yet" : {
+
+    },
+    "Here's where you stand." : {
+
+    },
+    "Hey,\nwelcome back" : {
+
+    },
+    "Hi %@! How would you like me to pay you for %@? (Square Up)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Hi %1$@! How would you like me to pay you for %2$@? (Square Up)"
+          }
+        }
+      }
+    },
+    "Hidden from friends" : {
+
+    },
+    "Hide password" : {
+
+    },
+    "History" : {
+
+    },
+    "Home" : {
+
+    },
+    "Host" : {
+
+    },
+    "Host is resolving" : {
+
+    },
+    "Host is resolving the rest" : {
+
+    },
+    "Host tools" : {
+
+    },
+    "Hosting" : {
+
+    },
+    "Housing" : {
+
+    },
+    "How can friends pay you?" : {
+
+    },
+    "How do you want to split it?" : {
+
+    },
+    "How friends\npay you" : {
+
+    },
+    "How friends pay you" : {
+
+    },
+    "How it works" : {
+
+    },
+    "How many %@ had" : {
+
+    },
+    "How many did you have?" : {
+
+    },
+    "How many you had" : {
+
+    },
+    "How people can pay you" : {
+
+    },
+    "How to fix it" : {
+
+    },
+    "How to invite" : {
+
+    },
+    "How to pay you" : {
+
+    },
+    "How to split" : {
+
+    },
+    "I already sent it" : {
+
+    },
+    "I didn't send it — cancel report" : {
+
+    },
+    "I haven't paid yet (cancel report)" : {
+
+    },
+    "I paid %@" : {
+
+    },
+    "I paid $80 for dinner split with %@" : {
+
+    },
+    "I paid $84 for dinner with…" : {
+
+    },
+    "I paid another way" : {
+
+    },
+    "I paid another way (cash, in person)" : {
+
+    },
+    "I paid with %@" : {
+
+    },
+    "I'll pay in cash" : {
+
+    },
+    "I'm %@" : {
+
+    },
+    "I'm back" : {
+
+    },
+    "I've verified my email" : {
+
+    },
+    "icon" : {
+
+    },
+    "Icon" : {
+
+    },
+    "If an account uses this address, we sent it a link to reset the password:" : {
+
+    },
+    "If that email has an account, a reset link is on its way." : {
+
+    },
+    "If that email has an account, a reset link is on its way. Follow it, then sign in with the new password." : {
+
+    },
+    "Image removed" : {
+
+    },
+    "Image unavailable" : {
+
+    },
+    "In %@ · only the people on it can claim" : {
+
+    },
+    "In %@." : {
+
+    },
+    "In %@. Claim what you had and check your share." : {
+
+    },
+    "In ^[%lld group](inflect: true)" : {
+
+    },
+    "In a shared group, everyone acts as themselves." : {
+
+    },
+    "In Messages, tap +, choose Apple Cash, paste %@, review, and send." : {
+
+    },
+    "In the shared version, %@ confirms on their own iPhone. In this prototype everyone is on this device, so you can respond as %@ to try the flow. No message is sent to anyone." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "In the shared version, %1$@ confirms on their own iPhone. In this prototype everyone is on this device, so you can respond as %2$@ to try the flow. No message is sent to anyone."
+          }
+        }
+      }
+    },
+    "In this group, you owe" : {
+
+    },
+    "In this group, you're all square" : {
+
+    },
+    "In this group, you're owed" : {
+
+    },
+    "includes rounding" : {
+
+    },
+    "instead of %lld" : {
+
+    },
+    "Instructions (optional)" : {
+
+    },
+    "Invitation" : {
+
+    },
+    "Invitation code" : {
+
+    },
+    "Invitation declined" : {
+
+    },
+    "Invitation expires %@" : {
+
+    },
+    "Invitation sent to %@" : {
+
+    },
+    "Invitation turned off" : {
+
+    },
+    "Invitations" : {
+
+    },
+    "Invitations sent" : {
+
+    },
+    "Invite" : {
+
+    },
+    "Invite %@" : {
+
+    },
+    "Invite people" : {
+
+    },
+    "Invite someone" : {
+
+    },
+    "Invite someone who already uses Square Up. They'll see your invitation in their Groups tab and join only if they accept." : {
+
+    },
+    "Invite someone who uses Square Up by their email or phone number." : {
+
+    },
+    "Invite to group" : {
+
+    },
+    "is owed" : {
+
+    },
+    "Is owed %@" : {
+
+    },
+    "Is owed %@ overall" : {
+
+    },
+    "It holds %@ and %@." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "It holds %1$@ and %2$@."
+          }
+        }
+      }
+    },
+    "It isn't saved until Square Up confirms it. Sending again won't apply it twice." : {
+
+    },
+    "It isn't taking new people." : {
+
+    },
+    "It may have been removed, or you may no longer be a member." : {
+
+    },
+    "It may have expired or been turned off. Ask the host for a new link." : {
+
+    },
+    "It was cancelled, so no expense was created." : {
+
+    },
+    "It will stop affecting balances, but stays in the group's history." : {
+
+    },
+    "It's held out of new suggestions so you won't be asked to pay twice. It counts as paid once %@ confirms." : {
+
+    },
+    "It's not mine" : {
+
+    },
+    "Item" : {
+
+    },
+    "Item removed from the receipt" : {
+
+    },
+    "Items" : {
+
+    },
+    "Items add up to %@; the printed subtotal is %@." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Items add up to %1$@; the printed subtotal is %2$@."
+          }
+        }
+      }
+    },
+    "Items identified with AI. Check ^[%lld value](inflect: true) against the receipt." : {
+
+    },
+    "Items identified with AI. Check the values against the receipt." : {
+
+    },
+    "Items not assigned yet" : {
+
+    },
+    "Its earlier expenses and payments came with it." : {
+
+    },
+    "Its sample data is deleted from this iPhone and the server. You can enter a fresh demo from the Welcome screen." : {
+
+    },
+    "Join" : {
+
+    },
+    "Join a group" : {
+
+    },
+    "Join a receipt" : {
+
+    },
+    "Join group" : {
+
+    },
+    "Join my group on Square Up" : {
+
+    },
+    "Join my receipt" : {
+
+    },
+    "Join or create a group first" : {
+
+    },
+    "Join receipt" : {
+
+    },
+    "Join with a code" : {
+
+    },
+    "Joined" : {
+
+    },
+    "Joined %@" : {
+
+    },
+    "Joining needs a connection. You'll join once, as this account." : {
+
+    },
+    "Joining…" : {
+
+    },
+    "Just you for now. Once it's created, open People → Invite people to send each person their own invitation." : {
+
+    },
+    "Keep editing" : {
+
+    },
+    "Keep on this iPhone" : {
+
+    },
+    "Keep reviewing" : {
+
+    },
+    "Keep the note under 140 characters." : {
+
+    },
+    "Keep this receipt?" : {
+
+    },
+    "Keeps this iPhone's account (and any receipt rooms it hosts) and lets you use shared groups and recover them on another iPhone." : {
+
+    },
+    "Kept for history. They don't affect balances." : {
+
+    },
+    "Kept on the server: everyone you invite sees the same expenses and balances on their own iPhone. Needs a connection to create. Up to 25 people." : {
+
+    },
+    "Label" : {
+
+    },
+    "Label (optional)" : {
+
+    },
+    "Leave" : {
+
+    },
+    "Leave %@?" : {
+
+    },
+    "Leave demo" : {
+
+    },
+    "Leave group" : {
+
+    },
+    "Leave the demo?" : {
+
+    },
+    "Leave the group" : {
+
+    },
+    "Left the group" : {
+
+    },
+    "Let everyone claim on their own phone" : {
+
+    },
+    "Let's get\nstarted" : {
+
+    },
+    "Let's get everyone square." : {
+
+    },
+    "Line total" : {
+
+    },
+    "Lines add up to" : {
+
+    },
+    "link on %@" : {
+
+    },
+    "Link or code" : {
+
+    },
+    "Link or QR code" : {
+
+    },
+    "Links and codes stop working. People already in the room stay in it." : {
+
+    },
+    "Live · up to date" : {
+
+    },
+    "Loading" : {
+
+    },
+    "Loading the group…" : {
+
+    },
+    "Local prototype" : {
+
+    },
+    "Local prototype · everyone claims on this iPhone · nothing is sent to other devices" : {
+
+    },
+    "Local prototype: everyone claims on this iPhone by switching who's acting. Nothing is sent to other devices." : {
+
+    },
+    "Lock claims and resolve the rest" : {
+
+    },
+    "Looks good" : {
+
+    },
+    "Looks like the line above. Remove it if it's a duplicate." : {
+
+    },
+    "Low contrast — faded text may be misread." : {
+
+    },
+    "Low resolution. A closer photo will read better." : {
+
+    },
+    "Made %@" : {
+
+    },
+    "Made %@ · expires %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Made %1$@ · expires %2$@"
+          }
+        }
+      }
+    },
+    "Make %@ the owner?" : {
+
+    },
+    "Make another invitation" : {
+
+    },
+    "Make owner" : {
+
+    },
+    "Make preferred" : {
+
+    },
+    "Making an invitation…" : {
+
+    },
+    "Manual adjustments" : {
+
+    },
+    "Mark as not received?" : {
+
+    },
+    "Mark resolved" : {
+
+    },
+    "Mark reviewed" : {
+
+    },
+    "Marked not received" : {
+
+    },
+    "Match each guest to someone in the group before saving the expense." : {
+
+    },
+    "Match guests" : {
+
+    },
+    "Matched %@" : {
+
+    },
+    "Members" : {
+
+    },
+    "Merchant" : {
+
+    },
+    "Merge with the next line" : {
+
+    },
+    "Messages couldn't send. Copy the amount and try Apple Cash in Messages directly." : {
+
+    },
+    "Messages isn't available on this device" : {
+
+    },
+    "Met: %@" : {
+
+    },
+    "Mine" : {
+
+    },
+    "minus %@" : {
+
+    },
+    "Mobile number" : {
+
+    },
+    "More for %@" : {
+
+    },
+    "More than one currency appears on this receipt. Choose the one it was paid in." : {
+
+    },
+    "More than one person matches “%@” — choose on the next step." : {
+
+    },
+    "More than one person paid" : {
+
+    },
+    "More than one possible value was found." : {
+
+    },
+    "More than one total was printed (%@). Check which one was paid." : {
+
+    },
+    "Move down" : {
+
+    },
+    "Move earlier" : {
+
+    },
+    "Move later" : {
+
+    },
+    "Move up" : {
+
+    },
+    "Must be resolved before saving." : {
+
+    },
+    "My Balances" : {
+
+    },
+    "name" : {
+
+    },
+    "Name" : {
+
+    },
+    "Name (required)" : {
+
+    },
+    "Name in shared groups" : {
+
+    },
+    "Name the group will see" : {
+
+    },
+    "Named when this group was shared. Their invitation lets that person take the place and its history." : {
+
+    },
+    "Needs resolution" : {
+
+    },
+    "Needs you" : {
+
+    },
+    "Neither person is marked as settled until it's resolved." : {
+
+    },
+    "New code sent. Use the latest one." : {
+
+    },
+    "New email" : {
+
+    },
+    "New group" : {
+
+    },
+    "New invitation" : {
+
+    },
+    "New to Square Up?" : {
+
+    },
+    "Next" : {
+
+    },
+    "Next up: the invitation you opened." : {
+
+    },
+    "Next, choose who was there and who had what." : {
+
+    },
+    "No %@ yet" : {
+
+    },
+    "No amount found — enter it below." : {
+
+    },
+    "No change needed" : {
+
+    },
+    "No expense was created." : {
+
+    },
+    "No expense will be created. Claims are kept in the room's history." : {
+
+    },
+    "No expenses affect this balance." : {
+
+    },
+    "No expenses yet. Add the first one below." : {
+
+    },
+    "No group needed. Everyone joins on their own phone." : {
+
+    },
+    "No groups yet" : {
+
+    },
+    "No items yet. Add each line from the receipt." : {
+
+    },
+    "No longer affects balances. The record is kept." : {
+
+    },
+    "No money was recorded." : {
+
+    },
+    "No more than %lld characters" : {
+
+    },
+    "No receipt image" : {
+
+    },
+    "No receipt image was attached." : {
+
+    },
+    "No shared groups yet. Create one, share a group from this iPhone, or join with an invitation code." : {
+
+    },
+    "No source text for this value." : {
+
+    },
+    "No Square Up account matches that. Check it, or share an invitation link instead." : {
+
+    },
+    "No text found" : {
+
+    },
+    "Nobody in %@ owes anything right now." : {
+
+    },
+    "Nobody owes anything in your groups right now." : {
+
+    },
+    "Nobody owes you anything." : {
+
+    },
+    "Not added" : {
+
+    },
+    "Not available" : {
+
+    },
+    "Not available in this build" : {
+
+    },
+    "Not changed" : {
+
+    },
+    "Not expenses yet. Balances change only when the host finishes one." : {
+
+    },
+    "Not expenses yet. Finish claiming to save them." : {
+
+    },
+    "Not found on the receipt." : {
+
+    },
+    "not involved" : {
+
+    },
+    "Not met yet: %@" : {
+
+    },
+    "Not mine / Dispute…" : {
+
+    },
+    "Not now" : {
+
+    },
+    "Not opened" : {
+
+    },
+    "Not paid yet" : {
+
+    },
+    "Not paid yet · opening an app doesn't mean money was sent" : {
+
+    },
+    "Not printed; using the group's default." : {
+
+    },
+    "Not received" : {
+
+    },
+    "Not reported yet" : {
+
+    },
+    "Not saved" : {
+
+    },
+    "Not saved on this iPhone yet" : {
+
+    },
+    "Not saved yet — waiting for connection: %@" : {
+
+    },
+    "Not sent: the receipt photo, your groups, other expenses, or balances." : {
+
+    },
+    "Not shared" : {
+
+    },
+    "Not signed in" : {
+
+    },
+    "Not started" : {
+
+    },
+    "Not verified" : {
+
+    },
+    "Not yet" : {
+
+    },
+    "Note" : {
+
+    },
+    "Note · not split" : {
+
+    },
+    "Nothing has been recorded. Finish paying, then report it." : {
+
+    },
+    "Nothing has been saved yet." : {
+
+    },
+    "Nothing has been uploaded." : {
+
+    },
+    "Nothing has changed yet." : {
+
+    },
+    "Nothing here yet." : {
+
+    },
+    "Nothing here." : {
+
+    },
+    "Nothing is owed here anymore. Balances may have changed." : {
+
+    },
+    "Nothing more can change" : {
+
+    },
+    "Nothing needs you right now" : {
+
+    },
+    "Nothing new can be added. History is kept." : {
+
+    },
+    "Nothing to pay" : {
+
+    },
+    "Nothing to pay %@ right now" : {
+
+    },
+    "Nothing was changed. Try again." : {
+
+    },
+    "Nothing was changed. Your expenses are still saved on this iPhone." : {
+
+    },
+    "of %@" : {
+
+    },
+    "Off: the photo stays on this iPhone. People see the items and amounts." : {
+
+    },
+    "Offline" : {
+
+    },
+    "Offline · %@. Nothing new can be confirmed until you're back online." : {
+
+    },
+    "Offline · showing %@" : {
+
+    },
+    "Offline · showing the copies saved on this iPhone" : {
+
+    },
+    "OK" : {
+
+    },
+    "On this iPhone" : {
+
+    },
+    "On this iPhone only" : {
+
+    },
+    "On-device only" : {
+
+    },
+    "One of the amounts can't be read" : {
+
+    },
+    "One of the values can't be read" : {
+
+    },
+    "Only %@ (host) can finalize. Switch to them to finish." : {
+
+    },
+    "Only ^[%lld is](inflect: true) left on this line." : {
+
+    },
+    "Only official cash.app links can be added. Without one, friends copy your $Cashtag." : {
+
+    },
+    "Only on this iPhone — good for trying things out or keeping track yourself. You can share it later." : {
+
+    },
+    "Only once everyone is settled up and no payment is in progress. Nothing new can be added and invitations stop working. Everyone can still read the history." : {
+
+    },
+    "Only people in this room can do that." : {
+
+    },
+    "Only people in this room can see it. It's deleted with the room." : {
+
+    },
+    "Only people who confirmed this email or number with their Square Up account can be found. They see your name and the group's name before deciding." : {
+
+    },
+    "Only the host can do that." : {
+
+    },
+    "Only the owner can change their payment methods." : {
+
+    },
+    "Only the payer or recipient of this payment can do that." : {
+
+    },
+    "Only the people on this receipt can see its details." : {
+
+    },
+    "Only use it if it's yours. Once it's added to this account, other people who sign in on this iPhone won't be offered it. Nothing is deleted either way." : {
+
+    },
+    "Only you can say whether the money arrived." : {
+
+    },
+    "Only your own personal groups can be shared." : {
+
+    },
+    "Open" : {
+
+    },
+    "Open %@'s Cash App link" : {
+
+    },
+    "Open %@'s Zelle QR link" : {
+
+    },
+    "Open balances" : {
+
+    },
+    "Open Cash App and tap $." : {
+
+    },
+    "Open for claims" : {
+
+    },
+    "Open Mail" : {
+
+    },
+    "Open PayPal" : {
+
+    },
+    "Open room" : {
+
+    },
+    "Open Settings" : {
+
+    },
+    "Open Square Up and sign in first." : {
+
+    },
+    "Open Square Up to finish setting up." : {
+
+    },
+    "Open the group" : {
+
+    },
+    "Open the link sent to this new address. Your account switches to it once you do; until then it keeps the old one." : {
+
+    },
+    "Open the link, choose a new password, then come back and sign in. Check spam if it doesn't arrive." : {
+
+    },
+    "Open the link, or paste code %@ in Square Up → Groups → Join with a code." : {
+
+    },
+    "Open the link, then come back here. It can take a minute to arrive — check spam too." : {
+
+    },
+    "Open the payment app" : {
+
+    },
+    "Open until %@" : {
+
+    },
+    "Open Venmo and tap Pay/Request." : {
+
+    },
+    "Open your bank or credit union app and go to Zelle." : {
+
+    },
+    "Opened %@" : {
+
+    },
+    "Opening the shared room…" : {
+
+    },
+    "Opens a sample workspace with fictional people, receipts, and amounts" : {
+
+    },
+    "Opens provider" : {
+
+    },
+    "Opens resolution options" : {
+
+    },
+    "Opens Square Up to record a shared expense." : {
+
+    },
+    "Opens Square Up to scan or import a receipt and split it item by item." : {
+
+    },
+    "Opens the editor and shows where this was read on the receipt." : {
+
+    },
+    "Opens the full image" : {
+
+    },
+    "Opens the payment link %@ shared." : {
+
+    },
+    "Opens the receipt to claim and review your items" : {
+
+    },
+    "Opens your profile" : {
+
+    },
+    "Optional note" : {
+
+    },
+    "Options for %@" : {
+
+    },
+    "Or enter this code in Square Up" : {
+
+    },
+    "Originally read as “%@” %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Originally read as “%1$@” %2$@"
+          }
+        }
+      }
+    },
+    "Other" : {
+
+    },
+    "Others will owe you %@ in total." : {
+
+    },
+    "Outdoors" : {
+
+    },
+    "Overall, you are owed %@" : {
+
+    },
+    "Overall, you owe %@" : {
+
+    },
+    "Overall, you owe %@ across ^[%lld group](inflect: true)." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Overall, you owe %1$@ across ^[%2$lld group](inflect: true)."
+          }
+        }
+      }
+    },
+    "Overall, you're owed %@ across ^[%lld group](inflect: true)." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Overall, you're owed %1$@ across ^[%2$lld group](inflect: true)."
+          }
+        }
+      }
+    },
+    "Owed to you" : {
+
+    },
+    "owes" : {
+
+    },
+    "Owes %@" : {
+
+    },
+    "Owes %@ overall" : {
+
+    },
+    "Owner" : {
+
+    },
+    "Owner: %@" : {
+
+    },
+    "Page" : {
+
+    },
+    "Page %lld" : {
+
+    },
+    "Page %lld of %lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Page %1$lld of %2$lld"
+          }
+        }
+      }
+    },
+    "Pages" : {
+
+    },
+    "paid" : {
+
+    },
+    "Paid · confirmed" : {
+
+    },
+    "Paid by" : {
+
+    },
+    "paid more than their share" : {
+
+    },
+    "Paid the bill" : {
+
+    },
+    "Participant" : {
+
+    },
+    "Participant totals are %@ away from the receipt total." : {
+
+    },
+    "Party" : {
+
+    },
+    "Password" : {
+
+    },
+    "Password requirements" : {
+
+    },
+    "Past expenses and payments are kept." : {
+
+    },
+    "Past members" : {
+
+    },
+    "Paste" : {
+
+    },
+    "Paste the code or link someone shared with you. Nothing is joined until you confirm." : {
+
+    },
+    "Paste the note, review, and send. Then come back here." : {
+
+    },
+    "Pay" : {
+
+    },
+    "Pay %@" : {
+
+    },
+    "Pay %@ %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Pay %1$@ %2$@"
+          }
+        }
+      }
+    },
+    "Pay %@ %@ in person." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Pay %1$@ %2$@ in person."
+          }
+        }
+      }
+    },
+    "Pay %@ %@ the way you agreed." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Pay %1$@ %2$@ the way you agreed."
+          }
+        }
+      }
+    },
+    "Pay %@ again" : {
+
+    },
+    "Pay another way" : {
+
+    },
+    "Payer" : {
+
+    },
+    "Payer covers it" : {
+
+    },
+    "Payer's reference: %@ (not verified by Square Up)" : {
+
+    },
+    "Paying %@" : {
+
+    },
+    "Paying you back" : {
+
+    },
+    "Payment" : {
+
+    },
+    "Payment from %@ is disputed" : {
+
+    },
+    "Payment methods aren't copied. Each person adds their own." : {
+
+    },
+    "Payments" : {
+
+    },
+    "Payments add up to the total" : {
+
+    },
+    "Payments are %@ more than the total" : {
+
+    },
+    "Payments can be reported and confirmed until %@. The room closes on its own once everyone is confirmed." : {
+
+    },
+    "Payments must be in the group's currency." : {
+
+    },
+    "Payments until %@" : {
+
+    },
+    "PayPal" : {
+
+    },
+    "PayPal opens with %@ to %@ filled in." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "PayPal opens with %1$@ to %2$@ filled in."
+          }
+        }
+      }
+    },
+    "PayPal.Me" : {
+
+    },
+    "PayPal.Me name or link" : {
+
+    },
+    "People" : {
+
+    },
+    "People join with their own invitation. Manage them from the group's People screen." : {
+
+    },
+    "People on this receipt" : {
+
+    },
+    "People see the merchant, items, amounts, and who claimed what — never your groups or balances." : {
+
+    },
+    "People see the receipt's items and amounts and who claimed what — never your groups or balances." : {
+
+    },
+    "People you know" : {
+
+    },
+    "Percent" : {
+
+    },
+    "Percent for %@" : {
+
+    },
+    "Percentages" : {
+
+    },
+    "Phone" : {
+
+    },
+    "Phone number" : {
+
+    },
+    "Phone number added. You can now sign in with it." : {
+
+    },
+    "phone number ending in %@" : {
+
+    },
+    "Phone or email used for iMessage" : {
+
+    },
+    "Phone sign-in isn't available for this number yet. Use email instead." : {
+
+    },
+    "Phone sign-in isn't available in this build" : {
+
+    },
+    "Pick who was there and who had what. It's added to the group right away as one itemized expense." : {
+
+    },
+    "Pinch to zoom. Double-tap to reset. Every value is also listed below." : {
+
+    },
+    "Placeholder detail text" : {
+
+    },
+    "Placeholder group name" : {
+
+    },
+    "Places waiting for someone" : {
+
+    },
+    "plus %@" : {
+
+    },
+    "Point a camera at this code to join." : {
+
+    },
+    "Post %@" : {
+
+    },
+    "Posted to %@ · waiting for claims" : {
+
+    },
+    "Preferences" : {
+
+    },
+    "preferred" : {
+
+    },
+    "Preferred" : {
+
+    },
+    "Preferred method" : {
+
+    },
+    "Preparing receipt" : {
+
+    },
+    "Previewing as %@" : {
+
+    },
+    "Printed subtotal (optional)" : {
+
+    },
+    "Privacy" : {
+
+    },
+    "Problem: %@" : {
+
+    },
+    "Process receipts with AI?" : {
+
+    },
+    "Processed by Square Up's server" : {
+
+    },
+    "Processed on this iPhone with Apple Intelligence" : {
+
+    },
+    "Processed on this iPhone without AI" : {
+
+    },
+    "Processed with Apple Private Cloud Compute" : {
+
+    },
+    "Profile" : {
+
+    },
+    "QR code for the invitation" : {
+
+    },
+    "Qty %lld" : {
+
+    },
+    "Quantity (optional)" : {
+
+    },
+    "Quantity × price doesn't match the line total." : {
+
+    },
+    "Quantity × price is %@." : {
+
+    },
+    "Read again" : {
+
+    },
+    "Read as: %@" : {
+
+    },
+    "Read clearly from the receipt." : {
+
+    },
+    "Read differently in different places. Check it against the receipt." : {
+
+    },
+    "Read on device: ^[%lld item](inflect: true) proposed" : {
+
+    },
+    "Read on this iPhone. Check ^[%lld value](inflect: true) against the receipt." : {
+
+    },
+    "Read on this iPhone. Check the values against the receipt." : {
+
+    },
+    "Read receipt" : {
+
+    },
+    "Read the receipt again?" : {
+
+    },
+    "Reading text" : {
+
+    },
+    "Reading was interrupted" : {
+
+    },
+    "Reading your receipt. %@" : {
+
+    },
+    "Reading your receipt. %@: %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Reading your receipt. %1$@: %2$@"
+          }
+        }
+      }
+    },
+    "Reading…" : {
+
+    },
+    "Ready to open" : {
+
+    },
+    "Receipt" : {
+
+    },
+    "Receipt history · ^[%lld event](inflect: true)" : {
+
+    },
+    "Receipt image" : {
+
+    },
+    "Receipt image removed" : {
+
+    },
+    "Receipt images and item details stay on this iPhone; the split amounts are shared." : {
+
+    },
+    "Receipt images were removed." : {
+
+    },
+    "Receipt math" : {
+
+    },
+    "Receipt needs your review" : {
+
+    },
+    "Receipt page" : {
+
+    },
+    "Receipt page %lld" : {
+
+    },
+    "Receipt photo" : {
+
+    },
+    "Receipt processing" : {
+
+    },
+    "Receipt ready to review." : {
+
+    },
+    "Receipt saved" : {
+
+    },
+    "Receipt total" : {
+
+    },
+    "Receipts" : {
+
+    },
+    "Receipts are read and organized on this iPhone. Nothing is sent for processing." : {
+
+    },
+    "Receipts being split" : {
+
+    },
+    "Receipts can include sensitive details, such as where you shopped, what you bought, and part of a card number." : {
+
+    },
+    "Receipts in progress" : {
+
+    },
+    "Recent activity" : {
+
+    },
+    "Recipient" : {
+
+    },
+    "Recipient's view" : {
+
+    },
+    "Record a manual payment" : {
+
+    },
+    "Record manually" : {
+
+    },
+    "Recorded payment" : {
+
+    },
+    "Refund" : {
+
+    },
+    "Refund or return" : {
+
+    },
+    "Remove" : {
+
+    },
+    "Remove %@" : {
+
+    },
+    "Remove %@?" : {
+
+    },
+    "Remove from group" : {
+
+    },
+    "Remove images" : {
+
+    },
+    "Remove method" : {
+
+    },
+    "Remove page" : {
+
+    },
+    "Remove receipt images" : {
+
+    },
+    "Remove the receipt images?" : {
+
+    },
+    "Removing %@ clears their claims. They're kept in the room's history." : {
+
+    },
+    "Reopen claims" : {
+
+    },
+    "Replace or rescan" : {
+
+    },
+    "Replace page" : {
+
+    },
+    "Report a payment sent" : {
+
+    },
+    "Reported as sent" : {
+
+    },
+    "Reported as sent. Not counted as paid until the recipient confirms." : {
+
+    },
+    "Reported paid · %@" : {
+
+    },
+    "Reporting doesn't settle anything yet. %@ confirms when the money arrives." : {
+
+    },
+    "Rescan this page" : {
+
+    },
+    "Resend available %@" : {
+
+    },
+    "Resend code" : {
+
+    },
+    "Resend code in %@" : {
+
+    },
+    "Resend email" : {
+
+    },
+    "Resend link" : {
+
+    },
+    "Reset demo data" : {
+
+    },
+    "Reset demo data?" : {
+
+    },
+    "Reset link sent." : {
+
+    },
+    "Reset password" : {
+
+    },
+    "Reset sample data" : {
+
+    },
+    "Reset sample data?" : {
+
+    },
+    "Reset zoom" : {
+
+    },
+    "Resolution note" : {
+
+    },
+    "Resolve" : {
+
+    },
+    "Resolve dispute" : {
+
+    },
+    "Resolve dispute…" : {
+
+    },
+    "Resolved" : {
+
+    },
+    "Respond as %@ (sample identity)" : {
+
+    },
+    "Restore" : {
+
+    },
+    "Restore %@" : {
+
+    },
+    "Result" : {
+
+    },
+    "Resume" : {
+
+    },
+    "Retake or import a clearer image from Pages, or add the items yourself below." : {
+
+    },
+    "Retry" : {
+
+    },
+    "Review" : {
+
+    },
+    "Review & finalize" : {
+
+    },
+    "Review and pay, then come back here." : {
+
+    },
+    "Review later" : {
+
+    },
+    "Review latest" : {
+
+    },
+    "Review receipt" : {
+
+    },
+    "Reviewed" : {
+
+    },
+    "Reviewing receipt" : {
+
+    },
+    "Road trip" : {
+
+    },
+    "Room closed" : {
+
+    },
+    "Room code" : {
+
+    },
+    "Room expired" : {
+
+    },
+    "Room not created" : {
+
+    },
+    "Room: %@" : {
+
+    },
+    "Rooms you share or join appear here." : {
+
+    },
+    "Rotate left" : {
+
+    },
+    "Rotate right" : {
+
+    },
+    "Rounding" : {
+
+    },
+    "Sample data" : {
+
+    },
+    "Sample recognition proposed ^[%lld item](inflect: true)" : {
+
+    },
+    "Save" : {
+
+    },
+    "Save %@" : {
+
+    },
+    "Save and clear claims" : {
+
+    },
+    "Save as expense" : {
+
+    },
+    "Save changes" : {
+
+    },
+    "Save draft" : {
+
+    },
+    "Save expense" : {
+
+    },
+    "Save method" : {
+
+    },
+    "Save the shared receipt" : {
+
+    },
+    "Save to the group" : {
+
+    },
+    "Saved" : {
+
+    },
+    "Saved as expense" : {
+
+    },
+    "Saved on this iPhone" : {
+
+    },
+    "Saved on this iPhone. Only you see %@ unless you share the group." : {
+
+    },
+    "Saved the shared room's final state on this iPhone" : {
+
+    },
+    "Saved to the shared group. Everyone in %@ sees it on their own iPhone." : {
+
+    },
+    "Saved to your account. In shared groups, others see which methods you accept; the details appear only to someone who owes you, when they pay." : {
+
+    },
+    "Saving…" : {
+
+    },
+    "Say a payment didn't arrive" : {
+
+    },
+    "Scan" : {
+
+    },
+    "Scan a Receipt" : {
+
+    },
+    "Scan a receipt instead" : {
+
+    },
+    "Scan more pages" : {
+
+    },
+    "Scan or import it, check what Square Up read, then let everyone claim what they had." : {
+
+    },
+    "Scan receipt" : {
+
+    },
+    "Scan Receipt" : {
+
+    },
+    "Scan receipts with the camera" : {
+
+    },
+    "Scan with Camera" : {
+
+    },
+    "School" : {
+
+    },
+    "Search %@, enter %@, and paste the note." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Search %1$@, enter %2$@, and paste the note."
+          }
+        }
+      }
+    },
+    "Section" : {
+
+    },
+    "See all" : {
+
+    },
+    "See who pays whom" : {
+
+    },
+    "Select a value below to see where it was read." : {
+
+    },
+    "Send" : {
+
+    },
+    "Send %@ to %@." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Send %1$@ to %2$@."
+          }
+        }
+      }
+    },
+    "Send again" : {
+
+    },
+    "Send code" : {
+
+    },
+    "Send link" : {
+
+    },
+    "Send reset link" : {
+
+    },
+    "Send this to %@ only. When they accept, they take their place in the group with everything already recorded for them." : {
+
+    },
+    "Send this to one person. It works once, for one account. Make another invitation for each person you invite." : {
+
+    },
+    "Sending ^[%lld change](inflect: true)…" : {
+
+    },
+    "Sending code…" : {
+
+    },
+    "Sending: %@" : {
+
+    },
+    "Sending…" : {
+
+    },
+    "Sent to %@" : {
+
+    },
+    "Sent to Square Up's server: the merchant, date, items, amounts, how charges are split, and the names of the people in the room." : {
+
+    },
+    "Service" : {
+
+    },
+    "Service charge" : {
+
+    },
+    "Service charges" : {
+
+    },
+    "Set up later" : {
+
+    },
+    "Set up room" : {
+
+    },
+    "Setting up the demo…" : {
+
+    },
+    "Settle up" : {
+
+    },
+    "settled up" : {
+
+    },
+    "Settled up" : {
+
+    },
+    "share" : {
+
+    },
+    "Share" : {
+
+    },
+    "Share a code or link. Friends can join without installing Square Up." : {
+
+    },
+    "Share invitation" : {
+
+    },
+    "Share it so everyone sees the same expenses on their own iPhone and can settle up with you." : {
+
+    },
+    "Share link" : {
+
+    },
+    "Share live" : {
+
+    },
+    "Share this group" : {
+
+    },
+    "Share this group…" : {
+
+    },
+    "Share this receipt live" : {
+
+    },
+    "Shared" : {
+
+    },
+    "Shared · up to date" : {
+
+    },
+    "Shared by %@" : {
+
+    },
+    "Shared group" : {
+
+    },
+    "Shared groups" : {
+
+    },
+    "Shared groups are kept on the server and on this iPhone for offline reading. Square Up never stores bank details." : {
+
+    },
+    "Shared groups aren't set up in this build of Square Up." : {
+
+    },
+    "Shared groups need an account you can recover on another iPhone." : {
+
+    },
+    "Shared receipts are saved by their host." : {
+
+    },
+    "Shared room" : {
+
+    },
+    "Shared rooms" : {
+
+    },
+    "Shares" : {
+
+    },
+    "Shares add up to %@; the receipt total is %@." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Shares add up to %1$@; the receipt total is %2$@."
+          }
+        }
+      }
+    },
+    "Shares for %@" : {
+
+    },
+    "Sharing isn't set up in this build of Square Up." : {
+
+    },
+    "Sharing…" : {
+
+    },
+    "Shopping" : {
+
+    },
+    "Short instructions only. Links and scripts aren't allowed." : {
+
+    },
+    "Show" : {
+
+    },
+    "Show %@ on the receipt" : {
+
+    },
+    "Show a QR code or a short code at the table. Friends join without a group, claim what they had, and pay you back." : {
+
+    },
+    "Show My Balances" : {
+
+    },
+    "Show password" : {
+
+    },
+    "Show the photo to people in the room" : {
+
+    },
+    "Show to friends" : {
+
+    },
+    "showing the copy from %@" : {
+
+    },
+    "Showing the last version that added up on this iPhone. Nothing was changed." : {
+
+    },
+    "showing the saved copy" : {
+
+    },
+    "Showing what's saved on this iPhone · %@" : {
+
+    },
+    "Showing what's saved on this iPhone." : {
+
+    },
+    "Shown only to people who owe you, after you finish the split." : {
+
+    },
+    "Shown to others in this room. It doesn't sign you in to anything." : {
+
+    },
+    "Shown to people in your shared groups. You can confirm or change it when you join a group." : {
+
+    },
+    "Shows a link and code others can use to join" : {
+
+    },
+    "Shows each part of the total" : {
+
+    },
+    "Shows every group and your position in each" : {
+
+    },
+    "Shows people and invitations" : {
+
+    },
+    "Shows the expenses behind this balance" : {
+
+    },
+    "Shows who pays whom to make the group square" : {
+
+    },
+    "Sign in" : {
+
+    },
+    "Sign in again" : {
+
+    },
+    "Sign in from Profile to share groups with other people's iPhones. Groups on this iPhone work without an account." : {
+
+    },
+    "Sign in from Profile with an email and password to create shared groups." : {
+
+    },
+    "Sign in instead" : {
+
+    },
+    "Sign in to an existing account" : {
+
+    },
+    "Sign in to continue." : {
+
+    },
+    "Sign in to see your groups and balances." : {
+
+    },
+    "Sign in with a text message code instead of a password. Google's Firebase processes your number to send codes and prevent abuse." : {
+
+    },
+    "Sign out" : {
+
+    },
+    "Sign out?" : {
+
+    },
+    "Sign-in methods" : {
+
+    },
+    "Signature haptics" : {
+
+    },
+    "Signed in" : {
+
+    },
+    "Signed out" : {
+
+    },
+    "Signed out · sign in again to make changes. Nothing you entered was lost." : {
+
+    },
+    "Signing in…" : {
+
+    },
+    "Simplified" : {
+
+    },
+    "Simplify payments" : {
+
+    },
+    "Simplifying changes who pays whom, not how much anyone owes or is owed overall. Square Up never moves money — each payment happens in the app you choose." : {
+
+    },
+    "Simplifying changes who pays whom. It never changes how much anyone owes or is owed overall." : {
+
+    },
+    "Skipped ^[%lld page](inflect: true) already on this receipt." : {
+
+    },
+    "Skipped ^[%lld page](inflect: true) imported twice." : {
+
+    },
+    "Some" : {
+
+    },
+    "Some items or charges still need attention." : {
+
+    },
+    "Some records in this group are duplicated." : {
+
+    },
+    "Someone" : {
+
+    },
+    "Someone changed the group first" : {
+
+    },
+    "Someone changed the group first. Your change wasn't saved." : {
+
+    },
+    "Someone changed this expense" : {
+
+    },
+    "Someone changed this expense. Your edit wasn't saved." : {
+
+    },
+    "Someone changed this first" : {
+
+    },
+    "Someone changed this first, so your change wasn't saved. Check the latest and try again." : {
+
+    },
+    "Someone else" : {
+
+    },
+    "Something went wrong" : {
+
+    },
+    "Something's not right — dispute" : {
+
+    },
+    "split" : {
+
+    },
+    "Split" : {
+
+    },
+    "Split a receipt" : {
+
+    },
+    "Split between" : {
+
+    },
+    "Split between %@." : {
+
+    },
+    "Split bills with friends, see who owes what, and settle up without the awkward math." : {
+
+    },
+    "Split by exact amounts between %@." : {
+
+    },
+    "Split by percentage between %@." : {
+
+    },
+    "Split by shares between %@." : {
+
+    },
+    "Split equally between %@ — %@ each." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Split equally between %1$@ — %2$@ each."
+          }
+        }
+      }
+    },
+    "Split equally between %@." : {
+
+    },
+    "Split everything equally" : {
+
+    },
+    "Split into two lines" : {
+
+    },
+    "Split method" : {
+
+    },
+    "Split needs fixing" : {
+
+    },
+    "Split now" : {
+
+    },
+    "Split receipt" : {
+
+    },
+    "Split the rest equally" : {
+
+    },
+    "Split the tab.\nSkip the math." : {
+
+    },
+    "Split with people now" : {
+
+    },
+    "Splitting now" : {
+
+    },
+    "Splitting now · waiting for payments" : {
+
+    },
+    "Splitting with people now needs Square Up's server. Add the receipt to a group on this iPhone instead." : {
+
+    },
+    "Sports" : {
+
+    },
+    "Square Up · %@ · %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Square Up · %1$@ · %2$@"
+          }
+        }
+      }
+    },
+    "Square Up can't check that this contact uses Apple Cash. Friends will be sent to Messages to pay you." : {
+
+    },
+    "Square Up can't see %@. Check that the money arrived before confirming." : {
+
+    },
+    "Square Up can't see Apple Cash. Only you can confirm you sent it." : {
+
+    },
+    "Square Up can't send more codes right now. Try again later, or use email instead." : {
+
+    },
+    "Square Up copies %@ and opens Messages to %@." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Square Up copies %1$@ and opens Messages to %2$@."
+          }
+        }
+      }
+    },
+    "Square Up couldn't confirm this request came from the app. Try again, or use email instead." : {
+
+    },
+    "Square Up couldn't open this account's data on this iPhone. Restart the app and try again." : {
+
+    },
+    "Square Up couldn't reach its account service. Try again in a moment." : {
+
+    },
+    "Square Up doesn't move money. Pay the payer however you usually do." : {
+
+    },
+    "Square Up doesn't move money. Reporting tells %@ to check; only they can confirm it arrived." : {
+
+    },
+    "Square Up never moves money. People pay you however you choose, and you confirm when it arrives." : {
+
+    },
+    "Square Up never moves money. You pay in the app you choose." : {
+
+    },
+    "Square Up uses the camera only while you scan. Text is read on this iPhone and the image stays here." : {
+
+    },
+    "Square Up: %@" : {
+
+    },
+    "Square Up: Paying you %@ for %@. Settlement %@." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Square Up: Paying you %1$@ for %2$@. Settlement %3$@."
+          }
+        }
+      }
+    },
+    "Start paying %@" : {
+
+    },
+    "Start using Square Up" : {
+
+    },
+    "Started paying with %@" : {
+
+    },
+    "Status" : {
+
+    },
+    "Step %lld of %lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Step %1$lld of %2$lld"
+          }
+        }
+      }
+    },
+    "Step %lld of 3" : {
+
+    },
+    "Still checking your account — this is taking longer than usual." : {
+
+    },
+    "Stop new people joining?" : {
+
+    },
+    "Storage" : {
+
+    },
+    "Subtotal" : {
+
+    },
+    "Suggested" : {
+
+    },
+    "Suggested from the description" : {
+
+    },
+    "Suggested, please review" : {
+
+    },
+    "Suggestions are processed on this iPhone. AI fills in a draft you review — it never calculates balances, records payments, or saves anything on its own. When it's unavailable, a built-in parser is used instead." : {
+
+    },
+    "Supplies" : {
+
+    },
+    "Switch" : {
+
+    },
+    "Switch who's acting" : {
+
+    },
+    "Talk with %@. Neither of you is marked as settled until %@ confirms or rejects it." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Talk with %1$@. Neither of you is marked as settled until %2$@ confirms or rejects it."
+          }
+        }
+      }
+    },
+    "Tap %@ in the tab bar to record what someone paid. Square Up splits it and updates everyone's balance." : {
+
+    },
+    "Tap a person to see which expenses created their balance" : {
+
+    },
+    "Tap to choose how each is divided." : {
+
+    },
+    "Tax" : {
+
+    },
+    "Tax of %@ is included in the prices, so it isn't added again." : {
+
+    },
+    "Tax, tip & extras" : {
+
+    },
+    "Tax, tip, and discounts (%@) are added in proportion once every item is assigned." : {
+
+    },
+    "Tax, tip, and discounts are shared in proportion to what each person had." : {
+
+    },
+    "Tax, tip, fees & discounts" : {
+
+    },
+    "Tells you who owes you, what you owe, and which payments need you, across your groups." : {
+
+    },
+    "Text touches the edge. Part of the receipt may be cut off." : {
+
+    },
+    "Text was found, but no priced lines. Add the items yourself." : {
+
+    },
+    "That charge is no longer on the receipt." : {
+
+    },
+    "That code has expired. Send a new one." : {
+
+    },
+    "That code isn't right. Check the latest text message and try again." : {
+
+    },
+    "That demo ended and its sample data was removed. Enter the demo again for a fresh copy." : {
+
+    },
+    "That dispute is no longer open." : {
+
+    },
+    "That doesn't look like a Square Up group invitation. Check the code and try again." : {
+
+    },
+    "That email and password don't match. Check them and try again." : {
+
+    },
+    "That email can't be used for a new account. If it's yours, sign in instead." : {
+
+    },
+    "That image couldn't be opened. Try another photo or scan the receipt." : {
+
+    },
+    "That isn't a Square Up invitation link or room code." : {
+
+    },
+    "That isn't available here." : {
+
+    },
+    "That isn't available in a shared group." : {
+
+    },
+    "That isn't available in a shared room." : {
+
+    },
+    "That isn't possible while the room is “%@”." : {
+
+    },
+    "That item is no longer on the receipt." : {
+
+    },
+    "That link isn't from this service. Only official https links can be added." : {
+
+    },
+    "That number looks too short for %@." : {
+
+    },
+    "That page couldn't be updated. Try again or replace it." : {
+
+    },
+    "That page is already on this receipt." : {
+
+    },
+    "That password doesn't meet the requirements. Choose a longer or stronger one." : {
+
+    },
+    "That payment couldn't be found." : {
+
+    },
+    "That payment method isn't available anymore. Choose another." : {
+
+    },
+    "That payment method was removed." : {
+
+    },
+    "That person couldn't be found." : {
+
+    },
+    "That person isn't an active member of this group." : {
+
+    },
+    "That split doesn't add up to the charge." : {
+
+    },
+    "That username doesn't look right for this service." : {
+
+    },
+    "That's a little long — please shorten it." : {
+
+    },
+    "That's everything still unclaimed on this line." : {
+
+    },
+    "That's larger than a single expense can be" : {
+
+    },
+    "That's more than is currently owed (%@). Balances may have changed." : {
+
+    },
+    "That's the address already on this account." : {
+
+    },
+    "That's you." : {
+
+    },
+    "The %@ receipt is fully assigned. %@." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "The %1$@ receipt is fully assigned. %2$@."
+          }
+        }
+      }
+    },
+    "The amount is owed again." : {
+
+    },
+    "The amount was rounded to whole cents." : {
+
+    },
+    "The app may not be installed, or the link couldn't be opened. Copy the details below and pay another way." : {
+
+    },
+    "The camera stopped unexpectedly. Try again or choose from Photos." : {
+
+    },
+    "The check was closed before it finished. Tap Continue to try again." : {
+
+    },
+    "The currency can't change after the room opens." : {
+
+    },
+    "The currency can't change once the group has expenses or payments." : {
+
+    },
+    "The demo is back to its sample data." : {
+
+    },
+    "The group sees the items and amounts, not the receipt photo." : {
+
+    },
+    "The host chooses how these are divided." : {
+
+    },
+    "The host closed it before it was final" : {
+
+    },
+    "The host edited the receipt. Check your items, then mark your portion reviewed." : {
+
+    },
+    "The host is asked to resolve it. Nothing can be saved while a dispute is open." : {
+
+    },
+    "The invitation expired or the host removed you. Ask the host for a new link." : {
+
+    },
+    "The lines are %@ less than the total. Fix a line or add a labelled adjustment." : {
+
+    },
+    "The lines are %@ more than the total. Fix a line or add a labelled adjustment." : {
+
+    },
+    "The link opens a web page with the code and an Open Square Up button. In Square Up, they can also paste the code in Groups → Join with a code." : {
+
+    },
+    "The message wasn't sent. Nothing was recorded." : {
+
+    },
+    "The owner manages the group's details and invitations." : {
+
+    },
+    "The passwords don't match." : {
+
+    },
+    "the payer" : {
+
+    },
+    "The payer" : {
+
+    },
+    "The payer keeps the whole charge." : {
+
+    },
+    "The payer must be in the group." : {
+
+    },
+    "The photos are deleted from this iPhone. The itemized breakdown and history stay with the expense." : {
+
+    },
+    "The place this invitation was for is no longer available. Ask for a new invitation." : {
+
+    },
+    "The previous version stays in the expense's history." : {
+
+    },
+    "The receipt image and the text read on this iPhone are sent to Square Up's server and to Anthropic's Claude to identify items and totals." : {
+
+    },
+    "The receipt total is %@, but the lines add up to %@ less." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "The receipt total is %1$@, but the lines add up to %2$@ less."
+          }
+        }
+      }
+    },
+    "The receipt total is %@, but the lines add up to %@ more." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "The receipt total is %1$@, but the lines add up to %2$@ more."
+          }
+        }
+      }
+    },
+    "The receipt total is %@. %@ account for the full amount." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "The receipt total is %1$@. %2$@ account for the full amount."
+          }
+        }
+      }
+    },
+    "The receipt total is %@. %@ and %@ account for the full amount." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "The receipt total is %1$@. %2$@ and %3$@ account for the full amount."
+          }
+        }
+      }
+    },
+    "The room changed while you were looking. Review the latest and try again." : {
+
+    },
+    "The room closes once everyone has paid and you've confirmed it, or if it expires." : {
+
+    },
+    "The room is finished, but the expense wasn't added to your group yet." : {
+
+    },
+    "The same invitation as the code below." : {
+
+    },
+    "The shared room's totals don't match this iPhone's. Nothing was saved — update Square Up and try again." : {
+
+    },
+    "The split doesn't add up yet. Check the amounts and try again." : {
+
+    },
+    "The split doesn't add up yet. Nothing was saved." : {
+
+    },
+    "The text was hard to read." : {
+
+    },
+    "The tip line was blank. Add a tip only if one was paid." : {
+
+    },
+    "The total must be more than zero." : {
+
+    },
+    "Their email address" : {
+
+    },
+    "Their past expenses and payments are still part of this group's history." : {
+
+    },
+    "Their phone number" : {
+
+    },
+    "their share" : {
+
+    },
+    "Then come back and mark the dispute resolved." : {
+
+    },
+    "Then report it here so %@ can confirm." : {
+
+    },
+    "These details can't be opened safely. Ask the recipient to update this payment method, or copy the amount and pay another way." : {
+
+    },
+    "They already have an invitation to this group." : {
+
+    },
+    "They can be removed only when they owe nothing, are owed nothing, and have no payment in progress. They'll lose access; their past expenses stay in the history." : {
+
+    },
+    "They no longer see this group. Their past expenses and payments stay in the history under their name." : {
+
+    },
+    "They won't be part of new expenses. Their past expenses, payments, and activity stay in the group." : {
+
+    },
+    "They'll manage the group, its people, and its invitations. Invitations you made stop working. You stay a member. This is recorded in the group's history." : {
+
+    },
+    "They'll see it in their Groups tab, and join only if they accept." : {
+
+    },
+    "They'll see it wasn't confirmed and can report it again once it arrives." : {
+
+    },
+    "They're already in this group." : {
+
+    },
+    "This account already has its own groups, so the earlier data can't be added to it. It stays aside, unchanged." : {
+
+    },
+    "This account can't be used right now." : {
+
+    },
+    "This account is already set up, so it can't be deleted here." : {
+
+    },
+    "This account is verified, so it can't be deleted here." : {
+
+    },
+    "This account works on this iPhone only. Add an email and password to use shared groups — receipt rooms you host stay yours." : {
+
+    },
+    "This account's groups are kept on this iPhone separately from any other account, and shared groups also on the server. Square Up never stores bank details." : {
+
+    },
+    "This could be read more than one way." : {
+
+    },
+    "This device doesn't support Apple Intelligence." : {
+
+    },
+    "This dispute was already resolved." : {
+
+    },
+    "This doesn't change what you owe." : {
+
+    },
+    "This expense isn't deleted." : {
+
+    },
+    "This expense no longer affects balances. Its record and history are kept." : {
+
+    },
+    "This expense no longer exists." : {
+
+    },
+    "This expense was deleted. Restore it before editing." : {
+
+    },
+    "This expense was edited after it was finalized. The breakdown below is the receipt as finalized." : {
+
+    },
+    "This group already has 25 people, its limit. Ask the owner about it." : {
+
+    },
+    "This group couldn't be read." : {
+
+    },
+    "This group has %lld people, its limit. Someone has to leave before anyone new can join." : {
+
+    },
+    "This group is no longer available. Nothing was saved." : {
+
+    },
+    "This group was already shared, possibly from another iPhone. Ask whoever shared it for an invitation." : {
+
+    },
+    "This group was archived, so no one new can join." : {
+
+    },
+    "This group was archived." : {
+
+    },
+    "This invitation doesn't work" : {
+
+    },
+    "This invitation expired. Ask for a new one." : {
+
+    },
+    "This invitation is for one person already listed in the group. Accept it only if it was sent to you." : {
+
+    },
+    "This invitation isn't valid. Check the code, or ask for a new invitation." : {
+
+    },
+    "This invitation was already used. Each invitation works once — ask for a new one." : {
+
+    },
+    "This invitation was turned off. Ask for a new one." : {
+
+    },
+    "This invitation's code was shown on the iPhone that made it. Turn it off and make a new one if you need to send it again." : {
+
+    },
+    "This iPhone only" : {
+
+    },
+    "This is the name people in your groups will see. You can change it later in Profile." : {
+
+    },
+    "This is the sample person for groups on this iPhone. Shared groups use your account's name, below." : {
+
+    },
+    "This is the sample person for groups on this iPhone. To share groups with other people's iPhones, add an account below." : {
+
+    },
+    "This item doesn't list a quantity to divide by." : {
+
+    },
+    "This item doesn't list a quantity. Claim it or share it instead." : {
+
+    },
+    "This item has exact amounts. Use “Custom split” to change it." : {
+
+    },
+    "This needs a connection to the server. Nothing was changed — try again when you're online." : {
+
+    },
+    "This number already has a Square Up account, so you're signed in to it. Choose your name to finish setting it up." : {
+
+    },
+    "This number didn't have a Square Up account yet, so we made one. Choose your name to finish." : {
+
+    },
+    "This number is already used by another Square Up account. Use a different number, or sign in with that one separately." : {
+
+    },
+    "This one keeps working. Use a new one for each person." : {
+
+    },
+    "This page is dark. Try more light, or check values carefully." : {
+
+    },
+    "This page looks blurry. Retake it if values are hard to read." : {
+
+    },
+    "This payment has already moved on, so that action no longer applies." : {
+
+    },
+    "This payment is part of the group's balances now." : {
+
+    },
+    "This payment method looks incomplete." : {
+
+    },
+    "This person" : {
+
+    },
+    "This prototype ships with sample people, groups, and expenses so every workflow can be tried without an account." : {
+
+    },
+    "This receipt is closed" : {
+
+    },
+    "This receipt is in %@, but the group uses %@. Square Up doesn't convert currencies." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "This receipt is in %1$@, but the group uses %2$@. Square Up doesn't convert currencies."
+          }
+        }
+      }
+    },
+    "This receipt is no longer available." : {
+
+    },
+    "This receipt shows more than one currency. Choose the one it was paid in." : {
+
+    },
+    "This receipt was already started." : {
+
+    },
+    "This room expired. Nothing more can change." : {
+
+    },
+    "This room has ended." : {
+
+    },
+    "This room is closed" : {
+
+    },
+    "This summary stays for 30 days after %@, then the room and everything in it is deleted." : {
+
+    },
+    "This unconfirmed account is removed from Square Up so you can sign up again. Accounts that are verified or already set up are never deleted." : {
+
+    },
+    "This value isn't valid." : {
+
+    },
+    "Those photos couldn't be loaded. Try another image." : {
+
+    },
+    "Timeline" : {
+
+    },
+    "Tip" : {
+
+    },
+    "To include someone else, they tap Share on this item." : {
+
+    },
+    "To leave, first make someone else the owner from their options." : {
+
+    },
+    "To review" : {
+
+    },
+    "to settle up" : {
+
+    },
+    "Today" : {
+
+    },
+    "Too many attempts. Wait a few minutes and try again." : {
+
+    },
+    "Total" : {
+
+    },
+    "Transport" : {
+
+    },
+    "Travel" : {
+
+    },
+    "Trim bottom" : {
+
+    },
+    "Trim left" : {
+
+    },
+    "Trim right" : {
+
+    },
+    "Trim the edges so only the receipt remains. The original photo is kept." : {
+
+    },
+    "Trim top" : {
+
+    },
+    "Try" : {
+
+    },
+    "Try “I paid $80 for dinner with Maya and Jordan.” You'll review every field before anything is saved." : {
+
+    },
+    "Try again" : {
+
+    },
+    "Trying again…" : {
+
+    },
+    "Turn off" : {
+
+    },
+    "Turn off all" : {
+
+    },
+    "Turn off every link and code" : {
+
+    },
+    "Turn off this invitation" : {
+
+    },
+    "Turn on camera access for Square Up in Settings, or import a photo of the receipt." : {
+
+    },
+    "Turned off" : {
+
+    },
+    "Turned off or expired" : {
+
+    },
+    "Type" : {
+
+    },
+    "Type each person's amount. It must add up exactly." : {
+
+    },
+    "Unclaimed" : {
+
+    },
+    "Understanding items" : {
+
+    },
+    "Undo" : {
+
+    },
+    "Undo crop" : {
+
+    },
+    "Uneven splits aren't filled in automatically — set amounts on the next step." : {
+
+    },
+    "Unfinished %@ payment" : {
+
+    },
+    "Unit price" : {
+
+    },
+    "Unnamed item" : {
+
+    },
+    "Updated %@" : {
+
+    },
+    "Use %lld characters or fewer." : {
+
+    },
+    "Use a different email" : {
+
+    },
+    "Use a different number" : {
+
+    },
+    "Use AI processing" : {
+
+    },
+    "Use email instead" : {
+
+    },
+    "Use full names. Add a handle if two people share a name." : {
+
+    },
+    "Use only when the receipt itself has an unexplained difference, such as printed rounding. A label is required." : {
+
+    },
+    "Use phone instead" : {
+
+    },
+    "Use the email or phone enrolled with Zelle at your bank. Square Up can't check enrolment." : {
+
+    },
+    "Use the sample receipt" : {
+
+    },
+    "Use with this account" : {
+
+    },
+    "Used by a payment in progress" : {
+
+    },
+    "username starting with %@" : {
+
+    },
+    "Uses %@; this receipt is in %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Uses %1$@; this receipt is in %2$@"
+          }
+        }
+      }
+    },
+    "Using %@ · not paid yet" : {
+
+    },
+    "Using Square Up as" : {
+
+    },
+    "Utilities" : {
+
+    },
+    "Venmo" : {
+
+    },
+    "Venmo username" : {
+
+    },
+    "Verification code" : {
+
+    },
+    "Verified" : {
+
+    },
+    "Verify" : {
+
+    },
+    "Verify\nyour email" : {
+
+    },
+    "Verify your email address to use shared groups. Nothing was changed." : {
+
+    },
+    "Verifying…" : {
+
+    },
+    "Version" : {
+
+    },
+    "View expense" : {
+
+    },
+    "Wait a moment before asking for another code." : {
+
+    },
+    "Wait for them, change something, or finalize their share for them." : {
+
+    },
+    "Waiting for %@ to confirm" : {
+
+    },
+    "Waiting for %@ to confirm they received %@. It won't be suggested again in the meantime." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Waiting for %1$@ to confirm they received %2$@. It won't be suggested again in the meantime."
+          }
+        }
+      }
+    },
+    "Waiting for an answer · %@" : {
+
+    },
+    "Waiting for connection · will send automatically" : {
+
+    },
+    "Waiting for payments" : {
+
+    },
+    "Waiting for reviews. Finalize for them above, or come back later." : {
+
+    },
+    "Waiting for you" : {
+
+    },
+    "Waiting on ^[%lld payment](inflect: true) to be confirmed." : {
+
+    },
+    "Waiting to be accepted" : {
+
+    },
+    "Waiting to join" : {
+
+    },
+    "Waiting to send: ^[%lld change](inflect: true) in shared groups. They're kept and sent after you sign in again. " : {
+
+    },
+    "We already sent a code to this number. Enter it below." : {
+
+    },
+    "We haven't seen the confirmation yet. Open the link in the email, then try again." : {
+
+    },
+    "We sent a link to confirm your address:" : {
+
+    },
+    "We texted a 6-digit code to" : {
+
+    },
+    "We'll ask Firebase to email a password-reset link. Square Up never sees your password." : {
+
+    },
+    "We'll email you a link to confirm your address." : {
+
+    },
+    "We'll send a link to the new address. Your account switches to it — already confirmed — once you open the link." : {
+
+    },
+    "We'll send a one-time code to verify your number. Standard message rates may apply." : {
+
+    },
+    "We'll send a one-time code to verify your number. Standard message rates may apply. Google's Firebase processes your number to send the code and to prevent spam and abuse." : {
+
+    },
+    "We'll text a code to confirm it's yours." : {
+
+    },
+    "Weighted, e.g. 2 shares for one person and 1 for another." : {
+
+    },
+    "Welcome, %@" : {
+
+    },
+    "What sharing does" : {
+
+    },
+    "What should\nwe call you?" : {
+
+    },
+    "What was it for?" : {
+
+    },
+    "What was it?" : {
+
+    },
+    "What's wrong? (optional)" : {
+
+    },
+    "When you come back, Square Up will ask whether you sent it. Opening an app doesn't count as paying." : {
+
+    },
+    "Where it lives" : {
+
+    },
+    "Where was this?" : {
+
+    },
+    "Which group is it for?" : {
+
+    },
+    "Which group?" : {
+
+    },
+    "Who are you?" : {
+
+    },
+    "Who had it" : {
+
+    },
+    "Who had what" : {
+
+    },
+    "Who had what, as saved" : {
+
+    },
+    "Who had what?" : {
+
+    },
+    "who paid" : {
+
+    },
+    "Who paid and who shares" : {
+
+    },
+    "Who paid?" : {
+
+    },
+    "Who pays this is decided in the room. By default, in proportion to each person's items." : {
+
+    },
+    "who shares it" : {
+
+    },
+    "Who shares it" : {
+
+    },
+    "Who was there?" : {
+
+    },
+    "Who's at the table?" : {
+
+    },
+    "Who's in the room" : {
+
+    },
+    "Why? (required)" : {
+
+    },
+    "With %@. You're not on this receipt." : {
+
+    },
+    "With AI processing, the receipt image and the text read on this iPhone go to Square Up's server and to Anthropic's Claude to identify items and totals. Nothing is saved until you review it. Anthropic deletes API data within 30 days under its current policy; Square Up keeps the result (not the image) for up to 24 hours so the same receipt isn't processed twice. Choosing on-device only deletes those results." : {
+
+    },
+    "Without Square Up, the link explains how to get it and join with the code." : {
+
+    },
+    "Worked out from the other amounts, not printed. Check it against the receipt." : {
+
+    },
+    "Works until %@, once." : {
+
+    },
+    "Works until %@, unless you turn it off." : {
+
+    },
+    "Works until it expires, unless you turn it off." : {
+
+    },
+    "Yes, I sent it" : {
+
+    },
+    "Yes, the payer keeps the whole receipt" : {
+
+    },
+    "Yesterday" : {
+
+    },
+    "you" : {
+      "comment" : "Refers to the current user inside a list of people"
+    },
+    "You" : {
+
+    },
+    "you %@" : {
+
+    },
+    "you ~%@" : {
+
+    },
+    "You are owed" : {
+
+    },
+    "You aren't in any groups yet." : {
+
+    },
+    "you borrowed" : {
+
+    },
+    "You can divide an item only among people who claimed it. Ask others to tap Share." : {
+
+    },
+    "You can keep processing on this iPhone instead, and change this anytime in Profile." : {
+
+    },
+    "You can leave only when your balance is zero and you have no payment in progress. You'll lose access; the group's history keeps your name." : {
+
+    },
+    "You can request another code in %@." : {
+
+    },
+    "You can sign in again later to finish confirming your email." : {
+
+    },
+    "You can sign in with a text message code sent to this number." : {
+
+    },
+    "You can still record a payment here. Some payment apps need a connection." : {
+
+    },
+    "You can still settle up — ask how they'd like to be paid, or pay another way and record it." : {
+
+    },
+    "You can't change this afterwards." : {
+
+    },
+    "You can't open this room anymore" : {
+
+    },
+    "You can't pay yourself." : {
+
+    },
+    "You can't remove someone else's claim. Ask them, or the host." : {
+
+    },
+    "You can't remove yourself from a group." : {
+
+    },
+    "You don't owe anyone here, and nobody owes you." : {
+
+    },
+    "You have ^[%lld payment](inflect: true) to confirm or finish." : {
+
+    },
+    "You haven't added a payment method. People can still pay you in cash or however you agree; add methods in Profile → How friends pay you." : {
+
+    },
+    "You haven't claimed this item." : {
+
+    },
+    "You join a group only if you accept." : {
+
+    },
+    "You joined %@" : {
+
+    },
+    "You left the demo. Its sample data was removed from this iPhone and the server." : {
+
+    },
+    "you lent" : {
+
+    },
+    "You lent %@" : {
+
+    },
+    "You need to be a member of this group to share it." : {
+
+    },
+    "You opened %@ for %@. Nothing has been recorded yet." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "You opened %1$@ for %2$@. Nothing has been recorded yet."
+          }
+        }
+      }
+    },
+    "you owe" : {
+
+    },
+    "You owe" : {
+
+    },
+    "you owe %@" : {
+
+    },
+    "You owe %@" : {
+
+    },
+    "You owe %@ for this" : {
+
+    },
+    "You owe ^[%lld person](inflect: true)" : {
+
+    },
+    "You paid" : {
+
+    },
+    "You paid %@" : {
+      "comment" : "Recorded settlement the current user paid"
+    },
+    "you paid back" : {
+
+    },
+    "You paid. Others owe you their share." : {
+
+    },
+    "You pay %@" : {
+
+    },
+    "You pay %@ %@." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "You pay %1$@ %2$@."
+          }
+        }
+      }
+    },
+    "you received" : {
+
+    },
+    "You reported it · waiting for %@ to confirm" : {
+
+    },
+    "You said it didn't arrive" : {
+
+    },
+    "You started paying %@ but haven't reported it. Nothing has been recorded." : {
+
+    },
+    "You'll owe %@ %@." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "You'll owe %1$@ %2$@."
+          }
+        }
+      }
+    },
+    "You'll owe %@ in total." : {
+
+    },
+    "You'll review and can correct everything before anything is saved." : {
+
+    },
+    "You'll see the group's expenses and balances after you join." : {
+
+    },
+    "You're %@" : {
+
+    },
+    "You're %@ · host" : {
+
+    },
+    "You're adding it" : {
+
+    },
+    "You're all set" : {
+
+    },
+    "You're all set, %@" : {
+
+    },
+    "You're all square" : {
+
+    },
+    "You're all square across ^[%lld group](inflect: true)." : {
+
+    },
+    "You're all square. Nobody owes anything." : {
+
+    },
+    "You're already in this group." : {
+
+    },
+    "You're already in this room" : {
+
+    },
+    "You're no longer in this group." : {
+
+    },
+    "You're no longer in this group. Its history stays with the people still in it." : {
+
+    },
+    "You're not part of this expense." : {
+
+    },
+    "You're offline" : {
+
+    },
+    "You're offline. Connect to the internet and try again." : {
+
+    },
+    "You're offline. Nothing changed — try again when you're connected." : {
+
+    },
+    "You're offline. Try again when you're connected." : {
+
+    },
+    "you're owed" : {
+
+    },
+    "you're owed %@" : {
+
+    },
+    "You're owed %@" : {
+
+    },
+    "You're seeing the last loaded balances." : {
+
+    },
+    "You're signed out." : {
+
+    },
+    "You've asked for several codes. You can request another %@, or use email instead." : {
+
+    },
+    "Your access to this room ended" : {
+
+    },
+    "Your access to this room has ended. Ask the host for a new invitation." : {
+
+    },
+    "Your account is ready, but the email couldn't be sent yet. Tap Resend email." : {
+
+    },
+    "Your change wasn't saved. You're now seeing the latest room." : {
+
+    },
+    "Your edit wasn't saved and is still in the editor. Review the latest version, then save again or discard your change." : {
+
+    },
+    "Your first group goes here" : {
+
+    },
+    "Your group invitation is waiting. It opens as soon as you're signed in." : {
+
+    },
+    "Your group on this iPhone is unchanged. You can try again — it will never be shared twice." : {
+
+    },
+    "Your groups" : {
+
+    },
+    "Your groups and balances stay in sync on every device you sign in to." : {
+
+    },
+    "Your groups stay on this iPhone for this account and come back when you sign in again; shared groups are also on the server. Nobody else who signs in here can see them." : {
+
+    },
+    "Your methods" : {
+
+    },
+    "Your name" : {
+
+    },
+    "Your name in the demo" : {
+
+    },
+    "your own share is %@" : {
+
+    },
+    "Your pages are safe. Read the receipt again or enter the details yourself." : {
+
+    },
+    "Your part" : {
+
+    },
+    "Your payment methods are in Profile." : {
+
+    },
+    "Your payment to %@ is disputed" : {
+
+    },
+    "Your payment to %@ wasn't received" : {
+
+    },
+    "Your receipt invitation is waiting. It opens as soon as you're signed in." : {
+
+    },
+    "Your reported payment covers what you owed. %@ just needs to confirm it." : {
+
+    },
+    "Your session ended. Sign in again to continue." : {
+
+    },
+    "Your share" : {
+
+    },
+    "Your share is covered. There's nothing to pay %@." : {
+
+    },
+    "your share is paid" : {
+
+    },
+    "Your shared groups come back from the server. Groups saved only on this iPhone stay as they are." : {
+
+    },
+    "Your shared groups stay on the server and come back when you sign in again. The copies saved on this iPhone are removed now, along with any changes that haven't been sent. Groups that are only on this iPhone aren't affected." : {
+
+    },
+    "Your sign-in ended. Shared groups saved on this iPhone are still readable; sign in again to make changes." : {
+
+    },
+    "Yours" : {
+
+    },
+    "Zelle" : {
+
+    },
+    "Zelle email or phone" : {
+
+    },
+    "Zelle email or US phone" : {
+
+    },
+    "Zelle payments usually can't be cancelled. Only send money to people you know and trust." : {
+
+    },
+    "Zelle QR link from your bank (optional)" : {
+
+    },
+    "Zero-value lines are notes and can't be claimed." : {
+
+    },
+    "Zoom in" : {
+
+    }
+  },
+  "version" : "1.0"
+}

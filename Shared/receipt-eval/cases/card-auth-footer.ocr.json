@@ -1,0 +1,420 @@
+{
+  "id" : "card-auth-footer",
+  "likelyCurrency" : "USD",
+  "ocrMilliseconds" : [
+    121
+  ],
+  "pages" : [
+    "card-auth-footer-p1.jpg"
+  ],
+  "regions" : [
+    {
+      "alternatives" : [
+        "MAPLE& PINE HARDWARE",
+        "MAPLE &PINE HARDWARE"
+      ],
+      "box" : [
+        0.2968,
+        0.1093,
+        0.4063,
+        0.045
+      ],
+      "confidence" : 1,
+      "id" : "A306C491-EFDC-4B25-A5C2-AE0BC68D6A49",
+      "order" : 0,
+      "page" : 0,
+      "text" : "MAPLE & PINE HARDWARE"
+    },
+    {
+      "alternatives" : [
+        "Sample Cit",
+        "Sample ity"
+      ],
+      "box" : [
+        0.4251,
+        0.1569,
+        0.1482,
+        0.0249
+      ],
+      "confidence" : 1,
+      "id" : "24DB7249-B845-452F-AFD7-23CC81967B3D",
+      "order" : 1,
+      "page" : 0,
+      "text" : "Sample City"
+    },
+    {
+      "alternatives" : [
+        "Phone 000) 555-0199",
+        "Phone(000) 555-0199"
+      ],
+      "box" : [
+        0.3635,
+        0.1977,
+        0.2714,
+        0.0225
+      ],
+      "confidence" : 1,
+      "id" : "FF6C82E4-C5B2-439A-8EC4-CD84E18E1732",
+      "order" : 2,
+      "page" : 0,
+      "text" : "Phone (000) 555-0199"
+    },
+    {
+      "alternatives" : [
+        "09/06/202610:47 Reg 2 Cashier 14",
+        "09/06/2026 10:47 Reg2 Cashier 14"
+      ],
+      "box" : [
+        0.1111,
+        0.283,
+        0.5063,
+        0.0273
+      ],
+      "confidence" : 1,
+      "id" : "40AC5121-5E7C-4A18-9EF4-E39318E4C030",
+      "order" : 3,
+      "page" : 0,
+      "text" : "09/06/2026 10:47 Reg 2 Cashier 14"
+    },
+    {
+      "alternatives" : [
+        "Wood Screws 1-5/8in",
+        "Wood Screws 1-5/8in"
+      ],
+      "box" : [
+        0.1111,
+        0.3248,
+        0.2905,
+        0.0241
+      ],
+      "confidence" : 1,
+      "id" : "8048D66A-2DA2-4763-9363-3373398F9FB7",
+      "order" : 4,
+      "page" : 0,
+      "text" : "Wood Screws 1-5/8in"
+    },
+    {
+      "alternatives" : [
+        "Paint RollerKit",
+        "Pain Roller Kit"
+      ],
+      "box" : [
+        0.1111,
+        0.3666,
+        0.246,
+        0.0225
+      ],
+      "confidence" : 1,
+      "id" : "C08E2A61-BE9D-465A-974B-C8B74CA50BE2",
+      "order" : 5,
+      "page" : 0,
+      "text" : "Paint Roller Kit"
+    },
+    {
+      "alternatives" : [
+        "Painter Tape",
+        "Painters Tap"
+      ],
+      "box" : [
+        0.1108,
+        0.4068,
+        0.2007,
+        0.0295
+      ],
+      "confidence" : 1,
+      "id" : "AC810381-B909-452F-99C8-EB142888DCE3",
+      "order" : 6,
+      "page" : 0,
+      "text" : "Painters Tape"
+    },
+    {
+      "alternatives" : [
+        "798",
+        "7.98"
+      ],
+      "box" : [
+        0.8268,
+        0.3259,
+        0.0623,
+        0.0267
+      ],
+      "confidence" : 1,
+      "id" : "289B009B-136A-45B0-A8AA-4FCDAFF0BD4F",
+      "order" : 7,
+      "page" : 0,
+      "text" : "7.98"
+    },
+    {
+      "alternatives" : [
+        "1249",
+        "12.49"
+      ],
+      "box" : [
+        0.8111,
+        0.3682,
+        0.0794,
+        0.0257
+      ],
+      "confidence" : 1,
+      "id" : "36980CF1-98B1-4732-8C85-AB1861E71E9F",
+      "order" : 8,
+      "page" : 0,
+      "text" : "12.49"
+    },
+    {
+      "alternatives" : [
+        "529",
+        "5.29"
+      ],
+      "box" : [
+        0.8269,
+        0.4098,
+        0.0636,
+        0.0261
+      ],
+      "confidence" : 1,
+      "id" : "FA2E7B34-4791-439A-8C8C-EE2BE4071B5B",
+      "order" : 9,
+      "page" : 0,
+      "text" : "5.29"
+    },
+    {
+      "alternatives" : [
+        "SUBTOTA",
+        "SUBOTAL"
+      ],
+      "box" : [
+        0.111,
+        0.4916,
+        0.1239,
+        0.0232
+      ],
+      "confidence" : 1,
+      "id" : "DFED0E08-11AF-4D3D-AD3C-4335A944DBFA",
+      "order" : 10,
+      "page" : 0,
+      "text" : "SUBTOTAL"
+    },
+    {
+      "alternatives" : [
+        "Sale Tax",
+        "Sals Tax"
+      ],
+      "box" : [
+        0.1111,
+        0.5338,
+        0.1397,
+        0.0225
+      ],
+      "confidence" : 1,
+      "id" : "FC34510D-38CD-42A9-8DCE-5CC029F57452",
+      "order" : 11,
+      "page" : 0,
+      "text" : "Sales Tax"
+    },
+    {
+      "alternatives" : [
+        "TOTA",
+        "OTAL"
+      ],
+      "box" : [
+        0.1095,
+        0.5772,
+        0.0794,
+        0.0209
+      ],
+      "confidence" : 1,
+      "id" : "9F4D3475-1540-4ECB-89D2-4C57D15794E2",
+      "order" : 12,
+      "page" : 0,
+      "text" : "TOTAL"
+    },
+    {
+      "alternatives" : [
+        "MASTERCARD****0000",
+        "MASTERCARD ***0000"
+      ],
+      "box" : [
+        0.1095,
+        0.6174,
+        0.2937,
+        0.0257
+      ],
+      "confidence" : 1,
+      "id" : "0C8BD5EC-D8F4-4B9B-9016-5E796984A51A",
+      "order" : 13,
+      "page" : 0,
+      "text" : "MASTERCARD ****0000"
+    },
+    {
+      "alternatives" : [
+        "AUTH CODE 0Z9Y8X",
+        "AUTH CODE 0Z9Y8X"
+      ],
+      "box" : [
+        0.1095,
+        0.6592,
+        0.2492,
+        0.0225
+      ],
+      "confidence" : 1,
+      "id" : "299C209E-D18D-431A-AF55-11487F6065A4",
+      "order" : 14,
+      "page" : 0,
+      "text" : "AUTH CODE 0Z9Y8X"
+    },
+    {
+      "alternatives" : [
+        "APPROVE CHIP READ",
+        "APPROVED CHIP REA"
+      ],
+      "box" : [
+        0.1095,
+        0.701,
+        0.2937,
+        0.0225
+      ],
+      "confidence" : 1,
+      "id" : "01974243-C331-4889-96F3-970821CBA7AA",
+      "order" : 15,
+      "page" : 0,
+      "text" : "APPROVED CHIP READ"
+    },
+    {
+      "alternatives" : [
+        "CHANGEDUE",
+        "CHANGE DE"
+      ],
+      "box" : [
+        0.1111,
+        0.7444,
+        0.154,
+        0.0209
+      ],
+      "confidence" : 1,
+      "id" : "9417E0CA-B6B6-4CF5-985C-0127051BE017",
+      "order" : 16,
+      "page" : 0,
+      "text" : "CHANGE DUE"
+    },
+    {
+      "alternatives" : [
+        "2576",
+        "25.76"
+      ],
+      "box" : [
+        0.8126,
+        0.4934,
+        0.0779,
+        0.0261
+      ],
+      "confidence" : 1,
+      "id" : "5D6BA63F-5D00-4746-93E5-06426DD9ACE7",
+      "order" : 17,
+      "page" : 0,
+      "text" : "25.76"
+    },
+    {
+      "alternatives" : [
+        "225",
+        "2.25"
+      ],
+      "box" : [
+        0.8267,
+        0.5336,
+        0.0642,
+        0.0262
+      ],
+      "confidence" : 1,
+      "id" : "FCCB1692-CD39-422F-8842-4FE0813C5939",
+      "order" : 18,
+      "page" : 0,
+      "text" : "2.25"
+    },
+    {
+      "alternatives" : [
+        "2801",
+        "28.01"
+      ],
+      "box" : [
+        0.8127,
+        0.577,
+        0.0779,
+        0.026
+      ],
+      "confidence" : 1,
+      "id" : "337157BF-F685-4415-A239-0FAA28D47BCF",
+      "order" : 19,
+      "page" : 0,
+      "text" : "28.01"
+    },
+    {
+      "alternatives" : [
+        "2801",
+        "28.01"
+      ],
+      "box" : [
+        0.8111,
+        0.6174,
+        0.0794,
+        0.0289
+      ],
+      "confidence" : 1,
+      "id" : "42AB46D8-7FBE-42EA-BDB8-F20836F64716",
+      "order" : 20,
+      "page" : 0,
+      "text" : "28.01"
+    },
+    {
+      "alternatives" : [
+        "TERMINA 00012",
+        "TERMINAL 0012"
+      ],
+      "box" : [
+        0.4016,
+        0.6608,
+        0.2143,
+        0.0209
+      ],
+      "confidence" : 1,
+      "id" : "6D05EB36-DDB5-4B50-B10E-28963018A03C",
+      "order" : 21,
+      "page" : 0,
+      "text" : "TERMINAL 00012"
+    },
+    {
+      "alternatives" : [
+        "000",
+        "0.00"
+      ],
+      "box" : [
+        0.8252,
+        0.7422,
+        0.0655,
+        0.03
+      ],
+      "confidence" : 1,
+      "id" : "99476ED1-3171-4C35-8723-14A5EE3CACE3",
+      "order" : 22,
+      "page" : 0,
+      "text" : "0.00"
+    },
+    {
+      "alternatives" : [
+        "Surveycode 1234-5678-9012",
+        "Survey code1234-5678-9012"
+      ],
+      "box" : [
+        0.3254,
+        0.7862,
+        0.3476,
+        0.0225
+      ],
+      "confidence" : 1,
+      "id" : "66C00B00-8B48-473B-9FE1-4B0F625FF766",
+      "order" : 23,
+      "page" : 0,
+      "text" : "Survey code 1234-5678-9012"
+    }
+  ]
+}

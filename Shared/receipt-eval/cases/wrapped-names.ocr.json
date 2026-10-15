@@ -1,0 +1,284 @@
+{
+  "id" : "wrapped-names",
+  "likelyCurrency" : "USD",
+  "ocrMilliseconds" : [
+    107
+  ],
+  "pages" : [
+    "wrapped-names-p1.jpg"
+  ],
+  "regions" : [
+    {
+      "alternatives" : [
+        "LARKSPUR GARDEN CAF",
+        "LARKSPUR GARDEN AFE"
+      ],
+      "box" : [
+        0.3042,
+        0.1433,
+        0.3875,
+        0.0429
+      ],
+      "confidence" : 1,
+      "id" : "9A62B52B-BC27-47AC-8418-66FE774A3975",
+      "order" : 0,
+      "page" : 0,
+      "text" : "LARKSPUR GARDEN CAFE"
+    },
+    {
+      "alternatives" : [
+        "08/14/202612:44",
+        "08/1/2026 12:44"
+      ],
+      "box" : [
+        0.1109,
+        0.2498,
+        0.2465,
+        0.0362
+      ],
+      "confidence" : 1,
+      "id" : "E9D13EDF-89DE-421E-A82F-71CFDC20DBE7",
+      "order" : 1,
+      "page" : 0,
+      "text" : "08/14/2026 12:44"
+    },
+    {
+      "alternatives" : [
+        "Roasted Bet and Goat",
+        "Roasted Bee and Goat"
+      ],
+      "box" : [
+        0.1111,
+        0.3049,
+        0.3222,
+        0.0285
+      ],
+      "confidence" : 1,
+      "id" : "813EB6D6-0233-4FE1-A2BD-55CBD602C463",
+      "order" : 2,
+      "page" : 0,
+      "text" : "Roasted Beet and Goat"
+    },
+    {
+      "alternatives" : [
+        "Chese Salad",
+        "Cheese Sala"
+      ],
+      "box" : [
+        0.1429,
+        0.3577,
+        0.1825,
+        0.0305
+      ],
+      "confidence" : 1,
+      "id" : "B55F8F6A-F744-438C-8926-AB1E48EADC49",
+      "order" : 3,
+      "page" : 0,
+      "text" : "Cheese Salad"
+    },
+    {
+      "alternatives" : [
+        "Wild Mushroom Flatbrea",
+        "Wil Mushroom Flatbread"
+      ],
+      "box" : [
+        0.1083,
+        0.4043,
+        0.3583,
+        0.0372
+      ],
+      "confidence" : 1,
+      "id" : "F3DB18EC-BCC6-414E-938B-195BC4191867",
+      "order" : 4,
+      "page" : 0,
+      "text" : "Wild Mushroom Flatbread"
+    },
+    {
+      "alternatives" : [
+        "with Truffle il",
+        "with Tuffle Oil"
+      ],
+      "box" : [
+        0.1397,
+        0.4634,
+        0.2492,
+        0.0285
+      ],
+      "confidence" : 1,
+      "id" : "BA296EFB-AE62-4E7E-8CBC-F3E8B66C2457",
+      "order" : 5,
+      "page" : 0,
+      "text" : "with Truffle Oil"
+    },
+    {
+      "alternatives" : [
+        "Ice Hibiscus Tea",
+        "Iced HibiscusTea"
+      ],
+      "box" : [
+        0.1111,
+        0.5163,
+        0.2667,
+        0.0305
+      ],
+      "confidence" : 1,
+      "id" : "0A9C1209-7A34-4CF1-AA2D-9582BCF49CA7",
+      "order" : 6,
+      "page" : 0,
+      "text" : "Iced Hibiscus Tea"
+    },
+    {
+      "alternatives" : [
+        "1350",
+        "13.50"
+      ],
+      "box" : [
+        0.8125,
+        0.3582,
+        0.0782,
+        0.0346
+      ],
+      "confidence" : 1,
+      "id" : "89BD3F09-F14B-4F74-AF49-986490FB2FA7",
+      "order" : 7,
+      "page" : 0,
+      "text" : "13.50"
+    },
+    {
+      "alternatives" : [
+        "15.00",
+        "1500"
+      ],
+      "box" : [
+        0.8109,
+        0.4627,
+        0.0797,
+        0.0359
+      ],
+      "confidence" : 1,
+      "id" : "0555A088-897E-4FC8-BB8A-C17484D82030",
+      "order" : 8,
+      "page" : 0,
+      "text" : "15.00"
+    },
+    {
+      "alternatives" : [
+        "400",
+        "4.00"
+      ],
+      "box" : [
+        0.827,
+        0.5163,
+        0.0635,
+        0.0346
+      ],
+      "confidence" : 1,
+      "id" : "A061E114-EA54-4B12-8C83-46214EBCB19B",
+      "order" : 9,
+      "page" : 0,
+      "text" : "4.00"
+    },
+    {
+      "alternatives" : [
+        "SUBTOTAL",
+        "SUBTOTA"
+      ],
+      "box" : [
+        0.1111,
+        0.624,
+        0.1238,
+        0.0264
+      ],
+      "confidence" : 1,
+      "id" : "26BF4447-443B-4FD6-AAE0-2EEDE786E0A5",
+      "order" : 10,
+      "page" : 0,
+      "text" : "SUBTOTAL"
+    },
+    {
+      "alternatives" : [
+        "Тах",
+        "ax"
+      ],
+      "box" : [
+        0.1111,
+        0.6768,
+        0.0476,
+        0.0264
+      ],
+      "confidence" : 1,
+      "id" : "F6C1A9F5-D84B-481E-88DC-A64A5F5DA71A",
+      "order" : 11,
+      "page" : 0,
+      "text" : "Tax"
+    },
+    {
+      "alternatives" : [
+        "TOTA",
+        "OTAL"
+      ],
+      "box" : [
+        0.1095,
+        0.7295,
+        0.0794,
+        0.0268
+      ],
+      "confidence" : 1,
+      "id" : "50BFB712-4D07-4102-8180-C35106E709A0",
+      "order" : 12,
+      "page" : 0,
+      "text" : "TOTAL"
+    },
+    {
+      "alternatives" : [
+        "3250",
+        "32.50"
+      ],
+      "box" : [
+        0.8125,
+        0.6227,
+        0.0781,
+        0.0341
+      ],
+      "confidence" : 1,
+      "id" : "60B64AF1-775D-4418-A914-FB2A1D3745B4",
+      "order" : 13,
+      "page" : 0,
+      "text" : "32.50"
+    },
+    {
+      "alternatives" : [
+        "280",
+        "2.80"
+      ],
+      "box" : [
+        0.8268,
+        0.6762,
+        0.0639,
+        0.0337
+      ],
+      "confidence" : 1,
+      "id" : "044B1A30-1676-4051-825B-12890DF4765D",
+      "order" : 14,
+      "page" : 0,
+      "text" : "2.80"
+    },
+    {
+      "alternatives" : [
+        "35.30",
+        "3530"
+      ],
+      "box" : [
+        0.8127,
+        0.7297,
+        0.0778,
+        0.0325
+      ],
+      "confidence" : 1,
+      "id" : "BE7FD434-9194-4092-B26C-4574661E56A9",
+      "order" : 15,
+      "page" : 0,
+      "text" : "35.30"
+    }
+  ]
+}
