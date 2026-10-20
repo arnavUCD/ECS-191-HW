@@ -142,7 +142,12 @@ final class SharedGroupLedger: LedgerStore {
             return try await enqueue { try await self.performReceipt(roomCommand) }
         case .saveDestination, .deleteDestination:
             throw LedgerError.remote(.refused(String(localized: "Your payment methods are in Profile.")))
-        case .createGroup, .addExistingMember, .recordSettlement, .switchCurrentUser:
+        case .recordSettlement(let settlement) where settlement.toID == viewerID:
+            // "Mark as settled": the person owed records it; the server caps it at what's owed now.
+            return try await enqueue { try await self.send(command) }
+        case .recordSettlement:
+            throw LedgerError.remote(.refused(String(localized: "In a shared group, only the person who's owed can mark it as settled.")))
+        case .createGroup, .addExistingMember, .switchCurrentUser:
             throw LedgerError.remote(.refused(String(localized: "That isn't available in a shared group.")))
         default:
             return try await enqueue { try await self.send(command) }

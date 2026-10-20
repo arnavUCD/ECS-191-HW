@@ -72,6 +72,11 @@ nonisolated enum AuditEventPresenter {
         case .expenseRestored(_, let title):
             return .init(title: String(localized: "\(actor) restored \(title)"), detail: nil,
                          symbolName: "arrow.uturn.backward.circle", tone: .informational, amount: nil)
+        case .settlementRecorded(_, let fromID, let toID, let amount) where event.actorID == toID && fromID != toID:
+            // "Mark as settled" in a shared group: the person owed recorded it themselves.
+            return .init(title: String(localized: "\(name(toID)) marked \(name(fromID, capitalized: false)) as settled"),
+                         detail: String(localized: "Paid outside Square Up, or not needed back"), symbolName: "checkmark.circle",
+                         tone: .positive, amount: amount)
         case .settlementRecorded(_, let fromID, let toID, let amount):
             return .init(title: String(localized: "\(name(fromID)) paid \(name(toID, capitalized: false))"),
                          detail: String(localized: "Recorded payment"), symbolName: "arrow.left.arrow.right",

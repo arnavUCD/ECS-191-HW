@@ -13,6 +13,7 @@ from __future__ import annotations
 from datetime import timedelta
 
 from ..storage.base import DIRECT_INVITATION, GROUP_INVITATION, GUEST, IDEMPOTENCY, INTELLIGENCE, INVITATION, RATE, ROOM_CODE, Transaction
+from .account_deletion import GroupRemovals
 from .assets import AssetService
 from .context import ServiceContext, iso
 from .demo import DemoService
@@ -49,6 +50,8 @@ class CleanupService:
             "receiptImages": self.assets.expire(),
             # Demo workspaces past their week, with every group, receipt, and record in them.
             "demoWorkspaces": self.demo.purge_expired() if self.demo is not None else 0,
+            # Deleted accounts' private groups whose deletion stopped part-way (record already gone).
+            "groupRemovals": GroupRemovals(self.ctx).finish_pending(),
         }
 
     def _delete_before(self, kind: str, field: str, cutoff: str) -> int:

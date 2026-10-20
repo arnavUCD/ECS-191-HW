@@ -125,6 +125,9 @@ STATUS_FOR_CODE: dict[str, int] = {
     "ai_timeout": 504,
     # A demo workspace used its (or all demos') AI receipt reading for today; the app reads on device.
     "ai_demo_limit": 429,
+    # Deleting an account: it needs a sign-in from the last few minutes, and nothing left to settle.
+    "recent_sign_in_required": 401,
+    "account_has_obligations": 409,
 }
 
 

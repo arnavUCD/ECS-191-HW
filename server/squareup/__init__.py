@@ -23,6 +23,7 @@ from .intelligence.provider import ReceiptIntelligenceProvider, RecordedProvider
 from .intelligence.secret_manager import SecretAccessor, SecretUnavailable, load_secret_key
 from .intelligence.settings import Secret, key_looks_valid, load_api_key
 from .logging_setup import configure, log_event, request_id_from
+from .services.account_deletion import AccountDeletionService
 from .services.accounts import AccountService
 from .services.assets import AssetService
 from .services.cleanup import CleanupService
@@ -51,6 +52,7 @@ class Services:
         self.cleanup = CleanupService(ctx, self.assets, self.demo)
         self.groups = GroupService(ctx, self.accounts)
         self.direct_invitations = DirectInvitationService(ctx, self.accounts, self.groups)
+        self.account_deletion = AccountDeletionService(ctx, self.groups, self.rooms, self.intelligence)
 
 
 def select_provider(

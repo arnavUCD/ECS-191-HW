@@ -5561,6 +5561,9 @@
     "The demo is back to its sample data." : {
 
     },
+    "The demo's AI receipt reading is used up for today, so this receipt was read on your iPhone. Check the values against the receipt." : {
+
+    },
     "The group sees the items and amounts, not the receipt photo." : {
 
     },

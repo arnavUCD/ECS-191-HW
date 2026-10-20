@@ -13,8 +13,9 @@ final class SquareUpAppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
         // Firebase starts here, once the UIApplication exists (see `FirebasePhoneVerifier.auth`).
         FirebasePhoneVerifier.shared?.start()
-        // Silent pushes need no permission prompt. Without the Push Notifications capability (it
-        // needs a paid Apple Developer team) registration fails and Firebase uses reCAPTCHA instead.
+        // Silent pushes need no permission prompt, so this never asks to show notifications. If
+        // registration fails (the Simulator, or a build signed without Push Notifications in
+        // `Config/SquareUp.entitlements`), Firebase uses reCAPTCHA instead.
         if FirebasePhoneVerifier.shared != nil, !LaunchConfiguration.current.isUITesting {
             application.registerForRemoteNotifications()
         }
@@ -26,12 +27,15 @@ final class SquareUpAppDelegate: NSObject, UIApplicationDelegate {
     }
 
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: any Error) {
-        // Expected without the Push Notifications capability; phone sign-in falls back to reCAPTCHA.
+        // Expected in the Simulator or without the Push Notifications entitlement; phone sign-in
+        // falls back to reCAPTCHA.
         Log.app.info("Remote notifications unavailable; phone verification will use reCAPTCHA")
     }
 
+    /// Firebase's silent verification push, and the test notification it sends first to check that
+    /// this delegate forwards notifications. Square Up has no notifications of its own.
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any]) async -> UIBackgroundFetchResult {
-        if FirebasePhoneVerifier.shared?.canHandleNotification(userInfo) == true { return .noData }
+        _ = FirebasePhoneVerifier.shared?.canHandleNotification(userInfo)
         return .noData
     }
 }

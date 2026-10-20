@@ -60,6 +60,12 @@ DIRECT_INVITATION = "GroupDirectInvitation"
 #: demo account (``demo-<random>``) and when it ends. Holds no credential.
 DEMO_SESSION = "DemoSession"
 
+# Deleting an account (October 2026).
+#: Keyed by group ID, indexed by ``requestedBy`` (a uid) and ``createdAt``: a group nobody else had
+#: joined, whose record is already gone (nobody can open or join it), and the keys of what's left to
+#: delete. Removed once that's done; the hourly cleanup finishes any a deletion left behind.
+GROUP_REMOVAL = "GroupRemoval"
+
 
 class Transaction(ABC):
     @abstractmethod
@@ -87,6 +93,26 @@ class Store(ABC):
     @abstractmethod
     def query_before(self, kind: str, field: str, cutoff: Any, limit: int = 200) -> list[tuple[str, dict[str, Any]]]:
         """Records whose indexed ``field`` is earlier than ``cutoff`` (cleanup)."""
+
+    @abstractmethod
+    def query_page(
+        self, kind: str, field: str, value: Any, *, cursor: str | None = None, limit: int = 200, before: bool = False
+    ) -> tuple[list[tuple[str, dict[str, Any]]], str | None]:
+        """One page of :meth:`query` — or, with ``before``, of :meth:`query_before` with ``value`` as
+        the cutoff — and the cursor of the next page (``None`` after the last one)."""
+
+    def query_all(
+        self, kind: str, field: str, value: Any, *, before: bool = False, page_size: int = 200
+    ) -> list[tuple[str, dict[str, Any]]]:
+        """Every matching record, page by page, with no limit. Collected before the caller acts, so
+        deleting what it found can't make a later page skip anything."""
+        results: list[tuple[str, dict[str, Any]]] = []
+        cursor: str | None = None
+        while True:
+            page, cursor = self.query_page(kind, field, value, cursor=cursor, limit=page_size, before=before)
+            results.extend(page)
+            if cursor is None:
+                return results
 
     @abstractmethod
     def ping(self) -> bool:

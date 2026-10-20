@@ -51,6 +51,9 @@ private struct SettlementPlanScreen: View {
     let environment: AppEnvironment
     @State private var model: SnapshotModel<SettlementPlanSummary>
     @State private var toggleError: String?
+    /// "Mark as settled" waiting for confirmation (a payment owed to the current user).
+    @State private var settling: PlannedPayment?
+    @State private var settleError: String?
     @Environment(AppRouter.self) private var router
 
     init(groupID: GroupID, environment: AppEnvironment) {
@@ -175,13 +178,43 @@ private struct SettlementPlanScreen: View {
     private func paymentsSection(_ summary: SettlementPlanSummary) -> some View {
         VStack(alignment: .leading, spacing: SUSpacing.sm) {
             SUSectionHeader(title: String(localized: "Payments"))
+            if let settleError {
+                Label(settleError, systemImage: "exclamationmark.circle").font(SUFont.metadata).foregroundStyle(SUColor.negative)
+            }
             VStack(spacing: SUSpacing.xs) {
                 ForEach(summary.orderedPayments) { payment in
-                    PlannedPaymentCard(summary: summary, payment: payment) {
+                    PlannedPaymentCard(summary: summary, payment: payment,
+                                       markSettled: payment.recipientID == summary.currentUserID ? { settling = payment } : nil) {
                         router.push(.pay(groupID: summary.group.id, recipientID: payment.recipientID))
                     }
                 }
             }
+        }
+        .confirmationDialog(String(localized: "Mark as settled?"), isPresented: Binding(get: { settling != nil }, set: { if !$0 { settling = nil } }),
+                            titleVisibility: .visible, presenting: settling) { payment in
+            Button(String(localized: "Mark as settled")) { Task { await markSettled(payment, in: summary) } }
+                .accessibilityIdentifier("plan.confirmMarkSettled")
+        } message: { payment in
+            let name = summary.members[payment.payerID]?.displayName ?? ""
+            let amount = MoneyFormatting.string(payment.amount)
+            Text(String(localized: """
+            Use this if \(name) paid you \(amount) outside Square Up, or you don't need it back. It's recorded as settled by you, \
+            and \(name) owes you \(amount) less. This can't be undone.
+            """))
+        }
+    }
+
+    /// The person owed records it themselves: paid another way, or not needed back. In a shared group
+    /// the server allows only the recipient, and never more than is owed right now.
+    private func markSettled(_ payment: PlannedPayment, in summary: SettlementPlanSummary) async {
+        let me = summary.currentUserID
+        let settlement = Settlement(groupID: summary.group.id, fromID: payment.payerID, toID: me, amount: payment.amount, date: .now,
+                                    recordedBy: me, provider: .other, confirmedAt: .now, confirmedBy: me)
+        do {
+            try await environment.ledger.perform(.recordSettlement(settlement), as: nil)
+            settleError = nil
+        } catch {
+            settleError = LedgerErrorMessages.text(for: error as? LedgerError ?? .unavailable)
         }
     }
 
@@ -209,6 +242,8 @@ private struct SettlementPlanScreen: View {
 private struct PlannedPaymentCard: View {
     let summary: SettlementPlanSummary
     let payment: PlannedPayment
+    /// Shown on a payment owed to the current user.
+    var markSettled: (() -> Void)?
     let pay: () -> Void
 
     var body: some View {
@@ -239,6 +274,15 @@ private struct PlannedPaymentCard: View {
                     .buttonStyle(.suPrimary)
                     .accessibilityIdentifier("plan.pay.\(recipient?.firstName ?? "")")
                     .accessibilityHint(String(localized: "Choose how to pay. Nothing is paid until you send it in another app."))
+                }
+                if let markSettled {
+                    Button(action: markSettled) {
+                        Text(String(localized: "Mark as settled"))
+                            .frame(maxWidth: .infinity)
+                    }
+                    .buttonStyle(.suSecondary)
+                    .accessibilityIdentifier("plan.markSettled.\(payer?.firstName ?? "")")
+                    .accessibilityHint(String(localized: "Use this if they paid you outside Square Up, or you don't need it back."))
                 }
             }
         }

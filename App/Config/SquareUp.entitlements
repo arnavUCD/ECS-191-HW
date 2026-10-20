@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!--
+	Push Notifications, used only for Firebase phone sign-in's silent app verification: Square Up
+	sends no visible notifications and never asks for notification permission. Debug builds use the
+	APNs sandbox; Xcode signs App Store and TestFlight exports with "production" automatically.
+	-->
+	<key>aps-environment</key>
+	<string>development</string>
+	<!--
+	Receipt-room invitations (https://<SQUAREUP_INVOCATION_DOMAIN>/r/<token>, Config/Remote.xcconfig)
+	open in the app when it's installed (universal links), including App Clip invocations, which
+	launch the full app instead of the App Clip once it's installed. The server's
+	/.well-known/apple-app-site-association lists this app for /r/* and the App Clip under appclips.
+	-->
+	<key>com.apple.developer.associated-domains</key>
+	<array>
+		<string>applinks:$(SQUAREUP_INVOCATION_DOMAIN)</string>
+		<string>appclips:$(SQUAREUP_INVOCATION_DOMAIN)</string>
+	</array>
+</dict>
+</plist>

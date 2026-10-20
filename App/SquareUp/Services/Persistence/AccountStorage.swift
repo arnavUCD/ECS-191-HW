@@ -189,6 +189,31 @@ final class LegacyDataRegistry {
         }
     }
 
+    /// The account that owned the earlier build's data was deleted: that data goes with it (the
+    /// ledger with its database side files, receipt images, room directory, and the AI choice it kept
+    /// in the standard preferences), and nobody is asked about it again. Returns `false` if a file
+    /// couldn't be removed. Data owned by another account, or not claimed, is never touched.
+    @discardableResult
+    func eraseData(ownedBy namespace: AccountNamespace, fileManager: FileManager = .default) -> Bool {
+        guard claim.state == .claimed, claim.owner == namespace else { return true }
+        let ledger = layout.legacyLedgerURL.path(percentEncoded: false)
+        let files = [URL(filePath: ledger), URL(filePath: ledger + "-shm"), URL(filePath: ledger + "-wal"),
+                     layout.legacyReceiptsDirectory, layout.legacyRoomDirectoryURL]
+        var removedAll = true
+        for file in files where fileManager.fileExists(atPath: file.path(percentEncoded: false)) {
+            do {
+                try fileManager.removeItem(at: file)
+            } catch {
+                removedAll = false
+            }
+        }
+        UserDefaults.standard.removeObject(forKey: ReceiptAISettings.storageKey)
+        claim = LegacyClaim(state: .none, updatedAt: now())
+        try? persist()
+        Log.persistence.info("Earlier data on this iPhone was deleted with its account")
+        return removedAll
+    }
+
     /// "Not mine": this account isn't asked again; the data stays aside for its owner.
     func decline(for namespace: AccountNamespace) {
         guard claim.state == .pending else { return }

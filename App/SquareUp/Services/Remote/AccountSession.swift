@@ -341,8 +341,9 @@ actor AccountSession {
         ])
     }
 
-    /// Deletes the signed-in Firebase account (only ever an incomplete, unverified sign-up — the
-    /// caller checks). An account that's already gone counts as deleted. Then forgets it here.
+    /// Deletes the signed-in Firebase account: an incomplete, unverified sign-up, or an established
+    /// account once the server deleted its data (Profile → Delete account, after `reauthenticate`).
+    /// An account that's already gone counts as deleted. Then forgets it here.
     func deleteAccount() async throws {
         do {
             let token = try await validIDToken(forceRefresh: false)
@@ -351,6 +352,35 @@ actor AccountSession {
             // USER_NOT_FOUND / INVALID_ID_TOKEN: a previous attempt already deleted it.
         }
         signOut()
+    }
+
+    /// Confirms it's this person before deleting the account: signs in again with the account's own
+    /// password, which gives the same account a fresh ID token (Firebase and Square Up's server both
+    /// require a recent sign-in for deletion). A password for another account changes nothing.
+    func reauthenticate(password: String) async throws {
+        try requireFirebase()
+        guard let current = account, let email = current.email else { throw Failure.signedOut }
+        let response: FirebaseTokenResponse = try await identityToolkit("accounts:signInWithPassword", [
+            "email": .string(email), "password": .string(password), "returnSecureToken": true,
+        ])
+        guard response.localId == current.userID else { throw Failure.invalidCredentials }
+        renew(current, refreshToken: response.refreshToken, idToken: response.idToken, expiresIn: TimeInterval(response.expiresIn) ?? 3600)
+    }
+
+    /// The same, with a code Firebase texted to the account's own verified number
+    /// (`FirebasePhoneVerifier`). A sign-in for any other account is refused.
+    func reauthenticate(_ phone: PhoneCredentialSession) throws {
+        try requireFirebase()
+        guard let current = account, current.userID == phone.userID else { throw Failure.invalidCredentials }
+        renew(current, refreshToken: phone.refreshToken, idToken: phone.idToken, expiresIn: phone.expiresIn)
+    }
+
+    /// New tokens for the signed-in account; everything else known about it stays.
+    private func renew(_ current: Account, refreshToken: String, idToken token: String, expiresIn: TimeInterval) {
+        var renewed = current
+        renewed.refreshToken = refreshToken
+        persist(renewed)
+        idToken = (token, now().addingTimeInterval(expiresIn))
     }
 
     /// Saves the name on the Firebase account too, so it can prefill profile setup after

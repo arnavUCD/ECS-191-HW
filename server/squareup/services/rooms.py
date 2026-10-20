@@ -249,6 +249,13 @@ class RoomService:
         """A temporary room past its deadline that hasn't been closed yet (cleanup closes it)."""
         return room.is_temporary and room.closed_at is None and room.expires_at is not None and parse_iso(room.expires_at) <= self.ctx.now()
 
+    def has_ended(self, room: Room) -> bool:
+        """Nothing more can happen in the room: a temporary room that closed (square, cancelled) or
+        passed its deadline, or any other room once it's finalized or cancelled."""
+        if room.is_temporary:
+            return room.closed_at is not None or self.is_expired(room)
+        return room.state in ("finalized", "cancelled")
+
     def retain_until(self, room: Room) -> str | None:
         """When everything about a temporary room — including its read-only summary — is deleted."""
         if not room.is_temporary:
@@ -540,25 +547,50 @@ class RoomService:
             raise DomainError("demo_restricted", "Joining a live room outside the demo isn't available in the demo")
         raise DomainError("demo_restricted", "This live room is part of a demo with sample data, so it can't be joined with an account")
 
+    def anonymize_participant(self, room_id: str, binding: str, name: str) -> bool:
+        """A deleted account's place in a room keeps its claims and payments under ``name``.
+        Returns whether anything changed; repeating is harmless."""
+        now = self.ctx.now_iso()
+
+        def body_fn(transaction: Transaction) -> bool:
+            record = transaction.get(ROOM, room_id)
+            if record is None:
+                return False
+            room = room_from_storage(record)
+            renamed = [p for p in room.participants if p.bound_subject == binding and p.display_name != name]
+            if not renamed:
+                return False
+            for participant in renamed:
+                participant.display_name = name
+            room.revision += 1
+            room.updated_at = now
+            self._put_room(transaction, room)
+            return True
+
+        changed: bool = self.ctx.store.run_in_transaction(body_fn)
+        return changed
+
     def delete_hosted_by(self, uid: str) -> int:
         """Every room this (demo) account hosts, with its invitations, short codes, guest credentials,
         and receipt images — when its demo workspace ends."""
         rooms = self.ctx.store.query(ROOM, "hostUid", uid, limit=200)
         for room_id, _ in rooms:
-            related = [
-                (kind, key)
-                for kind in (INVITATION, ROOM_CODE, GUEST, ASSET)
-                for key, _ in self.ctx.store.query(kind, "roomId", room_id, limit=500)
-            ]
-            for _, asset in self.ctx.store.query(ASSET, "roomId", room_id, limit=50):
-                self.ctx.blobs.delete(asset["objectName"])
-            for kind, key in [*related, (ROOM, room_id)]:
-
-                def delete(transaction: Transaction, kind: str = kind, key: str = key) -> None:
-                    transaction.delete(kind, key)
-
-                self.ctx.store.run_in_transaction(delete)
+            self.delete_room(room_id)
         return len(rooms)
+
+    def delete_room(self, room_id: str) -> None:
+        """One room with its invitations, short codes, guest credentials, and receipt images. Safe to
+        repeat (deleting a missing image or record is a no-op)."""
+        found = {kind: self.ctx.store.query_all(kind, "roomId", room_id) for kind in (INVITATION, ROOM_CODE, GUEST, ASSET)}
+        # Images first, the room record last: a deletion that stops part-way is found and finished again.
+        for _, asset in found[ASSET]:
+            self.ctx.blobs.delete(asset["objectName"])
+        for kind, key in [*((kind, key) for kind, records in found.items() for key, _ in records), (ROOM, room_id)]:
+
+            def delete(transaction: Transaction, kind: str = kind, key: str = key) -> None:
+                transaction.delete(kind, key)
+
+            self.ctx.store.run_in_transaction(delete)
 
     # MARK: - Linking a guest to a full-app account (milestone 4 §13)
 

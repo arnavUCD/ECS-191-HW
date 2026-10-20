@@ -16,7 +16,9 @@ nonisolated enum ReceiptAIMode: String, Sendable, CaseIterable {
 /// is asked again. Choosing on-device only is never asked about again.
 @Observable
 final class ReceiptAISettings {
-    static let consentVersion = 1
+    /// Version 2 (October 2026) adds that Square Up's server keeps results for up to 24 hours, so
+    /// everyone who agreed to version 1 is asked again. The server accepts both.
+    nonisolated static let consentVersion = 2
     static let storageKey = "receipts.aiProcessing"
 
     private(set) var mode: ReceiptAIMode

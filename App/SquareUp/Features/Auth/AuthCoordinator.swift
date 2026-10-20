@@ -408,6 +408,50 @@ final class AuthCoordinator {
         phase = .signedOut
     }
 
+    // MARK: - Deleting the account
+
+    /// Profile → Delete account: what deleting would do now, and anything to finish first.
+    func accountDeletionPlan() async throws(AuthFailure) -> AccountDeletionPlan {
+        guard let backend, phase == .ready, !isDemo else { throw .account(.signedOut) }
+        do {
+            return try await backend.accountDeletionPlan()
+        } catch {
+            if error.isSessionEnded { await endSession() }
+            throw error
+        }
+    }
+
+    /// Sends a code to the account's own number, to confirm it's this person before deleting.
+    func sendDeletionCode() async throws(AuthFailure) -> String {
+        guard let backend, phase == .ready, !isDemo else { throw .account(.signedOut) }
+        return try await backend.sendReauthenticationCode()
+    }
+
+    /// Confirms it's this person (their password, or the code texted to their number), then deletes
+    /// the account: its data on the server, its sign-in, and everything this iPhone kept for it.
+    /// Back to Welcome afterwards. Nothing is deleted if the confirmation fails.
+    func deleteAccount(_ confirmation: AccountConfirmation) async throws(AuthFailure) {
+        guard let backend, phase == .ready, !isDemo, !isWorking else { return }
+        isWorking = true
+        defer { isWorking = false }
+        switch confirmation {
+        case .password(let password): try await backend.reauthenticate(password: password)
+        case .code(let verificationID, let code): try await backend.reauthenticate(phoneVerificationID: verificationID, code: code)
+        }
+        let outcome = try await backend.deleteAccount()
+        Log.app.info("Account deleted; returning to Welcome")
+        clearAccount()
+        rememberedEmail = nil
+        pendingEmail = nil
+        draftName = ""
+        phone.reset()
+        clearVerificationCooldown()
+        clearPendingInvitation()
+        path = []
+        notice = outcome == .complete ? .accountDeleted : .accountDeletedLocalDataRemains
+        phase = .signedOut
+    }
+
     // MARK: - Invitations
 
     /// An invitation opened from a link. Before the app is ready it waits (on this iPhone, across

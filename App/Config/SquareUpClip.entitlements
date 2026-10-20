@@ -8,13 +8,13 @@
 		<string>$(AppIdentifierPrefix)$(SQUAREUP_APP_BUNDLE_ID)</string>
 	</array>
 	<!--
-	Associated Domains are added only once the paid Apple Developer Program team exists (they can't
-	be signed without it). Then add, to BOTH this file and the full app's entitlements:
-	  <key>com.apple.developer.associated-domains</key>
-	  <array><string>appclips:$(SQUAREUP_INVOCATION_DOMAIN)</string></array>   (App Clip)
-	  <array><string>applinks:$(SQUAREUP_INVOCATION_DOMAIN)</string>
-	         <string>appclips:$(SQUAREUP_INVOCATION_DOMAIN)</string></array>   (full app)
-	See HW/App/APP_CLIP_ACTIVATION.md.
+	The invitation domain (Config/Remote.xcconfig): App Clip invocations from https://<domain>/r/<token>
+	(QR code, Messages, the /r/ page's Smart App Banner). The server's apple-app-site-association file
+	lists this App Clip under "appclips". No path, slash, or wildcard here.
 	-->
+	<key>com.apple.developer.associated-domains</key>
+	<array>
+		<string>appclips:$(SQUAREUP_INVOCATION_DOMAIN)</string>
+	</array>
 </dict>
 </plist>

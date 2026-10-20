@@ -32,5 +32,17 @@ SQUAREUP_FIREBASE_PROJECT_ID = square-up-ecs-191
 SQUAREUP_FIREBASE_IOS_API_KEY = AIzaSyCNoyTwtNJwimc30tkAo9dgwLf71nOR4Rw
 SQUAREUP_FIREBASE_APP_URL_SCHEME = app-1-782598349845-ios-3c5dc3cb8bff380221da1c
 
+// The HTTPS host of receipt-room invitations (`https://<host>/r/<token>`), associated with the app
+// (`applinks:`) and the App Clip (`appclips:`) through Associated Domains. Always the API host: the
+// server builds invitation links from it, and both apps accept links from no other host.
+SQUAREUP_INVOCATION_DOMAIN = $(SQUAREUP_API_HOST)
+
+// The published privacy policy, without "https://" (xcconfig reads "//" as a comment), e.g.
+// example.com/privacy. Profile → About links to it. Empty until the policy is published.
+SQUAREUP_PRIVACY_POLICY_ADDRESS =
+
+// The version and build number, shared with the App Clip.
+#include "Version.xcconfig"
+
 // Optional local override (gitignored). Values set there replace the ones above.
 #include? "Remote.local.xcconfig"

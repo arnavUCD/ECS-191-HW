@@ -21,7 +21,10 @@ from typing import Any
 from ..domain.errors import DomainError
 
 SCHEMA_VERSION = 1
-CONSENT_VERSION = 1
+#: The AI disclosure the app showed when the person agreed. Version 2 (October 2026) adds that
+#: results are kept for up to 24 hours; version 1 is still accepted from earlier builds.
+CONSENT_VERSION = 2
+ACCEPTED_CONSENT_VERSIONS = (1, 2)
 
 QUALITY_WARNINGS = ("blurry", "tooDark", "overexposed", "lowContrast", "edgesMissing", "lowResolution")
 CONFIDENCE = ("high", "medium", "low")
@@ -127,7 +130,7 @@ def parse_request(body: object, *, max_pages: int, max_regions: int, max_image_b
     if not isinstance(consent, dict):
         raise DomainError("ai_consent_required", "AI processing needs your permission first")
     mode, version = consent.get("mode"), consent.get("version")
-    if mode != "automatic" or version != CONSENT_VERSION:
+    if mode != "automatic" or isinstance(version, bool) or version not in ACCEPTED_CONSENT_VERSIONS:
         raise DomainError("ai_consent_required", "AI processing needs your permission first")
 
     raw_pages = body.get("pages")

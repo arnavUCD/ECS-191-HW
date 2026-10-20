@@ -3,8 +3,9 @@
 ``/r/<token>`` is the App Clip / universal-link invocation URL. Once the App Clip or the full app
 is associated with this domain, iOS opens it instead of this page. Until then (and for anyone
 without an iPhone) this page is the fallback: it offers the full app's own link and explains how to
-join with the room's short code. It never claims the App Clip is available unless the Apple
-identifiers are configured, and it reveals nothing about the room: it never looks up the token's
+join with the room's short code. It offers the App Clip (Smart App Banner and card) only once the
+App Clip is live (``SQUAREUP_APP_CLIP_LIVE=1``, set after Apple approves its experience) and the
+Apple identifiers are configured, and it reveals nothing about the room: it never looks up the token's
 room, names, or amounts. The only thing echoed is the token itself (already in the address bar),
 inside the "Open in Square Up" link for the full app's URL scheme.
 """
@@ -50,7 +51,9 @@ _TOKEN = re.compile(r"^[A-Za-z0-9_-]{32,128}$")
 def invitation_page(token: str) -> Response:
     config = services().ctx.config
     banner = ""
-    clip_available = bool(config.apple_team_id and config.app_bundle_id and config.clip_bundle_id and config.app_store_id)
+    clip_available = config.app_clip_live and bool(
+        config.apple_team_id and config.app_bundle_id and config.clip_bundle_id and config.app_store_id
+    )
     if clip_available:
         banner = (
             f'<meta name="apple-itunes-app" content="app-id={escape(config.app_store_id or "")}, '

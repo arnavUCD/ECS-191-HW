@@ -267,8 +267,19 @@ private struct ProfileScreen: View {
         Section(String(localized: "About")) {
             LabeledContent(String(localized: "Version"), value: Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "—")
             LabeledContent(String(localized: "Storage"), value: String(localized: "On this iPhone"))
+            if let privacyPolicy = Self.privacyPolicyURL {
+                Link(String(localized: "Privacy policy"), destination: privacyPolicy)
+                    .accessibilityIdentifier("profile.privacyPolicy")
+            }
         }
         .suListRows()
+    }
+
+    /// The published privacy policy (`SQUAREUP_PRIVACY_POLICY_ADDRESS` in `Config/Remote.xcconfig`).
+    private static var privacyPolicyURL: URL? {
+        guard let address = (Bundle.main.object(forInfoDictionaryKey: "SquareUpPrivacyPolicyAddress") as? String)?
+            .trimmingCharacters(in: .whitespaces), !address.isEmpty, !address.hasPrefix("$(") else { return nil }
+        return URL(string: "https://\(address)")
     }
 }
 

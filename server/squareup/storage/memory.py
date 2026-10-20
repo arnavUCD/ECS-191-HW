@@ -76,6 +76,23 @@ class MemoryStore(Store):
             ]
             return matches[:limit]
 
+    def query_page(
+        self, kind: str, field: str, value: Any, *, cursor: str | None = None, limit: int = 200, before: bool = False
+    ) -> tuple[list[tuple[str, dict[str, Any]]], str | None]:
+        with self._lock:
+            matches = sorted(
+                (
+                    (key, copy.deepcopy(record[0]))
+                    for (k, key), record in self._data.items()
+                    if k == kind
+                    and (record[1].get(field) is not None and record[1][field] < value if before else record[1].get(field) == value)
+                ),
+                key=lambda match: match[0],
+            )
+        start = int(cursor or 0)
+        end = start + limit
+        return matches[start:end], (str(end) if end < len(matches) else None)
+
     def ping(self) -> bool:
         return True
 

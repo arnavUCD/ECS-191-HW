@@ -23,6 +23,20 @@ def get_account() -> Response:
     return jsonify({"account": services().accounts.account(principal())})
 
 
+@accounts.get("/deletion")
+def account_deletion_check() -> Response:
+    """What deleting the account would do now, and what has to happen first."""
+    limit("account")
+    return jsonify({"deletion": services().account_deletion.check(principal())})
+
+
+@accounts.delete("")
+def delete_account() -> Response:
+    """Deletes the account's Square Up data (services.account_deletion); needs a recent sign-in."""
+    limit("account-delete")
+    return jsonify(services().account_deletion.delete(principal()))
+
+
 @accounts.put("/profile")
 def save_profile() -> Response:
     limit("account")

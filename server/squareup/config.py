@@ -52,6 +52,9 @@ class Config:
     clip_bundle_id: str | None = None
     #: The full app's numeric App Store ID (the Smart App Banner's ``app-id``), once it has one.
     app_store_id: str | None = None
+    #: The App Clip's App Store experience is approved and released: only then do ``/r/`` pages
+    #: offer it. An App Store ID exists long before that (with the app record), so it isn't enough.
+    app_clip_live: bool = False
     invitation_ttl_hours: int = 48
     #: Shared-group invitations (milestone 7): a week by default, configurable per invitation.
     group_invitation_ttl_hours: int = 168
@@ -61,6 +64,12 @@ class Config:
     #: Demo workspaces ("Enter Demo"): offered at all, and how long one lasts before it's deleted.
     demo_enabled: bool = True
     demo_ttl_hours: int = 168
+    #: Starting a demo workspace: at most this many an hour from one network (generous: a class on one
+    #: Wi-Fi shares an address), and this many a day across everyone (the cost ceiling).
+    demo_starts_per_network_per_hour: int = 30
+    demo_starts_per_day: int = 300
+    #: Running on App Engine, whose front end sets ``X-Appengine-User-IP`` (only then is it trusted).
+    on_app_engine: bool = False
     asset_retention_days: int = 30
     #: Temporary rooms ("Split with people now"): how long claiming stays open before the host
     #: finalizes, how long people then have to pay and be confirmed, and how long the read-only
@@ -84,6 +93,8 @@ class Config:
             "asset": (120, 60),
             # Shared groups (milestone 7).
             "account": (60, 60),
+            # Deleting an account (each attempt also needs a recent sign-in).
+            "account-delete": (10, 3600),
             "group-read": (240, 60),
             "group-command": (120, 60),
             "group-publish": (10, 60),
@@ -112,6 +123,14 @@ class Config:
     @property
     def is_production(self) -> bool:
         return self.environment == "production"
+
+    def limit_for(self, scope: str) -> tuple[int, int]:
+        """(requests, window in seconds) for a rate-limit scope; unknown scopes get a default."""
+        if scope == "demo-start":
+            return self.demo_starts_per_network_per_hour, 3600
+        if scope == "demo-start-daily":
+            return self.demo_starts_per_day, 86_400
+        return self.rate_limits.get(scope, (120, 60))
 
     def with_intelligence_limits(self) -> Config:
         """The rate limits with receipt intelligence's configured values applied."""
@@ -145,12 +164,16 @@ class Config:
             app_bundle_id=os.environ.get("SQUAREUP_APP_BUNDLE_ID") or None,
             clip_bundle_id=os.environ.get("SQUAREUP_CLIP_BUNDLE_ID") or None,
             app_store_id=os.environ.get("SQUAREUP_APP_STORE_ID") or None,
+            app_clip_live=os.environ.get("SQUAREUP_APP_CLIP_LIVE") == "1",
             invitation_ttl_hours=_int("SQUAREUP_INVITATION_TTL_HOURS", 48),
             group_invitation_ttl_hours=_int("SQUAREUP_GROUP_INVITATION_TTL_HOURS", 168),
             direct_invitation_ttl_hours=_int("SQUAREUP_DIRECT_INVITATION_TTL_HOURS", 720),
             guest_ttl_hours=_int("SQUAREUP_GUEST_TTL_HOURS", 72),
             demo_enabled=os.environ.get("SQUAREUP_DEMO_ENABLED", "1") != "0",
             demo_ttl_hours=_int("SQUAREUP_DEMO_TTL_HOURS", 168),
+            demo_starts_per_network_per_hour=_int("SQUAREUP_DEMO_STARTS_PER_NETWORK_PER_HOUR", 30),
+            demo_starts_per_day=_int("SQUAREUP_DEMO_STARTS_PER_DAY", 300),
+            on_app_engine=on_app_engine,
             asset_retention_days=_int("SQUAREUP_ASSET_RETENTION_DAYS", 30),
             temporary_room_ttl_hours=_int("SQUAREUP_TEMPORARY_ROOM_TTL_HOURS", 72),
             temporary_room_payment_days=_int("SQUAREUP_TEMPORARY_ROOM_PAYMENT_DAYS", 30),

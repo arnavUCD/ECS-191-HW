@@ -78,6 +78,19 @@ class DatastoreStore(Store):
         query.add_filter(filter=datastore.query.PropertyFilter(field, "=", value))
         return [(entity.key.name, json.loads(entity["payload"])) for entity in query.fetch(limit=limit)]
 
+    def query_page(
+        self, kind: str, field: str, value: Any, *, cursor: str | None = None, limit: int = 200, before: bool = False
+    ) -> tuple[list[tuple[str, dict[str, Any]]], str | None]:
+        query = self._client.query(kind=kind, namespace=self._namespace)
+        query.add_filter(filter=datastore.query.PropertyFilter(field, "<" if before else "=", value))
+        iterator = query.fetch(limit=limit, start_cursor=cursor.encode("ascii") if cursor else None)
+        page = next(iterator.pages, None)
+        results = [(entity.key.name, json.loads(entity["payload"])) for entity in (page or [])]
+        token = iterator.next_page_token
+        if len(results) < limit or not token:
+            return results, None
+        return results, token.decode("ascii") if isinstance(token, bytes) else str(token)
+
     def query_before(self, kind: str, field: str, cutoff: Any, limit: int = 200) -> list[tuple[str, dict[str, Any]]]:
         query = self._client.query(kind=kind, namespace=self._namespace)
         query.add_filter(filter=datastore.query.PropertyFilter(field, "<", cutoff))

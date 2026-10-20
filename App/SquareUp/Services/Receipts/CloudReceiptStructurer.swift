@@ -17,7 +17,8 @@ nonisolated struct CloudReceiptStructurer: Sendable {
     static let maximumPages = 6
     static let maximumRegions = 1500
     static let maximumRegionText = 300
-    static let consentVersion = 1
+    /// The disclosure the person agreed to (`ReceiptAISettings`), sent with every request.
+    static let consentVersion = ReceiptAISettings.consentVersion
 
     let service: any ReceiptIntelligenceServicing
     /// The processing image for a page (metadata-free, size-limited JPEG).

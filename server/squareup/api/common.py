@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import ipaddress
 from typing import Any, cast
 
 from flask import current_app, g, request
@@ -31,11 +32,27 @@ def principal() -> Principal | None:
 
 
 def client_key() -> str:
-    """Rate-limit key: the authenticated subject, else the client address (hashed, never logged raw)."""
+    """Rate-limit key: the authenticated subject, else the caller's network (``network_key``)."""
     caller = principal()
     if caller is not None:
         return caller.binding
-    address = request.headers.get("X-Appengine-User-IP") or request.remote_addr or "unknown"
+    return network_key()
+
+
+def network_key() -> str:
+    """The caller's network for rate limits, hashed (never logged raw). On App Engine the address is
+    ``X-Appengine-User-IP``, which Google's front end sets (it removes App Engine's own headers from
+    incoming requests); anywhere else only the connection's address counts, so a header a client
+    made up is never trusted, and ``X-Forwarded-For`` never is. IPv6 addresses count by their /64,
+    the block one home or phone network usually gets, so rotating within it doesn't evade a limit."""
+    trusted = request.headers.get("X-Appengine-User-IP") if services().ctx.config.on_app_engine else None
+    address = trusted or request.remote_addr or "unknown"
+    try:
+        parsed = ipaddress.ip_address(address)
+    except ValueError:
+        return f"ip:{redact(address)}"
+    if parsed.version == 6:
+        address = f"{ipaddress.ip_network(f'{parsed}/64', strict=False).network_address}/64"
     return f"ip:{redact(address)}"
 
 
@@ -50,5 +67,9 @@ def json_body() -> Any:
     return body
 
 
-def limit(scope: str) -> None:
-    services().limits.check(scope, client_key())
+def limit(scope: str, *, client: str | None = None, message: str | None = None) -> None:
+    """Counts this request against ``scope`` for ``client`` (default: the caller); 429 past the limit."""
+    if message is None:
+        services().limits.check(scope, client or client_key())
+    else:
+        services().limits.check(scope, client or client_key(), message)

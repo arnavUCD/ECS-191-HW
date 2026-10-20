@@ -44,6 +44,8 @@
 	<string>$(SQUAREUP_FIREBASE_IOS_API_KEY)</string>
 	<key>SquareUpFirebaseProjectID</key>
 	<string>$(SQUAREUP_FIREBASE_PROJECT_ID)</string>
+	<key>SquareUpPrivacyPolicyAddress</key>
+	<string>$(SQUAREUP_PRIVACY_POLICY_ADDRESS)</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>fetch</string>

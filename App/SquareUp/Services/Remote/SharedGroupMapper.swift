@@ -296,6 +296,12 @@ nonisolated enum SharedGroupMapper {
                 live = false
             }
             return WireCommand(type: "advancePayment", payload: .object(payload), isRevisionStrict: false, requiresLiveResponse: live)
+        case .recordSettlement(let settlement):
+            // "Mark as settled" by the person owed (`SharedGroupLedger` allows nothing else).
+            return WireCommand(type: "recordSettlement", payload: [
+                "settlementId": .string(id(settlement.id)), "payerId": .string(id(settlement.fromID)),
+                "amount": .int(Int(settlement.amount.minorUnits)), "provider": .string((settlement.provider ?? .other).rawValue),
+            ], isRevisionStrict: false, requiresLiveResponse: true)
         default:
             throw .unsupportedCommand
         }

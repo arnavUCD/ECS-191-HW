@@ -195,6 +195,15 @@ def _check_removable(group: dict[str, Any], member_id: str, *, rooms_hosted: boo
         )
 
 
+def leave_blocker(group: dict[str, Any], member_id: str) -> DomainError | None:
+    """Why this member couldn't leave right now — the rule ``leaveGroup`` applies — or ``None``."""
+    try:
+        _check_removable(group, member_id)
+    except DomainError as error:
+        return error
+    return None
+
+
 def _remove_member(context: Context, payload: dict[str, Any]) -> None:
     group = context.group
     member_id = require_uuid(payload.get("memberId"), "memberId")
@@ -656,6 +665,54 @@ def _start_payment(context: Context, payload: dict[str, Any]) -> None:
     context.event("paymentStarted", _attempt_info(attempt))
 
 
+def _record_settlement(context: Context, payload: dict[str, Any]) -> None:
+    """ "Mark as settled": the person who is owed records that someone paid them outside Square Up,
+    or that they don't need it back. Only the person owed may do it, never for more than they're
+    owed right now, so it can only lower someone else's balance. It's recorded as a settlement the
+    recipient confirmed (``settlementRecorded``), exactly like one they confirmed after a report."""
+    group = context.group
+    settlement_id = require_uuid(payload.get("settlementId"), "settlementId")
+    if any(stored["id"] == settlement_id for stored in group["settlements"]):
+        raise DomainError("entity_exists", "That payment is already recorded", {"settlementId": settlement_id})
+    payer_id = require_uuid(payload.get("payerId"), "payerId")
+    amount = require_int(payload.get("amount"), "amount", low=1, high=MAX_ABS_MINOR_UNITS)
+    provider = payload.get("provider", "other")
+    if provider not in model.PROVIDERS:
+        raise DomainError("invalid_payload", "Unknown payment method")
+    if payer_id == context.actor_id:
+        raise DomainError("cannot_pay_self", "You can't pay yourself")
+    payer = model.find_member(group, payer_id)
+    if payer is None or payer["status"] == "removed":
+        raise DomainError("not_a_member", "That person isn't in this group")
+    owed = _available_obligation(group, payer_id, context.actor_id)
+    if owed is None:
+        raise DomainError("no_obligation", "They don't owe you anything right now")
+    if amount > owed:
+        raise DomainError("exceeds_obligation", "That's more than they owe you now", {"owed": owed})
+    if len(group["settlements"]) >= model.MAX_ATTEMPTS:
+        raise DomainError("group_full", "This group has reached its payment limit")
+    group["settlements"].append(
+        {
+            "id": settlement_id,
+            "fromId": payer_id,
+            "toId": context.actor_id,
+            "amount": amount,
+            "date": context.now,
+            "recordedBy": context.actor_id,
+            "provider": provider,
+            "attemptId": None,
+            "confirmedAt": context.now,
+            "confirmedBy": context.actor_id,
+        }
+    )
+    context.outcome.touched_settlements.add(settlement_id)
+    context.outcome.result["settlementId"] = settlement_id
+    context.event(
+        "settlementRecorded",
+        {"settlementId": settlement_id, "fromId": payer_id, "toId": context.actor_id, "amount": amount, "byRecipient": True},
+    )
+
+
 _ACTION_EVENTS = {
     "reportSent": "paymentReported",
     "confirm": "paymentConfirmed",
@@ -747,4 +804,5 @@ _HANDLERS: dict[str, Callable[[Context, dict[str, Any]], None]] = {
     "cancelReceipt": _cancel_receipt,
     "startPayment": _start_payment,
     "advancePayment": _advance_payment,
+    "recordSettlement": _record_settlement,
 }

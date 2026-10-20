@@ -68,6 +68,9 @@ MAX_IMPORTED_EVENTS = 1_500
 CODE_ALPHABET = "0123456789ABCDEFGHJKMNPQRSTVWXYZ"
 CODE_LENGTH = 20  # 100 bits
 
+#: How a deleted account appears in the history its groups and rooms keep (``account_deletion``).
+FORMER_MEMBER = "Former member"
+
 EVENT_KINDS = frozenset(
     {
         "groupCreated",
@@ -436,6 +439,43 @@ class GroupService:
             "kind": kind,
             "data": data,
         }
+
+    def anonymize_former_member(self, group_id: str, uid: str) -> bool:
+        """A deleted account keeps its place in a group's history as "Former member": its name and
+        handle are removed, and in an archived group its seat stops being active. Balances,
+        expenses, and payments don't change. Recorded as ``memberAnonymized`` so every member's app
+        picks up the new name. Returns whether anything changed; repeating is harmless."""
+        now = self.ctx.now_iso()
+
+        def body_fn(transaction: Transaction) -> bool:
+            group = transaction.get(SHARED_GROUP, group_id)
+            if group is None:
+                return False
+            seats = [member for member in group["members"] if member.get("uid") == uid]
+            pending = [m for m in seats if m["displayName"] != FORMER_MEMBER or m.get("handle") or m["status"] == "active"]
+            if not pending:
+                return False
+            if any(m["status"] == "active" for m in pending) and not group.get("archivedAt"):
+                # Still taking part in an open group: deletion must leave it (with its checks) first.
+                raise DomainError("revision_conflict", "A group changed while your account was being deleted. Try again")
+            events = []
+            for member in pending:
+                member["displayName"] = FORMER_MEMBER
+                member["handle"] = None
+                if member["status"] == "active":
+                    member["status"] = "removed"
+                    member["removedAt"] = now
+                events.append(self._new_event(group, member["id"], now, "memberAnonymized", {"memberId": member["id"]}))
+            group["revision"] += 1
+            group["updatedAt"] = now
+            self._put_group(transaction, group)
+            self._append_events(transaction, group_id, events)
+            return True
+
+        changed: bool = self.ctx.store.run_in_transaction(body_fn)
+        if changed:
+            log_event("group.memberAnonymized", group=redact(group_id))
+        return changed
 
     def _history(self, group: dict[str, Any]) -> list[dict[str, Any]]:
         def body_fn(transaction: Transaction) -> list[dict[str, Any]]:

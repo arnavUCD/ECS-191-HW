@@ -107,6 +107,8 @@ App/ARCHITECTURE.md
 App/DEPENDENCIES.md
 App/PHONE_AUTH_SETUP.md
 App/APP_CLIP_ACTIVATION.md
+# Release drafts (privacy policy, App Store Connect text, release checklist).
+App/Release/
 server/README.md
 server/API.md
 Shared/**/README.md

@@ -59,6 +59,9 @@ class Principal:
     phone: str | None = field(default=None, repr=False)
     #: A demo workspace's account (``Demo <token>``): fictional data, isolated from real accounts.
     demo: bool = False
+    #: When the person last signed in with a password or code (the Firebase ``auth_time`` claim, Unix
+    #: seconds); a refreshed token keeps it. Deleting the account needs it to be recent.
+    auth_time: int | None = None
 
     @property
     def verified(self) -> bool:
@@ -146,6 +149,7 @@ def parse_authorization(
         email_verified = claims.get("email_verified") is True
         phone_verified = _has_verified_phone(claims)
         email = claims.get("email")
+        auth_time = claims.get("auth_time")
         return Principal(
             "user",
             uid,
@@ -154,6 +158,7 @@ def parse_authorization(
             phone_verified=phone_verified,
             email=email.strip().lower() if email_verified and isinstance(email, str) and email.strip() else None,
             phone=claims["phone_number"] if phone_verified else None,
+            auth_time=auth_time if isinstance(auth_time, int) and not isinstance(auth_time, bool) else None,
         )
     if scheme == "Guest":
         principal = resolve_guest(credential)

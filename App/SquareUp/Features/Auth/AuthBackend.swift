@@ -81,6 +81,20 @@ protocol AuthBackend: AnyObject {
     func resetDemo() async throws(AuthFailure) -> AuthProfile
     /// Deletes the demo workspace (server and iPhone) and signs out of it.
     func leaveDemo() async
+
+    // MARK: Deleting an account
+
+    /// What deleting the signed-in account would do now, and anything to finish first.
+    func accountDeletionPlan() async throws(AuthFailure) -> AccountDeletionPlan
+    /// Signs in again with the account's password (a fresh sign-in for deleting it).
+    func reauthenticate(password: String) async throws(AuthFailure)
+    /// Sends a code to the account's own verified number, to sign in again before deleting it.
+    func sendReauthenticationCode() async throws(AuthFailure) -> String
+    /// Signs in again with that code.
+    func reauthenticate(phoneVerificationID: String, code: String) async throws(AuthFailure)
+    /// Deletes the account: its data on the server, then its Firebase sign-in, then everything this
+    /// iPhone keeps for it. Needs a fresh sign-in (`reauthenticate`) just before.
+    func deleteAccount() async throws(AuthFailure) -> AccountDeletionOutcome
 }
 
 /// Backends without Demo Mode (test stand-ins) don't offer it.
@@ -98,6 +112,26 @@ extension AuthBackend {
     func leaveDemo() async {
         await signOut()
     }
+
+    func accountDeletionPlan() async throws(AuthFailure) -> AccountDeletionPlan {
+        throw .account(.notConfigured)
+    }
+
+    func reauthenticate(password: String) async throws(AuthFailure) {
+        throw .account(.notConfigured)
+    }
+
+    func sendReauthenticationCode() async throws(AuthFailure) -> String {
+        throw .account(.notConfigured)
+    }
+
+    func reauthenticate(phoneVerificationID: String, code: String) async throws(AuthFailure) {
+        throw .account(.notConfigured)
+    }
+
+    func deleteAccount() async throws(AuthFailure) -> AccountDeletionOutcome {
+        throw .account(.notConfigured)
+    }
 }
 
 /// Firebase Authentication (REST for email, the SDK for phone verification) plus Square Up's
@@ -109,14 +143,16 @@ final class LiveAuthBackend: AuthBackend {
     private let session: AppSession
     private let phone: (any PhoneVerifying)?
     private let demo: DemoWorkspaceAPI?
+    private let deletion: AccountDeletionAPI?
     private let now: () -> Date
 
     init(account: AccountSession, session: AppSession, phone: (any PhoneVerifying)? = nil, demo: DemoWorkspaceAPI? = nil,
-         now: @escaping () -> Date = { .now }) {
+         deletion: AccountDeletionAPI? = nil, now: @escaping () -> Date = { .now }) {
         self.account = account
         self.session = session
         self.phone = phone
         self.demo = demo
+        self.deletion = deletion
         self.now = now
     }
 
@@ -311,6 +347,63 @@ final class LiveAuthBackend: AuthBackend {
     func leaveDemo() async {
         if await account.isDemo, let demo { try? await demo.end() }
         await signOut()
+    }
+
+    // MARK: Deleting an account
+
+    func accountDeletionPlan() async throws(AuthFailure) -> AccountDeletionPlan {
+        guard let deletion else { throw .account(.notConfigured) }
+        do {
+            return try await deletion.plan()
+        } catch {
+            throw Self.failure(error)
+        }
+    }
+
+    func reauthenticate(password: String) async throws(AuthFailure) {
+        try await call { try await $0.reauthenticate(password: password) }
+    }
+
+    func sendReauthenticationCode() async throws(AuthFailure) -> String {
+        guard let number = await account.storedAccount?.phoneNumber else { throw .account(.signedOut) }
+        return try await sendPhoneCode(to: number)
+    }
+
+    func reauthenticate(phoneVerificationID: String, code: String) async throws(AuthFailure) {
+        guard let phone else { throw .account(.notConfigured) }
+        let credential: PhoneCredentialSession
+        do {
+            credential = try await phone.signIn(verificationID: phoneVerificationID, code: code)
+        } catch {
+            throw .account(error)
+        }
+        try await call { try await $0.reauthenticate(credential) }
+    }
+
+    /// The server deletes the account's data first (it checks the sign-in is recent and nothing is
+    /// left to settle), then Firebase deletes the sign-in, then this iPhone forgets everything it kept
+    /// for the account. A failure after the server step is safe to retry: it repeats harmlessly.
+    func deleteAccount() async throws(AuthFailure) -> AccountDeletionOutcome {
+        guard let deletion, !(await account.isDemo), let userID = await account.userID else { throw .account(.signedOut) }
+        do {
+            try await deletion.delete()
+        } catch {
+            if error.code == "recent_sign_in_required" { throw .account(.recentSignInRequired) }
+            throw Self.failure(error)
+        }
+        do {
+            try await account.deleteAccount()
+        } catch {
+            // The server's part is done (repeating it is harmless); only the sign-in is left. This
+            // iPhone's copy stays until it's gone, so trying again finishes everything.
+            let reason = (error as? AccountSession.Failure).map { LedgerErrorMessages.text(for: $0) } ?? ""
+            throw .server(String(localized: """
+            Your Square Up data was deleted, but removing your sign-in didn't finish. \(reason) Tap Delete account again to finish.
+            """))
+        }
+        let removed = session.discardLocalData(uid: userID)
+        Log.app.info("Deleted an account (this iPhone's copy \(removed ? "removed" : "partly left", privacy: .public))")
+        return removed ? .complete : .localDataRemains
     }
 
     private static func serverDate(_ text: String) -> Date? {

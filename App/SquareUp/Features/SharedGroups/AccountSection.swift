@@ -113,6 +113,7 @@ private struct SignedInAccountSection: View {
     @State private var isConfirmingSignOut = false
     @State private var isEditingName = false
     @State private var isShowingMethods = false
+    @State private var isDeletingAccount = false
 
     var body: some View {
         Section {
@@ -147,6 +148,9 @@ private struct SignedInAccountSection: View {
             }
             Button(String(localized: "Sign out"), role: .destructive) { isConfirmingSignOut = true }
                 .accessibilityIdentifier("profile.account.signOut")
+            Button(String(localized: "Delete account"), role: .destructive) { isDeletingAccount = true }
+                .accessibilityIdentifier("profile.account.delete")
+                .sheet(isPresented: $isDeletingAccount) { DeleteAccountView(auth: auth) }
         } header: {
             Text(String(localized: "Account"))
         } footer: {

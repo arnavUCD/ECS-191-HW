@@ -1,13 +1,14 @@
 import StoreKit
 import SwiftUI
 
-/// The Square Up App Clip (prepared; not yet invocable — see `HW/App/APP_CLIP_ACTIVATION.md`).
+/// The Square Up App Clip, embedded in the full app (activation status: `HW/App/APP_CLIP_ACTIVATION.md`).
 ///
 /// One job only: join a temporary room ("Split with people now") from its link, QR code, or short
 /// code; claim what you had; review your share; and pay the payer back and report it. No scanning,
 /// AI, groups, profile, or history. The invocation URL is `https://<server>/r/<token>`, the same
-/// link the full app opens; launched without one (App Switcher, notification), it returns to the
-/// last room or asks for the code.
+/// link the full app opens (once installed, the full app receives every invocation instead).
+/// Launched without one (App Switcher, notification) or with the bare `/r/` prefix, it returns to
+/// the last room or asks for the code.
 @main
 struct SquareUpClipApp: App {
     @State private var model = ClipModel()

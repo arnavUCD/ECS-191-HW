@@ -47,6 +47,8 @@ extension SharedGroupLedger {
         case .addMember(_, let draft): return String(localized: "Add \(draft.displayName)")
         case .removeMember(_, let id): return String(localized: "Remove \(snapshot.members[id]?.displayName ?? "")")
         case .startPayment(let request): return String(localized: "Start paying \(snapshot.members[request.recipientID]?.displayName ?? "")")
+        case .recordSettlement(let settlement):
+            return String(localized: "Mark \(snapshot.members[settlement.fromID]?.displayName ?? "") as settled · \(money(settlement.amount))")
         case .advancePayment(_, let action):
             switch action {
             case .confirm: return String(localized: "Confirm receiving a payment")

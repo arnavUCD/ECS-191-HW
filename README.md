@@ -30,8 +30,8 @@ reports the payment, and the person being paid confirms that it arrived.
    cd <the cloned folder>
    open App/SquareUp.xcodeproj
    ```
-2. Wait for Xcode to finish resolving Swift packages (Firebase, PhoneNumberKit,
-   swift-snapshot-testing). The versions are pinned in `Package.resolved`.
+2. Wait for Xcode to finish resolving Swift packages (Firebase and PhoneNumberKit). The versions are
+   pinned in `Package.resolved`.
 3. Choose the **SquareUp** scheme and an **iPhone Simulator running iOS 27** as the destination.
 4. Press **Run** (⌘R).
 
@@ -39,8 +39,12 @@ No configuration files, accounts, or keys need to be added: the project already 
 configuration for the production backend (see [Configuration and security](#configuration-and-security)).
 The app opens on the Welcome screen.
 
-To run it on your own iPhone instead, select the **SquareUp** target → *Signing & Capabilities*,
-choose your own development team, and, if Xcode asks, give the bundle identifier a unique suffix.
+Square Up is an iPhone app (iOS 27 or later). The build includes its App Clip, and both are signed
+for Square Up's own Apple Developer team. To run it on your own iPhone, choose your own team for both
+targets (*Signing & Capabilities*). Then give the app a bundle identifier of your own in
+`App/Config/AppClip.xcconfig` (`SQUAREUP_APP_BUNDLE_ID`) and the **SquareUp** target; the App Clip's
+identifier follows it. Push Notifications and Associated Domains need a paid team; remove them from
+your copy if you use a personal one.
 
 ## Try it with Enter Demo
 
@@ -83,6 +87,10 @@ Tap **Create account** or **Sign in** on the Welcome screen:
   account.
 - After signing in, choose the name other people see. Each account's data stays separate on the
   device, and shared groups sync through the backend.
+- **Delete account** is in Profile → Account. First settle up, hand over any group you own that
+  others have joined, and finish live rooms; the app lists anything left and how to resolve it.
+  Someone who is owed money can **Mark as settled** in Settle up. After deletion, other members keep
+  their records and balances, which show "Former member" instead of the deleted person's name.
 
 ## Configuration and security
 
@@ -111,14 +119,13 @@ The Simulator runs the whole app, but some things are best checked on a physical
 
 | Path | Contents |
 |---|---|
-| `App/` | The iOS app (SwiftUI): `SquareUp/` source and assets, `SquareUpTests/`, `SquareUpUITests/`, an App Clip target (prepared, not activated), `Config/` |
-| `App/ARCHITECTURE.md`, `App/DEPENDENCIES.md` | How the app is built, and why each dependency is used |
-| `server/` | The backend (Python/Flask): shared groups, live receipt rooms, Demo Mode, and receipt intelligence. See `server/README.md` and `server/API.md` |
-| `Shared/` | Fictional fixtures shared by app and server tests (ledger parity cases, a receipt evaluation set) |
-| `overview.md`, `milestone *.md` | Product definition and milestone plans |
+| `App/SquareUp/` | The iOS app (SwiftUI): source and assets |
+| `App/SquareUpClip/` | The App Clip for joining a live receipt room without the app (embedded in the app build; offered publicly only after App Store release) |
+| `App/SquareUpShared/` | Code compiled into both: room wire types and invitation links |
+| `App/Config/` | Client configuration, entitlements, version, and Info.plist files |
+| `server/` | The backend (Python/Flask on App Engine): accounts, shared groups, live receipt rooms, Demo Mode, and receipt intelligence |
 
 ## Tests
 
-In Xcode, **Product → Test** (⌘U) runs the app's tests. Snapshot reference images aren't in the
-repository, so the first snapshot test run records them (those tests report a failure until the
-references exist). The backend has its own test suite, described in `server/README.md`.
+The app's and server's automated test suites, and the release tooling, are kept outside this
+repository. The public repository holds the production app and backend source.

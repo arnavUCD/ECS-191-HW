@@ -129,15 +129,21 @@ struct AccountScopeFactory {
         }
     }
 
-    /// Demo Mode: deletes one account's data from this iPhone — its ledger, receipt images, room
+    /// Deletes one account's data from this iPhone — its ledger, receipt images, room
     /// directory, preferences, Keychain items, and cached shared groups. Its scope must be closed.
-    func discard(_ namespace: AccountNamespace, uid: String) {
+    /// Returns `false` when the account's folder is still there afterwards.
+    @discardableResult
+    func discard(_ namespace: AccountNamespace, uid: String) -> Bool {
+        var removed = true
         if !configuration.usesInMemoryStore {
-            try? FileManager.default.removeItem(at: layout.directory(for: namespace))
+            let directory = layout.directory(for: namespace)
+            try? FileManager.default.removeItem(at: directory)
+            removed = !FileManager.default.fileExists(atPath: directory.path(percentEncoded: false))
             SharedGroupCache(root: layout.sharedGroupCacheRoot).purge(account: uid)
             UserDefaults.standard.removePersistentDomain(forName: AccountStorageLayout.defaultsSuiteName(for: namespace))
         }
         KeychainStore(service: AccountStorageLayout.keychainService(for: namespace)).removeAll()
+        return removed
     }
 
     /// Whether a scope's own ledger has anything a person made (used before binding earlier data).
@@ -271,13 +277,19 @@ final class AppSession {
         generation += 1
     }
 
-    /// Demo Mode: removes a demo workspace's data from this iPhone (closing it first if it's open),
-    /// on Reset demo data and Leave demo. Real accounts' data is never discarded here.
-    func discardLocalData(uid: String) {
+    /// Removes one account's data from this iPhone (closing it first if it's open): a demo workspace
+    /// on Reset demo data and Leave demo, and an account that was deleted (Profile → Delete account).
+    /// Signing out never discards anything.
+    /// Returns `false` if some of it couldn't be removed (the caller says so; nothing is retried here).
+    @discardableResult
+    func discardLocalData(uid: String) -> Bool {
         let namespace = AccountNamespace(uid: uid)
         if scope?.namespace == namespace { close() }
         keptInMemory[namespace] = nil
-        factory?.discard(namespace, uid: uid)
+        let removed = factory?.discard(namespace, uid: uid) ?? true
+        // An account that adopted the earlier build's data used it in place: it goes too.
+        let legacyRemoved = legacy?.eraseData(ownedBy: namespace) ?? true
+        return removed && legacyRemoved
     }
 
     /// "Use with this account": binds the earlier data to the open account and reopens on it.
@@ -389,6 +401,7 @@ extension AppSession {
         #endif
         guard let account else { return nil }
         let demo = remote.map { DemoWorkspaceAPI(configuration: $0, transport: URLSessionTransport(), account: account) }
-        return LiveAuthBackend(account: account, session: session, phone: FirebasePhoneVerifier.shared, demo: demo)
+        let deletion = remote.map { AccountDeletionAPI(configuration: $0, transport: URLSessionTransport(), account: account) }
+        return LiveAuthBackend(account: account, session: session, phone: FirebasePhoneVerifier.shared, demo: demo, deletion: deletion)
     }
 }

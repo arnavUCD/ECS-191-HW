@@ -1,0 +1,8 @@
+// The app and its App Clip ship together in one build, and App Store Connect refuses an upload where
+// their version or build number differ. Both targets read them from here (through Remote.xcconfig):
+// change them in this file only, not in Xcode's General tab, which would set them for one target.
+
+// The version people see on the App Store.
+MARKETING_VERSION = 1.0
+// Must increase with every upload to App Store Connect.
+CURRENT_PROJECT_VERSION = 1

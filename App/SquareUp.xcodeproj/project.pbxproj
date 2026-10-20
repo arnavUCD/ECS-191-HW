@@ -10,7 +10,32 @@
 		5A0000000000000000000302 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5A0000000000000000000502 /* FirebaseAuth */; };
 		5A0000000000000000000303 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 5A0000000000000000000503 /* FirebaseCore */; };
 		5A0000000000000000000304 /* PhoneNumberKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5A0000000000000000000504 /* PhoneNumberKit */; };
+		5A0000000000000000000305 /* SquareUpClip.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = 5A0000000000000000000206 /* SquareUpClip.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5A0000000000000000000801 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A0000000000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A0000000000000000000104;
+			remoteInfo = SquareUpClip;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5A0000000000000000000604 /* Embed App Clips */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/AppClips";
+			dstSubfolderSpec = 16;
+			files = (
+				5A0000000000000000000305 /* SquareUpClip.app in Embed App Clips */,
+			);
+			name = "Embed App Clips";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5A0000000000000000000201 /* SquareUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SquareUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,6 +45,8 @@
 		5A0000000000000000000207 /* AppClip.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = AppClip.xcconfig; sourceTree = "<group>"; };
 		5A0000000000000000000208 /* SquareUpClip-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SquareUpClip-Info.plist"; sourceTree = "<group>"; };
 		5A0000000000000000000209 /* SquareUpClip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SquareUpClip.entitlements; sourceTree = "<group>"; };
+		5A000000000000000000020A /* SquareUp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SquareUp.entitlements; sourceTree = "<group>"; };
+		5A000000000000000000020B /* Version.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Version.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -85,7 +112,9 @@
 			isa = PBXGroup;
 			children = (
 				5A0000000000000000000204 /* SquareUp-Info.plist */,
+				5A000000000000000000020A /* SquareUp.entitlements */,
 				5A0000000000000000000205 /* Remote.xcconfig */,
+				5A000000000000000000020B /* Version.xcconfig */,
 				5A0000000000000000000207 /* AppClip.xcconfig */,
 				5A0000000000000000000208 /* SquareUpClip-Info.plist */,
 				5A0000000000000000000209 /* SquareUpClip.entitlements */,
@@ -103,10 +132,12 @@
 				5A0000000000000000000601 /* Sources */,
 				5A0000000000000000000602 /* Frameworks */,
 				5A0000000000000000000603 /* Resources */,
+				5A0000000000000000000604 /* Embed App Clips */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5A0000000000000000000802 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				5A0000000000000000000011 /* SquareUp */,
@@ -220,6 +251,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5A0000000000000000000802 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A0000000000000000000104 /* SquareUpClip */;
+			targetProxy = 5A0000000000000000000801 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		5A0000000000000000000A01 /* Debug */ = {
@@ -353,25 +392,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Config/SquareUp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9L56L8Y5R3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Config/SquareUp-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Square Up";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
-				INFOPLIST_KEY_NSCameraUsageDescription = "Square Up uses the camera only to scan receipts you choose to split. The text is read on this device and the image stays here.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Square Up uses the camera to scan receipts you choose to split. Receipt images are sent to Square Up's server and Anthropic only if you turn on AI processing. A photo you choose to share in a live room is kept on Square Up's server for the people in that room.";
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Square Up connects to a development server on your network to test shared receipt rooms.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = edu.ucdavis.ecs191.SquareUp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -382,7 +419,7 @@
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -392,25 +429,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Config/SquareUp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9L56L8Y5R3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Config/SquareUp-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Square Up";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
-				INFOPLIST_KEY_NSCameraUsageDescription = "Square Up uses the camera only to scan receipts you choose to split. The text is read on this device and the image stays here.";
-				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Square Up connects to a development server on your network to test shared receipt rooms.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Square Up uses the camera to scan receipts you choose to split. Receipt images are sent to Square Up's server and Anthropic only if you turn on AI processing. A photo you choose to share in a live room is kept on Square Up's server for the people in that room.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = edu.ucdavis.ecs191.SquareUp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -421,7 +455,7 @@
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -429,9 +463,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5A0000000000000000000207 /* AppClip.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Config/SquareUpClip.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9L56L8Y5R3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Config/SquareUpClip-Info.plist";
@@ -445,7 +480,6 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "$(SQUAREUP_CLIP_BUNDLE_ID)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -464,15 +498,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5A0000000000000000000207 /* AppClip.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Config/SquareUpClip.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9L56L8Y5R3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Config/SquareUpClip-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Square Up";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
-				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Square Up connects to a development server on your network to test temporary receipt rooms.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
@@ -480,7 +514,6 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "$(SQUAREUP_CLIP_BUNDLE_ID)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

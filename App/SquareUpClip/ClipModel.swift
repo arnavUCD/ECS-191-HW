@@ -33,6 +33,11 @@ final class ClipModel {
     @ObservationIgnored private let client: ClipRoomClient?
     @ObservationIgnored private let credentials: ClipCredentials
     @ObservationIgnored private var pollTask: Task<Void, Never>?
+    /// Counts invitations opened, so a slower return to the last room never replaces a newer one.
+    @ObservationIgnored private var invocations = 0
+    /// The last room's credential, when the preview showed this guest is already in the invited
+    /// room: joining with it restores the same participant. Anyone else joins as someone new.
+    @ObservationIgnored private var returningCredential: String?
 
     init(configuration: ClipConfiguration? = .current(), credentials: ClipCredentials = ClipCredentials()) {
         self.configuration = configuration
@@ -50,10 +55,14 @@ final class ClipModel {
     /// code typed by hand — read exactly like the full app reads them.
     func handle(_ text: String) async {
         guard let configuration else { return }
+        // The registered prefix (an App Clip experience or TestFlight URL) names no room.
+        if configuration.isInvitationPrefix(text) { return }
         guard let found = configuration.invitation(in: text) else {
             message = String(localized: "That isn't a Square Up invitation. Check the code with the host.")
             return
         }
+        invocations += 1
+        stopPolling()
         invitation = found
         message = nil
         await loadPreview()
@@ -67,9 +76,10 @@ final class ClipModel {
         phase = .needsInvitation
     }
 
-    /// Opening the clip again (from the App Switcher or a notification) returns to the last room.
+    /// Opening the clip again (from the App Switcher or a notification) returns to the last room —
+    /// unless an invitation is being opened, which always wins.
     func resume() async {
-        guard room == nil, let roomID = credentials.lastRoomID, let credential = credentials.credential(for: roomID) else { return }
+        guard room == nil, invitation == nil, let roomID = credentials.lastRoomID, let credential = credentials.credential(for: roomID) else { return }
         await load(roomID, credential: credential)
     }
 
@@ -77,7 +87,7 @@ final class ClipModel {
         guard let client, let invitation else { return }
         phase = .loading
         do {
-            let preview = try await client.preview(invitation)
+            let preview = try await self.preview(invitation, client: client)
             if preview.youAreParticipantId != nil || preview.isClosed {
                 // Already in it (or it ended): rejoining restores the same participant.
                 phase = .preview(preview)
@@ -90,14 +100,34 @@ final class ClipModel {
         }
     }
 
+    /// The preview, asked with the last room's guest credential so a guest coming back to that room
+    /// is recognized. A credential whose room ended is forgotten, and the preview asked again
+    /// without it: it must never stop someone joining a different room.
+    private func preview(_ invitation: InvitationInput, client: ClipRoomClient) async throws(ClipError) -> InvitationPreviewDTO {
+        returningCredential = nil
+        guard let roomID = credentials.lastRoomID, let credential = credentials.credential(for: roomID) else {
+            return try await client.preview(invitation, credential: nil)
+        }
+        let preview: InvitationPreviewDTO
+        do {
+            preview = try await client.preview(invitation, credential: credential)
+        } catch {
+            guard error.code == "credential_expired" else { throw error }
+            credentials.remove(roomID)
+            credentials.lastRoomID = nil
+            return try await client.preview(invitation, credential: nil)
+        }
+        if preview.youAreParticipantId != nil { returningCredential = credential }
+        return preview
+    }
+
     func join() async {
         guard let client, let invitation else { return }
         let trimmed = name.trimmingCharacters(in: .whitespacesAndNewlines)
         isSending = true
         defer { isSending = false }
         do {
-            let previous = credentials.lastRoomID.flatMap { credentials.credential(for: $0) }
-            let response = try await client.join(invitation, name: trimmed.isEmpty ? nil : String(trimmed.prefix(40)), credential: previous)
+            let response = try await client.join(invitation, name: trimmed.isEmpty ? nil : String(trimmed.prefix(40)), credential: returningCredential)
             if let credential = response.credential { credentials.save(credential, for: response.room.roomId) }
             credentials.lastRoomID = response.room.roomId
             accept(response.room)
@@ -111,12 +141,16 @@ final class ClipModel {
 
     private func load(_ roomID: String, credential: String) async {
         guard let client else { return }
+        let opened = invocations
         phase = .loading
         do {
-            await accept(try client.room(roomID, credential: credential))
+            let latest = try await client.room(roomID, credential: credential)
+            guard invocations == opened else { return } // an invitation opened meanwhile
+            accept(latest)
             phase = .inRoom
             startPolling()
         } catch {
+            guard invocations == opened else { return }
             if error.endsAccess {
                 credentials.remove(roomID)
                 credentials.lastRoomID = nil
@@ -132,9 +166,12 @@ final class ClipModel {
     func refresh() async {
         guard let client, let room, let credential else { return }
         do {
-            await accept(try client.room(room.roomId, credential: credential))
+            let latest = try await client.room(room.roomId, credential: credential)
+            guard self.room?.roomId == room.roomId else { return } // another room opened meanwhile
+            accept(latest)
             isOffline = false
         } catch {
+            guard self.room?.roomId == room.roomId else { return }
             isOffline = error.code == "offline"
             if error.endsAccess { endAccess(error) }
         }
@@ -159,8 +196,11 @@ final class ClipModel {
         pollTask = nil
     }
 
+    /// The newest copy of the current room, or a different room after joining one. Revisions are
+    /// only compared within the same room.
     private func accept(_ latest: RoomDTO) {
-        if let room, latest.revision < room.revision { return }
+        if let room, room.roomId == latest.roomId, latest.revision < room.revision { return }
+        if room?.roomId != latest.roomId { destinations = nil }
         room = latest
         lastSynced = .now
         if latest.state == "finalized", destinations == nil, latest.payment(of: latest.viewer.participantId).map({ $0.state != "confirmed" }) == true {
@@ -177,7 +217,9 @@ final class ClipModel {
 
     func loadDestinations() async {
         guard let client, let room, let credential else { return }
-        destinations = try? await client.paymentDestinations(room: room.roomId, credential: credential)
+        let found = try? await client.paymentDestinations(room: room.roomId, credential: credential)
+        guard self.room?.roomId == room.roomId else { return }
+        destinations = found
     }
 
     // MARK: Changes
@@ -219,7 +261,9 @@ final class ClipModel {
         for _ in 0..<3 {
             let envelope = CommandEnvelope(type: type, payload: payload, expectedRevision: base.revision)
             do {
-                await accept(try client.command(envelope, room: base.roomId, credential: credential).room)
+                let latest = try await client.command(envelope, room: base.roomId, credential: credential).room
+                guard self.room?.roomId == base.roomId else { return } // another room opened meanwhile
+                accept(latest)
                 message = nil
                 isOffline = false
                 return

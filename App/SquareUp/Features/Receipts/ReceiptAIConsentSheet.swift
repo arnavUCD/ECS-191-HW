@@ -26,6 +26,10 @@ struct ReceiptAIConsentSheet: View {
                     Receipts can include sensitive details, such as where you shopped, what you bought, and part \
                     of a card number.
                     """))
+                    point("clock", String(localized: """
+                    Square Up's server keeps the items and totals it found for up to 24 hours, so the same receipt isn't sent \
+                    again. The image isn't kept. Turning AI processing off in Profile deletes them.
+                    """))
                     point("checkmark.circle", String(localized: "You'll review and can correct everything before anything is saved."))
                     point("iphone", String(localized: "You can keep processing on this iPhone instead, and change this anytime in Profile."))
                 }

@@ -12,9 +12,9 @@ class RateLimiter:
     def __init__(self, ctx: ServiceContext) -> None:
         self.ctx = ctx
 
-    def check(self, scope: str, client: str) -> None:
+    def check(self, scope: str, client: str, message: str = "Too many requests. Try again shortly") -> None:
         """Count one request for ``client`` in ``scope``; raise ``rate_limited`` past the limit."""
-        limit, window = self.ctx.config.rate_limits.get(scope, (120, 60))
+        limit, window = self.ctx.config.limit_for(scope)
         now = self.ctx.now()
         bucket = int(now.timestamp()) // window
         key = token_hash(f"{scope}|{client}|{bucket}")
@@ -29,6 +29,4 @@ class RateLimiter:
 
         count = self.ctx.store.run_in_transaction(body)
         if count > limit:
-            raise DomainError(
-                "rate_limited", "Too many requests. Try again shortly", {"retryAfterSeconds": max(1, reset_at - int(now.timestamp()))}
-            )
+            raise DomainError("rate_limited", message, {"retryAfterSeconds": max(1, reset_at - int(now.timestamp()))})

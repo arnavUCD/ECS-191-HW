@@ -33,7 +33,7 @@ struct ClipConfiguration: Sendable, Equatable {
     }
 
     /// DEBUG only: `-SUClipOpen <link or code>` opens an invitation at launch the way an App Clip
-    /// invocation would. Real invocations need the paid Apple team (`APP_CLIP_ACTIVATION.md`).
+    /// invocation would. Real invocations arrive as a browsing-web user activity (`SquareUpClipApp`).
     static func launchInvitation(arguments: [String] = ProcessInfo.processInfo.arguments) -> String? {
         #if DEBUG
         if let index = arguments.firstIndex(of: "-SUClipOpen"), arguments.indices.contains(index + 1) { return arguments[index + 1] }
@@ -44,6 +44,14 @@ struct ClipConfiguration: Sendable, Equatable {
     /// The invitation an invocation URL (or something pasted) carries, read exactly like the full app.
     func invitation(in text: String) -> InvitationInput? {
         InvitationInput.parse(text, expectedHost: baseURL.host(), expectedPort: baseURL.port)
+    }
+
+    /// This server's invitation prefix itself (`https://<server>/r/`, or just the origin): the URL an
+    /// App Clip experience or TestFlight invocation is registered with. It names no room, so the
+    /// clip stays where it is (the code entry, or the room it returned to).
+    func isInvitationPrefix(_ text: String) -> Bool {
+        guard let url = URL(string: text.trimmingCharacters(in: .whitespacesAndNewlines)) else { return false }
+        return InvitationLink.isPrefix(url, expectedHost: baseURL.host(), expectedPort: baseURL.port)
     }
 }
 
@@ -70,11 +78,14 @@ struct ClipRoomClient: Sendable {
     let configuration: ClipConfiguration
     var session: URLSession = .shared
 
-    func preview(_ invitation: InvitationInput) async throws(ClipError) -> InvitationPreviewDTO {
+    /// With a guest credential, the preview says whether that guest is already in this room
+    /// (`youAreParticipantId`).
+    func preview(_ invitation: InvitationInput, credential: String?) async throws(ClipError) -> InvitationPreviewDTO {
         let response: InvitationPreviewResponse
         switch invitation {
-        case .token(let token): response = try await send("GET", ["v1", "receipt-room-invitations", token], credential: nil)
-        case .code(let code): response = try await send("POST", ["v1", "receipt-room-codes", "preview"], body: CodeRequest(code: code), credential: nil)
+        case .token(let token): response = try await send("GET", ["v1", "receipt-room-invitations", token], credential: credential)
+        case .code(let code):
+            response = try await send("POST", ["v1", "receipt-room-codes", "preview"], body: CodeRequest(code: code), credential: credential)
         }
         return response.invitation
     }
@@ -137,9 +148,9 @@ struct ClipRoomClient: Sendable {
 
 /// The guest credential for each room this App Clip joined, in the Keychain (this device only).
 ///
-/// When the full app is installed it can adopt the guest's place with the same credential
-/// (`/link-guest`) — that handoff needs an App Group shared by both, which requires the paid Apple
-/// Developer Program team (see `HW/App/APP_CLIP_ACTIVATION.md`); until then the clip keeps it alone.
+/// When the full app is installed it could adopt the guest's place with the same credential
+/// (`/link-guest`). That handoff needs an App Group shared by both targets and isn't set up (see
+/// `HW/App/APP_CLIP_ACTIVATION.md`), so the clip keeps its credentials alone.
 struct ClipCredentials: Sendable {
     let service = "edu.ucdavis.ecs191.SquareUp.Clip.credentials"
 

@@ -35,6 +35,15 @@ nonisolated enum InvitationLink {
         return token(fromPath: url.path())
     }
 
+    /// This server's invitation prefix itself (`https://<server>/r/`, or just the origin): the URL an
+    /// App Clip experience or TestFlight invocation is registered with. It names no room.
+    static func isPrefix(_ url: URL, expectedHost: String?, expectedPort: Int? = nil) -> Bool {
+        guard let scheme = url.scheme?.lowercased(), scheme == "https" || scheme == "http", let expectedHost,
+              url.host()?.lowercased() == expectedHost.lowercased(), url.port == expectedPort else { return false }
+        let parts = url.path().split(separator: "/")
+        return parts.isEmpty || parts == ["r"]
+    }
+
     static func appURL(token: String) -> URL {
         var components = URLComponents()
         components.scheme = appScheme

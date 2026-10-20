@@ -1,17 +1,14 @@
-// App Clip identifiers (prepared; not yet activated). Nothing here is a real, registered value
-// until the Apple Developer Program team exists — see HW/App/APP_CLIP_ACTIVATION.md.
+// App Clip identifiers. Both are registered under the paid Apple Developer Program team
+// (9L56L8Y5R3, set as DEVELOPMENT_TEAM on both targets) by Xcode's automatic signing — see
+// HW/App/APP_CLIP_ACTIVATION.md.
 //
-// The App Clip's bundle ID must start with the full app's bundle ID. Both must be registered under
-// the paid team before the App Clip can be signed for a device, embedded, or uploaded.
+// The App Clip's bundle ID must start with the full app's bundle ID. Firebase phone sign-in and the
+// server's apple-app-site-association file both depend on these values: change them only together.
 
-// The full app's current bundle ID (already used by the SquareUp target).
+// The full app's bundle ID (the SquareUp target's PRODUCT_BUNDLE_IDENTIFIER).
 SQUAREUP_APP_BUNDLE_ID = edu.ucdavis.ecs191.SquareUp
-// Apple's naming rule: the parent's ID plus a suffix. Confirm it when registering the identifier.
+// Apple's naming rule: the parent's ID plus a suffix.
 SQUAREUP_CLIP_BUNDLE_ID = $(SQUAREUP_APP_BUNDLE_ID).Clip
-// The HTTPS host for invitations (`/r/<token>`) once it's associated with the apps. Left empty on
-// purpose: choose and validate it during activation (it must serve the AASA file over HTTPS).
-SQUAREUP_INVOCATION_DOMAIN =
-// The paid team's ID (10 characters). Left empty on purpose: never invented.
-// DEVELOPMENT_TEAM =
 
+// The invocation domain (SQUAREUP_INVOCATION_DOMAIN) and server host come from Remote.xcconfig.
 #include "Remote.xcconfig"

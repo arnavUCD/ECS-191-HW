@@ -35,6 +35,21 @@ nonisolated enum AuthRoute: Hashable, Sendable {
 }
 
 /// A short explanation shown on the current auth screen, with a symbol and words (never color alone).
+/// What deleting an account finished (it's reported only after the server and Firebase both did).
+nonisolated enum AccountDeletionOutcome: Equatable, Sendable {
+    /// The server's data, the sign-in, and this iPhone's copy.
+    case complete
+    /// The account is gone, but some of this iPhone's copy couldn't be removed.
+    case localDataRemains
+}
+
+/// How someone confirms it's them just before deleting their account (a fresh sign-in).
+nonisolated enum AccountConfirmation: Equatable, Sendable {
+    case password(String)
+    /// The code Firebase texted to the account's own number, with its verification ID.
+    case code(verificationID: String, code: String)
+}
+
 nonisolated enum AuthNotice: Equatable, Sendable {
     /// The stored sign-in stopped working (expired, revoked, or the account changed elsewhere).
     case sessionEnded
@@ -51,6 +66,10 @@ nonisolated enum AuthNotice: Equatable, Sendable {
     case demoEnded
     /// "Leave demo": its fictional data was deleted.
     case leftDemo
+    /// Profile → Delete account finished: the account and its data are gone.
+    case accountDeleted
+    /// The account is deleted, but some of this iPhone's copy couldn't be removed.
+    case accountDeletedLocalDataRemains
     /// Any other failure, already in plain language.
     case problem(String)
 
@@ -65,6 +84,12 @@ nonisolated enum AuthNotice: Equatable, Sendable {
         case .notVerifiedYet: String(localized: "We haven't seen the confirmation yet. Open the link in the email, then try again.")
         case .demoEnded: String(localized: "That demo ended and its sample data was removed. Enter the demo again for a fresh copy.")
         case .leftDemo: String(localized: "You left the demo. Its sample data was removed from this iPhone and the server.")
+        case .accountDeleted: String(localized: "Your Square Up account was deleted, with its data on this iPhone and on Square Up's server.")
+        case .accountDeletedLocalDataRemains:
+            String(localized: """
+            Your Square Up account was deleted. Some of its data couldn't be removed from this iPhone; deleting and reinstalling \
+            Square Up removes it.
+            """)
         case .problem(let message): message
         }
     }
