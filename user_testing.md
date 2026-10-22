@@ -69,3 +69,16 @@ Any part which you found confusing or anything different they would want in the 
 
 
 
+
+
+**The patterns you saw across users. Where did multiple people get confused?**
+One pattern I saw across users was they got stuck after clicking the image of the receipt, and could not find the next button at top right, and users noted that the AI processing took a long time. These were the main two patterns I saw across users.
+
+**What you would change about your app based on what you learned**
+1. Make the image scanning UI more simple and the next button more prominent.
+2. For the wait time in AI processing I will have to try a couple of thing to decide which one produces best result, a) Lowering the model and token usage, it could lower the wait time. or b) make the AI prompt more simpler and note down to produce results fast but keeping it reliable.
+Whichever option works better, I will have to implement that.
+
+Thanks :)
+
+
